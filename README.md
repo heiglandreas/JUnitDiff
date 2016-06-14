@@ -24,7 +24,7 @@ When you have two files from two different runs you can check what tests have
 changed between those runs by calling this:
 
 ```bash
-$ junitdiff --1 <path to the first logfile> -2 <path to the last logfile>
+$ junitdiff diff -1 <path to the first logfile> -2 <path to the last logfile>
 ```
 
 An example output might be:
