@@ -16,7 +16,7 @@ $ composer require --dev org_heigl/junitdiff
 
 JUnitDiff compares two JUnit-Files. They can be generated with f.e. ```phpunit```
 
-``bash
+```bash
 $ phpunit --log-junit logfile.xml
 ```
 
