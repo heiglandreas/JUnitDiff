@@ -1,0 +1,39 @@
+#!/usr/bin/env php
+<?php
+
+// set to run indefinitely if needed
+set_time_limit(0);
+
+/* Optional. It’s better to do it in the php.ini file */
+date_default_timezone_set('UTC');
+
+// include the composer autoloader
+foreach (array(__DIR__ . '/../../autoload.php', __DIR__ . '/../vendor/autoload.php', __DIR__ . '/vendor/autoload.php') as $file) {
+    if (file_exists($file)) {
+        define('JUNITDIFF_COMPOSER_INSTALL', $file);
+
+        break;
+    }
+}
+
+unset($file);
+
+if (!defined('JUNITDIFF_COMPOSER_INSTALL')) {
+    fwrite(STDERR,
+        'You need to set up the project dependencies using the following commands:' . PHP_EOL .
+        'wget http://getcomposer.org/composer.phar' . PHP_EOL .
+        'php composer.phar install' . PHP_EOL
+    );
+
+    die(1);
+}
+
+require JUNITDIFF_COMPOSER_INSTALL;
+
+// import the Symfony Console Application
+use Symfony\Component\Console\Application;
+
+$app = new Application();
+
+$app->add(new \Org_Heigl\JUnitDiff\Commands\DiffCommand());
+$app->run();
