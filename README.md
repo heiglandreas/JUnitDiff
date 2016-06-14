@@ -35,3 +35,9 @@ New Test MyTest::testStoringIdWorksBetter with data set #7
 Removed Test MyTest::testStoringIdWorksBest
 ```
 
+## Caveat
+
+Currently the JUnit-log file does not provide information (Or I was too stubborn to find it)
+about skipped or ignored tests. They will **not** be shown in the output! But as they are
+ignored or skipped and therefore not executed they are just like not existing tests at
+all, so it shouldn't be an issue.
