@@ -101,4 +101,20 @@ Analyzed 615 tests in total, 613 tests in file log1.xml and 613 tests in file lo
  File log.empty seems not to be a JUnit-File  
 ', $commandTester->getDisplay());
     }
+
+
+    public function testThatNoFileRaisesError()
+    {
+        $application = new Application();
+        $application->add(new DiffCommand());
+
+        $command = $application->find('diff');
+        $commandTester = new CommandTester($command);
+        $commandTester->execute([]);
+
+        $this->assertEquals('JUnitDiff (%version%) by Andreas Heigl and contributors
+
+  File  is not readable  
+', $commandTester->getDisplay());
+    }
 }
