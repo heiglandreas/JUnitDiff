@@ -36,8 +36,8 @@ class DiffCommand extends Command
 {
     protected function configure()
     {
-        $this->setName("diff")
-             ->setDescription("show a diff between 2 JUnit-files")
+        $this->setName('diff')
+             ->setDescription('Shows a diff between two JUnit log files')
              ->setDefinition(array(
                  new InputOption('input1', '1', InputOption::VALUE_REQUIRED, 'First input file'),
                  new InputOption('input2', '2', InputOption::VALUE_REQUIRED, 'Second input file')
