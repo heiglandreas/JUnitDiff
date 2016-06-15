@@ -1,0 +1,1673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="615" assertions="1460" failures="28" errors="70" time="7.102248">
+    <testsuite name="wdvCompass Application-Test Suite" tests="2" assertions="1" failures="0" errors="1" time="0.238533">
+      <testsuite name="ContentTypesModelTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/app/model/ContentTypesModelTest.php" tests="0" assertions="0" failures="0" errors="0" time="0.000000"/>
+      <testsuite name="ContentsModelTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/app/model/ContentsModelTest.php" tests="0" assertions="0" failures="0" errors="0" time="0.000000"/>
+      <testsuite name="NodeContentsModelTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/app/model/NodeContentsModelTest.php" tests="0" assertions="0" failures="0" errors="0" time="0.000000"/>
+      <testsuite name="PdfAnnotationsModelTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/app/model/PdfAnnotationsModelTest.php" tests="2" assertions="1" failures="0" errors="1" time="0.238533">
+        <testcase name="testStoringIdWorks" class="PdfAnnotationsModelTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/app/model/PdfAnnotationsModelTest.php" line="50" assertions="0" time="0.078256"/>
+        <testcase name="testRetrievingNonexisting" class="PdfAnnotationsModelTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/app/model/PdfAnnotationsModelTest.php" line="87" assertions="1" time="0.160277"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="wdvCompass library Suite" tests="595" assertions="1441" failures="28" errors="69" time="6.852269">
+      <testsuite name="Org_Heigl_HyphenatorTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Org/Heigl/HyphenatorTest.php" tests="12" assertions="12" failures="0" errors="0" time="0.146202">
+        <testcase name="testHyphenatorSingeltonReturnsDifferentObjectsForDifferentLanguages" class="Org_Heigl_HyphenatorTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Org/Heigl/HyphenatorTest.php" line="44" assertions="1" time="0.030736"/>
+        <testcase name="testHyphenateWordEnglish" class="Org_Heigl_HyphenatorTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Org/Heigl/HyphenatorTest.php" line="51" assertions="1" time="0.002589"/>
+        <testcase name="testHyphenateEntweder" class="Org_Heigl_HyphenatorTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Org/Heigl/HyphenatorTest.php" line="66" assertions="1" time="0.001005"/>
+        <testcase name="testHyphenateEntscheidet" class="Org_Heigl_HyphenatorTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Org/Heigl/HyphenatorTest.php" line="72" assertions="1" time="0.000985"/>
+        <testcase name="testHyphenateBienenstich" class="Org_Heigl_HyphenatorTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Org/Heigl/HyphenatorTest.php" line="79" assertions="1" time="0.001052"/>
+        <testcase name="testHyphenateSchwimmerin" class="Org_Heigl_HyphenatorTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Org/Heigl/HyphenatorTest.php" line="84" assertions="1" time="0.000918"/>
+        <testcase name="testHyphenatePlattform" class="Org_Heigl_HyphenatorTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Org/Heigl/HyphenatorTest.php" line="90" assertions="1" time="0.000598"/>
+        <testcase name="testHyphenateTrenngebot" class="Org_Heigl_HyphenatorTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Org/Heigl/HyphenatorTest.php" line="96" assertions="1" time="0.000830"/>
+        <testcase name="testHyphenateStringForMinus" class="Org_Heigl_HyphenatorTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Org/Heigl/HyphenatorTest.php" line="102" assertions="1" time="0.001802"/>
+        <testcase name="testHyphenateUmlaute" class="Org_Heigl_HyphenatorTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Org/Heigl/HyphenatorTest.php" line="109" assertions="1" time="0.031211"/>
+        <testcase name="testHyphenateLineBreak" class="Org_Heigl_HyphenatorTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Org/Heigl/HyphenatorTest.php" line="116" assertions="1" time="0.001550"/>
+      </testsuite>
+      <testsuite name="Wdv_Acl_DbTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/DbTest.php" tests="7" assertions="27" failures="0" errors="0" time="0.276952">
+        <testcase name="testExceptionWithoutModel" class="Wdv_Acl_DbTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/DbTest.php" line="75" assertions="1" time="0.260043"/>
+        <testcase name="testCreationWithStringModel" class="Wdv_Acl_DbTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/DbTest.php" line="82" assertions="1" time="0.002924"/>
+        <testcase name="testSettingDefaultModel" class="Wdv_Acl_DbTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/DbTest.php" line="90" assertions="1" time="0.001303"/>
+        <testcase name="testSettingModel" class="Wdv_Acl_DbTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/DbTest.php" line="102" assertions="1" time="0.001229"/>
+        <testcase name="testSetup" class="Wdv_Acl_DbTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/DbTest.php" line="113" assertions="2" time="0.001925"/>
+        <testcase name="testCreatingRule" class="Wdv_Acl_DbTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/DbTest.php" line="122" assertions="20" time="0.008231"/>
+      </testsuite>
+      <testsuite name="Wdv_Acl_ResourceRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/ResourceRegistryTest.php" tests="6" assertions="20" failures="0" errors="0" time="0.054166">
+        <testcase name="testCreatingRegistryWorks" class="Wdv_Acl_ResourceRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/ResourceRegistryTest.php" line="54" assertions="1" time="0.000561"/>
+        <testcase name="testAddingResourcesWorks" class="Wdv_Acl_ResourceRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/ResourceRegistryTest.php" line="59" assertions="4" time="0.000605"/>
+        <testcase name="testHavingResource" class="Wdv_Acl_ResourceRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/ResourceRegistryTest.php" line="78" assertions="4" time="0.000611"/>
+        <testcase name="testRemovingResources" class="Wdv_Acl_ResourceRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/ResourceRegistryTest.php" line="96" assertions="8" time="0.000681"/>
+        <testcase name="testForCorrectRegistryArray" class="Wdv_Acl_ResourceRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/ResourceRegistryTest.php" line="129" assertions="1" time="0.000588"/>
+        <testcase name="testXmlFileIsParsedCorrectly" class="Wdv_Acl_ResourceRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/ResourceRegistryTest.php" line="148" assertions="2" time="0.051120"/>
+      </testsuite>
+      <testsuite name="Wdv_Acl_ResourceTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/ResourceTest.php" tests="7" assertions="9" failures="0" errors="0" time="0.004708">
+        <testcase name="testResourceHoldsName" class="Wdv_Acl_ResourceTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/ResourceTest.php" line="51" assertions="1" time="0.000866"/>
+        <testcase name="testResourceNameReturnsString" class="Wdv_Acl_ResourceTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/ResourceTest.php" line="58" assertions="1" time="0.000650"/>
+        <testcase name="testResourceHoldsDescription" class="Wdv_Acl_ResourceTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/ResourceTest.php" line="65" assertions="1" time="0.000637"/>
+        <testcase name="testResourceCanHoldPrivilege" class="Wdv_Acl_ResourceTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/ResourceTest.php" line="72" assertions="1" time="0.000639"/>
+        <testcase name="testResourceCanRemovePrivilege" class="Wdv_Acl_ResourceTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/ResourceTest.php" line="79" assertions="2" time="0.000726"/>
+        <testcase name="testReturnedPrivileges" class="Wdv_Acl_ResourceTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/ResourceTest.php" line="88" assertions="2" time="0.000614"/>
+        <testcase name="testResourceIdReturnsString" class="Wdv_Acl_ResourceTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/ResourceTest.php" line="105" assertions="1" time="0.000576"/>
+      </testsuite>
+      <testsuite name="Wdv_Acl_RoleRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/RoleRegistryTest.php" tests="6" assertions="20" failures="0" errors="0" time="0.068307">
+        <testcase name="testCreatingRegistryWorks" class="Wdv_Acl_RoleRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/RoleRegistryTest.php" line="54" assertions="1" time="0.000573"/>
+        <testcase name="testAddingResourcesWorks" class="Wdv_Acl_RoleRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/RoleRegistryTest.php" line="59" assertions="4" time="0.000620"/>
+        <testcase name="testHavingRoles" class="Wdv_Acl_RoleRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/RoleRegistryTest.php" line="78" assertions="4" time="0.000624"/>
+        <testcase name="testRemovingRoles" class="Wdv_Acl_RoleRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/RoleRegistryTest.php" line="96" assertions="8" time="0.001158"/>
+        <testcase name="testXmlFileIsParsedCorrectly" class="Wdv_Acl_RoleRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/RoleRegistryTest.php" line="148" assertions="2" time="0.053935"/>
+        <testcase name="testWritingXMLWorks" class="Wdv_Acl_RoleRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/RoleRegistryTest.php" line="161" assertions="1" time="0.011397"/>
+      </testsuite>
+      <testsuite name="Wdv_Acl_RoleTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/RoleTest.php" tests="7" assertions="7" failures="0" errors="0" time="0.004832">
+        <testcase name="testRoleHoldsName" class="Wdv_Acl_RoleTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/RoleTest.php" line="51" assertions="1" time="0.000876"/>
+        <testcase name="testRoleNameReturnsString" class="Wdv_Acl_RoleTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/RoleTest.php" line="58" assertions="1" time="0.000813"/>
+        <testcase name="testRoleNameSetsRoleId" class="Wdv_Acl_RoleTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/RoleTest.php" line="65" assertions="1" time="0.000685"/>
+        <testcase name="testRoleHoldsDescription" class="Wdv_Acl_RoleTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/RoleTest.php" line="72" assertions="1" time="0.000643"/>
+        <testcase name="testRoleDescriptionReturnsString" class="Wdv_Acl_RoleTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/RoleTest.php" line="79" assertions="1" time="0.000642"/>
+        <testcase name="testRoleHoldsRoleId" class="Wdv_Acl_RoleTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/RoleTest.php" line="86" assertions="1" time="0.000609"/>
+        <testcase name="testRoleIdReturnsString" class="Wdv_Acl_RoleTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Acl/RoleTest.php" line="93" assertions="1" time="0.000564"/>
+      </testsuite>
+      <testsuite name="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" tests="53" assertions="195" failures="0" errors="0" time="0.045680">
+        <testcase name="testRoleRegistryAddAndGetOne" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="77" assertions="2" time="0.000604"/>
+        <testcase name="testRoleRegistryRemoveOne" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="93" assertions="1" time="0.000659"/>
+        <testcase name="testRoleRegistryRemoveOneNonExistent" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="106" assertions="1" time="0.001174"/>
+        <testcase name="testRoleRegistryRemoveAll" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="121" assertions="1" time="0.000580"/>
+        <testcase name="testRoleRegistryAddInheritsNonExistent" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="134" assertions="1" time="0.000747"/>
+        <testcase name="testRoleRegistryInheritsNonExistent" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="149" assertions="2" time="0.000934"/>
+        <testcase name="testRoleRegistryInherits" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="172" assertions="13" time="0.001175"/>
+        <testcase name="testRoleRegistryInheritsMultiple" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="204" assertions="8" time="0.000834"/>
+        <testcase name="testRoleRegistryDuplicate" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="234" assertions="1" time="0.000780"/>
+        <testcase name="testRoleRegistryDuplicateId" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="252" assertions="1" time="0.000675"/>
+        <testcase name="testResourceAddAndGetOne" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="271" assertions="2" time="0.000598"/>
+        <testcase name="testResourceRemoveOne" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="286" assertions="1" time="0.000599"/>
+        <testcase name="testResourceRemoveOneNonExistent" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="299" assertions="1" time="0.000727"/>
+        <testcase name="testResourceRemoveAll" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="314" assertions="1" time="0.000631"/>
+        <testcase name="testResourceAddInheritsNonExistent" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="327" assertions="1" time="0.000743"/>
+        <testcase name="testResourceInheritsNonExistent" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="342" assertions="2" time="0.000830"/>
+        <testcase name="testResourceInherits" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="365" assertions="7" time="0.000761"/>
+        <testcase name="testResourceDuplicate" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="388" assertions="1" time="0.000644"/>
+        <testcase name="testResourceDuplicateId" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="405" assertions="1" time="0.000627"/>
+        <testcase name="testIsAllowedNonExistent" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="423" assertions="2" time="0.000810"/>
+        <testcase name="testDefaultDeny" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="444" assertions="1" time="0.000591"/>
+        <testcase name="testDefaultAssert" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="454" assertions="2" time="0.000646"/>
+        <testcase name="testDefaultRuleSet" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="466" assertions="2" time="0.000634"/>
+        <testcase name="testDefaultPrivilegeDeny" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="479" assertions="1" time="0.000599"/>
+        <testcase name="testDefaultRuleSetPrivilege" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="489" assertions="2" time="0.000687"/>
+        <testcase name="testPrivilegeAllow" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="502" assertions="1" time="0.000613"/>
+        <testcase name="testPrivilegeDeny" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="513" assertions="1" time="0.000616"/>
+        <testcase name="testPrivileges" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="525" assertions="7" time="0.000857"/>
+        <testcase name="testPrivilegeAssert" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="544" assertions="2" time="0.000670"/>
+        <testcase name="testRoleDefaultDeny" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="557" assertions="1" time="0.000643"/>
+        <testcase name="testRoleDefaultRuleSet" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="569" assertions="2" time="0.000675"/>
+        <testcase name="testRoleDefaultPrivilegeDeny" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="584" assertions="1" time="0.000639"/>
+        <testcase name="testRoleDefaultRuleSetPrivilege" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="596" assertions="2" time="0.000696"/>
+        <testcase name="testRolePrivilegeAllow" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="611" assertions="1" time="0.000650"/>
+        <testcase name="testRolePrivilegeDeny" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="624" assertions="1" time="0.000666"/>
+        <testcase name="testRolePrivileges" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="638" assertions="7" time="0.000916"/>
+        <testcase name="testRolePrivilegeAssert" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="659" assertions="2" time="0.000735"/>
+        <testcase name="testRemoveDefaultDeny" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="674" assertions="2" time="0.000682"/>
+        <testcase name="testRemoveDefaultDenyAssert" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="686" assertions="2" time="0.000664"/>
+        <testcase name="testRemoveDefaultAllow" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="699" assertions="2" time="0.000659"/>
+        <testcase name="testRemoveDefaultAllowNonExistent" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="712" assertions="1" time="0.000604"/>
+        <testcase name="testRemoveDefaultDenyNonExistent" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="723" assertions="1" time="0.000579"/>
+        <testcase name="testRoleDefaultAllowRuleWithResourceDenyRule" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="736" assertions="1" time="0.000816"/>
+        <testcase name="testRoleDefaultAllowRuleWithPrivilegeDenyRule" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="754" assertions="1" time="0.000754"/>
+        <testcase name="testRulesRemove" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="769" assertions="5" time="0.000802"/>
+        <testcase name="testRuleRoleRemove" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="785" assertions="3" time="0.000892"/>
+        <testcase name="testRuleRoleRemoveAll" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="806" assertions="3" time="0.000826"/>
+        <testcase name="testRulesResourceRemove" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="827" assertions="3" time="0.000829"/>
+        <testcase name="testCMSExample" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="870" assertions="78" time="0.007907"/>
+        <testcase name="testRoleInheritanceSupportsCheckingOnlyParents" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="1038" assertions="1" time="0.000656"/>
+        <testcase name="testZf2234" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="1052" assertions="4" time="0.000974"/>
+        <testcase name="testAclPositiveForNullValNull" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="1094" assertions="1" time="0.000677"/>
+        <testcase name="testAclPositiveForNullNullNull" class="Wdv_AclBaseTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclBaseTest.php" line="1114" assertions="1" time="0.000695"/>
+      </testsuite>
+      <testsuite name="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" tests="42" assertions="41" failures="0" errors="0" time="0.033587">
+        <testcase name="testSetup" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="82" assertions="1" time="0.001146"/>
+        <testcase name="testAclHas2States" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="86" assertions="1" time="0.000937"/>
+        <testcase name="testAclHas2Roles" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="95" assertions="1" time="0.000879"/>
+        <testcase name="testAclHas2Resources" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="99" assertions="1" time="0.000896"/>
+        <testcase name="testAclPositiveForValValValVal" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="103" assertions="1" time="0.001003"/>
+        <testcase name="testAclPositiveForValValValNull" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="108" assertions="1" time="0.000999"/>
+        <testcase name="testAclPositiveForValValNullVal" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="113" assertions="1" time="0.000787"/>
+        <testcase name="testAclPositiveForValNullValVal" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="118" assertions="1" time="0.000871"/>
+        <testcase name="testAclPositiveForNullValValVal" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="123" assertions="1" time="0.000829"/>
+        <testcase name="testAclPositiveForValValNullNull" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="128" assertions="1" time="0.000729"/>
+        <testcase name="testAclPositiveForValNullValNull" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="133" assertions="1" time="0.000757"/>
+        <testcase name="testAclPositiveForNullValValNull" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="138" assertions="1" time="0.000760"/>
+        <testcase name="testAclPositiveForNullNullValVal" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="143" assertions="1" time="0.000744"/>
+        <testcase name="testAclPositiveForNullValNullVal" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="151" assertions="1" time="0.000717"/>
+        <testcase name="testAclPositiveForNullNullNullVal" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="159" assertions="1" time="0.000744"/>
+        <testcase name="testAclPositiveForNullNullValNull" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="164" assertions="1" time="0.000794"/>
+        <testcase name="testAclPositiveForNullValNullNull" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="169" assertions="1" time="0.000730"/>
+        <testcase name="testAclPositiveForValNullNullNull" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="174" assertions="1" time="0.000767"/>
+        <testcase name="testAclPositiveForNullNullNullNull" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="179" assertions="1" time="0.000782"/>
+        <testcase name="testAclNegativeForValValValVal" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="185" assertions="1" time="0.000803"/>
+        <testcase name="testAclNegativeForValValValNull" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="191" assertions="1" time="0.000771"/>
+        <testcase name="testAclNegativeForValValNullVal" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="196" assertions="1" time="0.000746"/>
+        <testcase name="testAclNegativeForValNullValVal" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="201" assertions="1" time="0.000774"/>
+        <testcase name="testAclNegativeForNullValValVal" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="206" assertions="1" time="0.000877"/>
+        <testcase name="testAclNegativeForValValNullNull" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="211" assertions="1" time="0.000912"/>
+        <testcase name="testAclNegativeForValNullValNull" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="216" assertions="1" time="0.000812"/>
+        <testcase name="testAclNegativeForNullValValNull" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="221" assertions="1" time="0.000800"/>
+        <testcase name="testAclNegativeForNullNullValVal" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="226" assertions="1" time="0.000774"/>
+        <testcase name="testAclNegativeForNullValNullVal" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="231" assertions="1" time="0.000769"/>
+        <testcase name="testAclNegativeForNullNullNullVal" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="236" assertions="1" time="0.000796"/>
+        <testcase name="testAclNegativeForNullNullValNull" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="241" assertions="1" time="0.000814"/>
+        <testcase name="testAclNegativeForNullValNullNull" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="246" assertions="1" time="0.000799"/>
+        <testcase name="testAclNegativeForValNullNullNull" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="251" assertions="1" time="0.000802"/>
+        <testcase name="testAclGuestCanNotReadArchivedUser" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="256" assertions="1" time="0.000767"/>
+        <testcase name="testAclGuestCanNotWriteArchivedUser" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="260" assertions="1" time="0.000743"/>
+        <testcase name="testAclPersonanongrataCanReadNothing" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="264" assertions="1" time="0.000753"/>
+        <testcase name="testAclPersonanongrataCanReadNothing2" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="268" assertions="1" time="0.000745"/>
+        <testcase name="testAclGuestCanWriteArchivedUserAfterAclChange" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="272" assertions="1" time="0.000744"/>
+        <testcase name="testAclForResultOfRoleDFSOnePrivilege" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="283" assertions="1" time="0.000676"/>
+        <testcase name="testAclForResultOfRoleDFSAllPrivileges" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="295" assertions="1" time="0.000706"/>
+        <testcase name="testAclWorksWithDefinedState" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="302" assertions="1" time="0.000689"/>
+        <testcase name="testAclWorksWithoutDefinedState" class="Wdv_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/AclTest.php" line="309" assertions="0" time="0.000644"/>
+      </testsuite>
+      <testsuite name="Wdv_Color_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Color/AbstractTest.php" tests="8" assertions="8" failures="0" errors="0" time="0.031053">
+        <testsuite name="Wdv_Color_AbstractTest::testContrastColorBlackAndWhite" tests="8" assertions="8" failures="0" errors="0" time="0.031053">
+          <testcase name="testContrastColorBlackAndWhite with data set #0" assertions="1" time="0.026843"/>
+          <testcase name="testContrastColorBlackAndWhite with data set #1" assertions="1" time="0.000708"/>
+          <testcase name="testContrastColorBlackAndWhite with data set #2" assertions="1" time="0.000583"/>
+          <testcase name="testContrastColorBlackAndWhite with data set #3" assertions="1" time="0.000581"/>
+          <testcase name="testContrastColorBlackAndWhite with data set #4" assertions="1" time="0.000587"/>
+          <testcase name="testContrastColorBlackAndWhite with data set #5" assertions="1" time="0.000602"/>
+          <testcase name="testContrastColorBlackAndWhite with data set #6" assertions="1" time="0.000575"/>
+          <testcase name="testContrastColorBlackAndWhite with data set #7" assertions="1" time="0.000574"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv_ColorTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/ColorTest.php" tests="2" assertions="4" failures="0" errors="0" time="0.001558">
+        <testcase name="testRGBtoHSLtoRGB" class="Wdv_ColorTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/ColorTest.php" line="40" assertions="1" time="0.000929"/>
+        <testcase name="testRgbToHtml" class="Wdv_ColorTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/ColorTest.php" line="51" assertions="3" time="0.000629"/>
+      </testsuite>
+      <testsuite name="Wdv_ContextTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/ContextTest.php" tests="1" assertions="0" failures="0" errors="0" time="0.000536">
+        <testcase name="testContext" class="Wdv_ContextTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/ContextTest.php" line="31" assertions="0" time="0.000536"/>
+      </testsuite>
+      <testsuite name="Wdvtest\Controller\Plugin\ConvertQueryParameterToAcceptHeaderPluginTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Controller/Plugin/ConvertQueryParameterToAcceptHeaderPluginTest.php" tests="3" assertions="3" failures="0" errors="0" time="0.105487">
+        <testsuite name="Wdvtest\Controller\Plugin\ConvertQueryParameterToAcceptHeaderPluginTest::testEquals" tests="3" assertions="3" failures="0" errors="0" time="0.105487">
+          <testcase name="testEquals with data set #0" assertions="1" time="0.104217"/>
+          <testcase name="testEquals with data set #1" assertions="1" time="0.000689"/>
+          <testcase name="testEquals with data set #2" assertions="1" time="0.000581"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv_Db_ReferenceHelperTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Db/ReferenceHelperTest.php" tests="6" assertions="8" failures="0" errors="0" time="0.924558">
+        <testcase name="testGettingTypeAndIdForNode" class="Wdv_Db_ReferenceHelperTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Db/ReferenceHelperTest.php" line="36" assertions="1" time="0.816727"/>
+        <testcase name="testGettingTypeAndIdForContent" class="Wdv_Db_ReferenceHelperTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Db/ReferenceHelperTest.php" line="48" assertions="1" time="0.011285"/>
+        <testcase name="testGettingTypeAndIdForProperty" class="Wdv_Db_ReferenceHelperTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Db/ReferenceHelperTest.php" line="60" assertions="1" time="0.035347"/>
+        <testcase name="testGettingTypeAndIdForObject" class="Wdv_Db_ReferenceHelperTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Db/ReferenceHelperTest.php" line="72" assertions="2" time="0.003049"/>
+        <testcase name="testGettingTypeAndIdForSimpleType" class="Wdv_Db_ReferenceHelperTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Db/ReferenceHelperTest.php" line="87" assertions="2" time="0.000764"/>
+        <testcase name="testSettingReference" class="Wdv_Db_ReferenceHelperTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Db/ReferenceHelperTest.php" line="100" assertions="1" time="0.057386"/>
+      </testsuite>
+      <testsuite name="Wdv_Db_Table_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Db/Table/AbstractTest.php" tests="2" assertions="4" failures="0" errors="0" time="0.053199">
+        <testcase name="testCreate" class="Wdv_Db_Table_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Db/Table/AbstractTest.php" line="59" assertions="2" time="0.040222"/>
+        <testcase name="testUpdate" class="Wdv_Db_Table_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Db/Table/AbstractTest.php" line="66" assertions="2" time="0.012977"/>
+      </testsuite>
+      <testsuite name="Wdv_File_Action_Pdf_Preview_Renderer_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/File/Action/Pdf/Preview/Renderer/AbstractTest.php" tests="5" assertions="28" failures="0" errors="0" time="0.020523">
+        <testcase name="testInputSetterAndGetter" class="Wdv_File_Action_Pdf_Preview_Renderer_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/File/Action/Pdf/Preview/Renderer/AbstractTest.php" line="28" assertions="4" time="0.016302"/>
+        <testcase name="testOutputSetterAndGetter" class="Wdv_File_Action_Pdf_Preview_Renderer_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/File/Action/Pdf/Preview/Renderer/AbstractTest.php" line="36" assertions="4" time="0.000995"/>
+        <testcase name="testResolutionSetterAndGetter" class="Wdv_File_Action_Pdf_Preview_Renderer_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/File/Action/Pdf/Preview/Renderer/AbstractTest.php" line="44" assertions="4" time="0.001071"/>
+        <testcase name="testOutputFormatSetterAndGetter" class="Wdv_File_Action_Pdf_Preview_Renderer_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/File/Action/Pdf/Preview/Renderer/AbstractTest.php" line="52" assertions="8" time="0.001164"/>
+        <testcase name="testBoxSetterAndGetter" class="Wdv_File_Action_Pdf_Preview_Renderer_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/File/Action/Pdf/Preview/Renderer/AbstractTest.php" line="64" assertions="8" time="0.000991"/>
+      </testsuite>
+      <testsuite name="Wdv_File_Action_Pdf_Preview_Renderer_PdfToolboxCliTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/File/Action/Pdf/Preview/Renderer/PdfToolboxCliTest.php" tests="2" assertions="4" failures="0" errors="0" time="0.093109">
+        <testcase name="testSystemCallWithRealInstance" class="Wdv_File_Action_Pdf_Preview_Renderer_PdfToolboxCliTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/File/Action/Pdf/Preview/Renderer/PdfToolboxCliTest.php" line="28" assertions="2" time="0.016214"/>
+        <testcase name="testSystemCallWithMockedInstance" class="Wdv_File_Action_Pdf_Preview_Renderer_PdfToolboxCliTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/File/Action/Pdf/Preview/Renderer/PdfToolboxCliTest.php" line="35" assertions="2" time="0.076895"/>
+      </testsuite>
+      <testsuite name="Wdv_File_FileinfoTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/File/FileinfoTest.php" tests="12" assertions="11" failures="2" errors="0" time="0.288513">
+        <testcase name="testFileInfoCanBeInstantiated" class="Wdv_File_FileinfoTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/File/FileinfoTest.php" line="31" assertions="0" time="0.028790"/>
+        <testsuite name="Wdv_File_FileinfoTest::testFileInfoReturnsCorrectTypeForZipFile" tests="11" assertions="11" failures="2" errors="0" time="0.259723">
+          <testcase name="testFileInfoReturnsCorrectTypeForZipFile with data set #0" assertions="1" time="0.003949"/>
+          <testcase name="testFileInfoReturnsCorrectTypeForZipFile with data set #1" assertions="1" time="0.047470"/>
+          <testcase name="testFileInfoReturnsCorrectTypeForZipFile with data set #2" assertions="1" time="0.014769"/>
+          <testcase name="testFileInfoReturnsCorrectTypeForZipFile with data set #3" assertions="1" time="0.086570">
+            <failure type="PHPUnit_Framework_ExpectationFailedException">Wdv_File_FileinfoTest::testFileInfoReturnsCorrectTypeForZipFile with data set #3 ('sample_iPod.m4v', 'video/mp4')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'video/mp4'
++'video/x-m4v'
+
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/File/FileinfoTest.php:47
+</failure>
+          </testcase>
+          <testcase name="testFileInfoReturnsCorrectTypeForZipFile with data set #4" assertions="1" time="0.044295"/>
+          <testcase name="testFileInfoReturnsCorrectTypeForZipFile with data set #5" assertions="1" time="0.047906"/>
+          <testcase name="testFileInfoReturnsCorrectTypeForZipFile with data set #6" assertions="1" time="0.006565"/>
+          <testcase name="testFileInfoReturnsCorrectTypeForZipFile with data set #7" assertions="1" time="0.002801"/>
+          <testcase name="testFileInfoReturnsCorrectTypeForZipFile with data set #8" assertions="1" time="0.002384">
+            <failure type="PHPUnit_Framework_ExpectationFailedException">Wdv_File_FileinfoTest::testFileInfoReturnsCorrectTypeForZipFile with data set #8 ('sample.3gp', 'video/3gpp')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'video/3gpp'
++'application/octet-stream'
+
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/File/FileinfoTest.php:47
+</failure>
+          </testcase>
+          <testcase name="testFileInfoReturnsCorrectTypeForZipFile with data set #9" assertions="1" time="0.001629"/>
+          <testcase name="testFileInfoReturnsCorrectTypeForZipFile with data set #10" assertions="1" time="0.001385"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv\Filter\AsciiTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/AsciiTest.php" tests="7" assertions="7" failures="0" errors="0" time="0.004793">
+        <testsuite name="Wdv\Filter\AsciiTest::testFilterEquals" tests="7" assertions="7" failures="0" errors="0" time="0.004793">
+          <testcase name="testFilterEquals with data set #0" assertions="1" time="0.001254"/>
+          <testcase name="testFilterEquals with data set #1" assertions="1" time="0.000597"/>
+          <testcase name="testFilterEquals with data set #2" assertions="1" time="0.000601"/>
+          <testcase name="testFilterEquals with data set #3" assertions="1" time="0.000594"/>
+          <testcase name="testFilterEquals with data set #4" assertions="1" time="0.000587"/>
+          <testcase name="testFilterEquals with data set #5" assertions="1" time="0.000592"/>
+          <testcase name="testFilterEquals with data set #6" assertions="1" time="0.000568"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv\Filter\ForbiddenCharsTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/ForbiddenCharsTest.php" tests="26" assertions="26" failures="0" errors="0" time="0.015458">
+        <testsuite name="Wdv\Filter\ForbiddenCharsTest::testFilterEquals" tests="13" assertions="13" failures="0" errors="0" time="0.008122">
+          <testcase name="testFilterEquals with data set #0" assertions="1" time="0.001002"/>
+          <testcase name="testFilterEquals with data set #1" assertions="1" time="0.000581"/>
+          <testcase name="testFilterEquals with data set #2" assertions="1" time="0.000592"/>
+          <testcase name="testFilterEquals with data set #3" assertions="1" time="0.000622"/>
+          <testcase name="testFilterEquals with data set #4" assertions="1" time="0.000588"/>
+          <testcase name="testFilterEquals with data set #5" assertions="1" time="0.000585"/>
+          <testcase name="testFilterEquals with data set #6" assertions="1" time="0.000588"/>
+          <testcase name="testFilterEquals with data set #7" assertions="1" time="0.000579"/>
+          <testcase name="testFilterEquals with data set #8" assertions="1" time="0.000600"/>
+          <testcase name="testFilterEquals with data set #9" assertions="1" time="0.000588"/>
+          <testcase name="testFilterEquals with data set #10" assertions="1" time="0.000588"/>
+          <testcase name="testFilterEquals with data set #11" assertions="1" time="0.000583"/>
+          <testcase name="testFilterEquals with data set #12" assertions="1" time="0.000626"/>
+        </testsuite>
+        <testsuite name="Wdv\Filter\ForbiddenCharsTest::testFilterEqualsCustomChar" tests="13" assertions="13" failures="0" errors="0" time="0.007336">
+          <testcase name="testFilterEqualsCustomChar with data set #0" assertions="1" time="0.000591"/>
+          <testcase name="testFilterEqualsCustomChar with data set #1" assertions="1" time="0.000578"/>
+          <testcase name="testFilterEqualsCustomChar with data set #2" assertions="1" time="0.000560"/>
+          <testcase name="testFilterEqualsCustomChar with data set #3" assertions="1" time="0.000561"/>
+          <testcase name="testFilterEqualsCustomChar with data set #4" assertions="1" time="0.000561"/>
+          <testcase name="testFilterEqualsCustomChar with data set #5" assertions="1" time="0.000561"/>
+          <testcase name="testFilterEqualsCustomChar with data set #6" assertions="1" time="0.000563"/>
+          <testcase name="testFilterEqualsCustomChar with data set #7" assertions="1" time="0.000562"/>
+          <testcase name="testFilterEqualsCustomChar with data set #8" assertions="1" time="0.000557"/>
+          <testcase name="testFilterEqualsCustomChar with data set #9" assertions="1" time="0.000558"/>
+          <testcase name="testFilterEqualsCustomChar with data set #10" assertions="1" time="0.000557"/>
+          <testcase name="testFilterEqualsCustomChar with data set #11" assertions="1" time="0.000566"/>
+          <testcase name="testFilterEqualsCustomChar with data set #12" assertions="1" time="0.000561"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv\Filter\MultipleReplaceTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/MultipleReplaceTest.php" tests="8" assertions="8" failures="0" errors="0" time="0.005315">
+        <testsuite name="Wdv\Filter\MultipleReplaceTest::testFilterEquals" tests="2" assertions="2" failures="0" errors="0" time="0.001688">
+          <testcase name="testFilterEquals with data set #0" assertions="1" time="0.001002"/>
+          <testcase name="testFilterEquals with data set #1" assertions="1" time="0.000686"/>
+        </testsuite>
+        <testsuite name="Wdv\Filter\MultipleReplaceTest::testFilterEqualsFrom" tests="2" assertions="2" failures="0" errors="0" time="0.001234">
+          <testcase name="testFilterEqualsFrom with data set #0" assertions="1" time="0.000649"/>
+          <testcase name="testFilterEqualsFrom with data set #1" assertions="1" time="0.000585"/>
+        </testsuite>
+        <testsuite name="Wdv\Filter\MultipleReplaceTest::testFilterEqualsTo" tests="2" assertions="2" failures="0" errors="0" time="0.001206">
+          <testcase name="testFilterEqualsTo with data set #0" assertions="1" time="0.000607"/>
+          <testcase name="testFilterEqualsTo with data set #1" assertions="1" time="0.000599"/>
+        </testsuite>
+        <testsuite name="Wdv\Filter\MultipleReplaceTest::testFilterEqualsFromTo" tests="2" assertions="2" failures="0" errors="0" time="0.001187">
+          <testcase name="testFilterEqualsFromTo with data set #0" assertions="1" time="0.000592"/>
+          <testcase name="testFilterEqualsFromTo with data set #1" assertions="1" time="0.000595"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv_Filter_ByteTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_ByteTest.php" tests="20" assertions="2" failures="0" errors="19" time="0.426702">
+        <testsuite name="Wdv_Filter_ByteTest::testFilterEquals" tests="18" assertions="0" failures="0" errors="18" time="0.317589">
+          <testcase name="testFilterEquals with data set #0" assertions="0" time="0.192453">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv_Filter_ByteTest::testFilterEquals with data set #0 ('5G', 5368709120)
+ErrorException: iconv_set_encoding(): Use of iconv.internal_encoding is deprecated
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Zend/Locale/Format.php:335
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:165
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:332
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:366
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Filter/Byte.php:70
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_ByteTest.php:52
+</error>
+          </testcase>
+          <testcase name="testFilterEquals with data set #1" assertions="0" time="0.006855">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv_Filter_ByteTest::testFilterEquals with data set #1 (' 5G ', 5368709120)
+ErrorException: iconv_set_encoding(): Use of iconv.internal_encoding is deprecated
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Zend/Locale/Format.php:335
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:165
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:332
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:366
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Filter/Byte.php:70
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_ByteTest.php:52
+</error>
+          </testcase>
+          <testcase name="testFilterEquals with data set #2" assertions="0" time="0.006884">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv_Filter_ByteTest::testFilterEquals with data set #2 ('5GB', 5368709120)
+ErrorException: iconv_set_encoding(): Use of iconv.internal_encoding is deprecated
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Zend/Locale/Format.php:335
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:165
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:332
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:366
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Filter/Byte.php:70
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_ByteTest.php:52
+</error>
+          </testcase>
+          <testcase name="testFilterEquals with data set #3" assertions="0" time="0.008904">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv_Filter_ByteTest::testFilterEquals with data set #3 ('5g', 5368709120)
+ErrorException: iconv_set_encoding(): Use of iconv.internal_encoding is deprecated
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Zend/Locale/Format.php:335
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:165
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:332
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:366
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Filter/Byte.php:70
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_ByteTest.php:52
+</error>
+          </testcase>
+          <testcase name="testFilterEquals with data set #4" assertions="0" time="0.007082">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv_Filter_ByteTest::testFilterEquals with data set #4 ('5gb', 5368709120)
+ErrorException: iconv_set_encoding(): Use of iconv.internal_encoding is deprecated
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Zend/Locale/Format.php:335
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:165
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:332
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:366
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Filter/Byte.php:70
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_ByteTest.php:52
+</error>
+          </testcase>
+          <testcase name="testFilterEquals with data set #5" assertions="0" time="0.006925">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv_Filter_ByteTest::testFilterEquals with data set #5 ('5M', 5242880)
+ErrorException: iconv_set_encoding(): Use of iconv.internal_encoding is deprecated
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Zend/Locale/Format.php:335
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:165
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:332
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:366
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Filter/Byte.php:70
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_ByteTest.php:52
+</error>
+          </testcase>
+          <testcase name="testFilterEquals with data set #6" assertions="0" time="0.006989">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv_Filter_ByteTest::testFilterEquals with data set #6 ('5MB', 5242880)
+ErrorException: iconv_set_encoding(): Use of iconv.internal_encoding is deprecated
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Zend/Locale/Format.php:335
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:165
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:332
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:366
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Filter/Byte.php:70
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_ByteTest.php:52
+</error>
+          </testcase>
+          <testcase name="testFilterEquals with data set #7" assertions="0" time="0.006741">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv_Filter_ByteTest::testFilterEquals with data set #7 ('5m', 5242880)
+ErrorException: iconv_set_encoding(): Use of iconv.internal_encoding is deprecated
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Zend/Locale/Format.php:335
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:165
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:332
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:366
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Filter/Byte.php:70
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_ByteTest.php:52
+</error>
+          </testcase>
+          <testcase name="testFilterEquals with data set #8" assertions="0" time="0.007315">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv_Filter_ByteTest::testFilterEquals with data set #8 ('5mb', 5242880)
+ErrorException: iconv_set_encoding(): Use of iconv.internal_encoding is deprecated
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Zend/Locale/Format.php:335
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:165
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:332
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:366
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Filter/Byte.php:70
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_ByteTest.php:52
+</error>
+          </testcase>
+          <testcase name="testFilterEquals with data set #9" assertions="0" time="0.008976">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv_Filter_ByteTest::testFilterEquals with data set #9 ('5k', 5120)
+ErrorException: iconv_set_encoding(): Use of iconv.internal_encoding is deprecated
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Zend/Locale/Format.php:335
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:165
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:332
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:366
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Filter/Byte.php:70
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_ByteTest.php:52
+</error>
+          </testcase>
+          <testcase name="testFilterEquals with data set #10" assertions="0" time="0.006789">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv_Filter_ByteTest::testFilterEquals with data set #10 ('5kB', 5120)
+ErrorException: iconv_set_encoding(): Use of iconv.internal_encoding is deprecated
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Zend/Locale/Format.php:335
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:165
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:332
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:366
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Filter/Byte.php:70
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_ByteTest.php:52
+</error>
+          </testcase>
+          <testcase name="testFilterEquals with data set #11" assertions="0" time="0.006711">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv_Filter_ByteTest::testFilterEquals with data set #11 ('5k', 5120)
+ErrorException: iconv_set_encoding(): Use of iconv.internal_encoding is deprecated
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Zend/Locale/Format.php:335
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:165
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:332
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:366
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Filter/Byte.php:70
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_ByteTest.php:52
+</error>
+          </testcase>
+          <testcase name="testFilterEquals with data set #12" assertions="0" time="0.009669">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv_Filter_ByteTest::testFilterEquals with data set #12 ('5kb', 5120)
+ErrorException: iconv_set_encoding(): Use of iconv.internal_encoding is deprecated
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Zend/Locale/Format.php:335
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:165
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:332
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:366
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Filter/Byte.php:70
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_ByteTest.php:52
+</error>
+          </testcase>
+          <testcase name="testFilterEquals with data set #13" assertions="0" time="0.007045">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv_Filter_ByteTest::testFilterEquals with data set #13 ('5120', 5120)
+ErrorException: iconv_set_encoding(): Use of iconv.internal_encoding is deprecated
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Zend/Locale/Format.php:335
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:165
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:332
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:366
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Filter/Byte.php:70
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_ByteTest.php:52
+</error>
+          </testcase>
+          <testcase name="testFilterEquals with data set #14" assertions="0" time="0.007476">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv_Filter_ByteTest::testFilterEquals with data set #14 ('5120B', 5120)
+ErrorException: iconv_set_encoding(): Use of iconv.internal_encoding is deprecated
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Zend/Locale/Format.php:335
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:165
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:332
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:366
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Filter/Byte.php:70
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_ByteTest.php:52
+</error>
+          </testcase>
+          <testcase name="testFilterEquals with data set #15" assertions="0" time="0.007095">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv_Filter_ByteTest::testFilterEquals with data set #15 ('5120b', 5120)
+ErrorException: iconv_set_encoding(): Use of iconv.internal_encoding is deprecated
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Zend/Locale/Format.php:335
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:165
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:332
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:366
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Filter/Byte.php:70
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_ByteTest.php:52
+</error>
+          </testcase>
+          <testcase name="testFilterEquals with data set #16" assertions="0" time="0.006706">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv_Filter_ByteTest::testFilterEquals with data set #16 (5120, 5120)
+ErrorException: iconv_set_encoding(): Use of iconv.internal_encoding is deprecated
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Zend/Locale/Format.php:335
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:165
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:332
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:366
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Filter/Byte.php:70
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_ByteTest.php:52
+</error>
+          </testcase>
+          <testcase name="testFilterEquals with data set #17" assertions="0" time="0.006974">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv_Filter_ByteTest::testFilterEquals with data set #17 (5120.0, 5120)
+ErrorException: iconv_set_encoding(): Use of iconv.internal_encoding is deprecated
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Zend/Locale/Format.php:335
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:165
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:332
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:366
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Filter/Byte.php:70
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_ByteTest.php:52
+</error>
+          </testcase>
+        </testsuite>
+        <testcase name="testFilterInternalType" class="Wdv_Filter_ByteTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_ByteTest.php" line="92" assertions="0" time="0.006868">
+          <error type="PHPUnit_Framework_ExceptionWrapper">Wdv_Filter_ByteTest::testFilterInternalType
+ErrorException: iconv_set_encoding(): Use of iconv.internal_encoding is deprecated
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Zend/Locale/Format.php:335
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:165
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:332
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Measure/Abstract.php:366
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Filter/Byte.php:70
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_ByteTest.php:96
+</error>
+        </testcase>
+        <testcase name="testExceptionHasRightMessage" class="Wdv_Filter_ByteTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_ByteTest.php" line="105" assertions="2" time="0.102245"/>
+      </testsuite>
+      <testsuite name="Wdv_Filter_HyphenCleanerTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_HyphenCleanerTest.php" tests="6" assertions="6" failures="0" errors="0" time="0.026483">
+        <testsuite name="Wdv_Filter_HyphenCleanerTest::testHyphenCleanerFilter" tests="6" assertions="6" failures="0" errors="0" time="0.026483">
+          <testcase name="testHyphenCleanerFilter with data set #0" assertions="1" time="0.022841"/>
+          <testcase name="testHyphenCleanerFilter with data set #1" assertions="1" time="0.000902"/>
+          <testcase name="testHyphenCleanerFilter with data set #2" assertions="1" time="0.000794"/>
+          <testcase name="testHyphenCleanerFilter with data set #3" assertions="1" time="0.000650"/>
+          <testcase name="testHyphenCleanerFilter with data set #4" assertions="1" time="0.000649"/>
+          <testcase name="testHyphenCleanerFilter with data set #5" assertions="1" time="0.000647"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv_Filter_UTF8CleanerTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Filter/Wdv_Filter_UTF8CleanerTest.php" tests="7" assertions="7" failures="0" errors="0" time="0.007146">
+        <testsuite name="Wdv_Filter_UTF8CleanerTest::testUtf8Filter" tests="3" assertions="3" failures="0" errors="0" time="0.004808">
+          <testcase name="testUtf8Filter with data set #0" assertions="1" time="0.001070"/>
+          <testcase name="testUtf8Filter with data set #1" assertions="1" time="0.003081"/>
+          <testcase name="testUtf8Filter with data set #2" assertions="1" time="0.000657"/>
+        </testsuite>
+        <testsuite name="Wdv_Filter_UTF8CleanerTest::testRemovalOfUnfollowedStartBytes" tests="2" assertions="2" failures="0" errors="0" time="0.001178">
+          <testcase name="testRemovalOfUnfollowedStartBytes with data set #0" assertions="1" time="0.000597"/>
+          <testcase name="testRemovalOfUnfollowedStartBytes with data set #1" assertions="1" time="0.000581"/>
+        </testsuite>
+        <testsuite name="Wdv_Filter_UTF8CleanerTest::testRemovalOfUnstartedFollowerBytes" tests="2" assertions="2" failures="0" errors="0" time="0.001160">
+          <testcase name="testRemovalOfUnstartedFollowerBytes with data set #0" assertions="1" time="0.000575"/>
+          <testcase name="testRemovalOfUnstartedFollowerBytes with data set #1" assertions="1" time="0.000585"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv_Flow_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/AbstractTest.php" tests="3" assertions="12" failures="0" errors="0" time="0.097742">
+        <testcase name="testSettingAndGettingName" class="Wdv_Flow_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/AbstractTest.php" line="57" assertions="4" time="0.037341"/>
+        <testcase name="testConditions" class="Wdv_Flow_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/AbstractTest.php" line="66" assertions="4" time="0.059297"/>
+        <testcase name="testTransitions" class="Wdv_Flow_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/AbstractTest.php" line="78" assertions="4" time="0.001104"/>
+      </testsuite>
+      <testsuite name="Wdv_Flow_Condition_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/Condition/AbstractTest.php" tests="3" assertions="15" failures="0" errors="0" time="0.073328">
+        <testcase name="testSettingAndGettingName" class="Wdv_Flow_Condition_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/Condition/AbstractTest.php" line="40" assertions="4" time="0.001763"/>
+        <testcase name="testSettingAndGettingDescription" class="Wdv_Flow_Condition_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/Condition/AbstractTest.php" line="49" assertions="4" time="0.000767"/>
+        <testcase name="testSettingAndGettingLogo" class="Wdv_Flow_Condition_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/Condition/AbstractTest.php" line="58" assertions="7" time="0.070798"/>
+      </testsuite>
+      <testsuite name="Wdv_Flow_DbTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/DbTest.php" tests="3" assertions="11" failures="0" errors="0" time="0.104812">
+        <testcase name="testSettingValues" class="Wdv_Flow_DbTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/DbTest.php" line="83" assertions="3" time="0.077009"/>
+        <testcase name="testUpdatingValues" class="Wdv_Flow_DbTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/DbTest.php" line="94" assertions="4" time="0.015121"/>
+        <testcase name="testDeletingValue" class="Wdv_Flow_DbTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/DbTest.php" line="107" assertions="4" time="0.012682"/>
+      </testsuite>
+      <testsuite name="Wdv_Flow_PreconditionListTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/PreconditionListTest.php" tests="6" assertions="30" failures="0" errors="0" time="0.019753">
+        <testcase name="testInterfaces" class="Wdv_Flow_PreconditionListTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/PreconditionListTest.php" line="32" assertions="2" time="0.000708"/>
+        <testcase name="testIteratorInterface" class="Wdv_Flow_PreconditionListTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/PreconditionListTest.php" line="38" assertions="10" time="0.015456"/>
+        <testcase name="testCountableInterface" class="Wdv_Flow_PreconditionListTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/PreconditionListTest.php" line="64" assertions="4" time="0.000743"/>
+        <testcase name="testGetterAndSetter" class="Wdv_Flow_PreconditionListTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/PreconditionListTest.php" line="80" assertions="11" time="0.001073"/>
+        <testcase name="testChangingValues" class="Wdv_Flow_PreconditionListTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/PreconditionListTest.php" line="104" assertions="2" time="0.000660"/>
+        <testcase name="testSerialization" class="Wdv_Flow_PreconditionListTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/PreconditionListTest.php" line="115" assertions="1" time="0.001113"/>
+      </testsuite>
+      <testsuite name="Wdv_Flow_ListAbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/TransitionListTest.php" tests="4" assertions="34" failures="0" errors="0" time="0.002774">
+        <testcase name="testInterfaces" class="Wdv_Flow_ListAbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/TransitionListTest.php" line="32" assertions="3" time="0.000628"/>
+        <testcase name="testIteratorInterface" class="Wdv_Flow_ListAbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/TransitionListTest.php" line="40" assertions="10" time="0.000695"/>
+        <testcase name="testCountableInterface" class="Wdv_Flow_ListAbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/TransitionListTest.php" line="62" assertions="4" time="0.000615"/>
+        <testcase name="testGetterAndSetter" class="Wdv_Flow_ListAbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Flow/TransitionListTest.php" line="75" assertions="17" time="0.000836"/>
+      </testsuite>
+      <testsuite name="Wdv\Grid\BinaryAccessTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Grid/BinaryAccessTest.php" tests="5" assertions="5" failures="0" errors="0" time="0.032111">
+        <testsuite name="Wdv\Grid\BinaryAccessTest::testBinaryAccessWorks" tests="5" assertions="5" failures="0" errors="0" time="0.032111">
+          <testcase name="testBinaryAccessWorks with data set #0" assertions="1" time="0.028786"/>
+          <testcase name="testBinaryAccessWorks with data set #1" assertions="1" time="0.000955"/>
+          <testcase name="testBinaryAccessWorks with data set #2" assertions="1" time="0.000858"/>
+          <testcase name="testBinaryAccessWorks with data set #3" assertions="1" time="0.000836"/>
+          <testcase name="testBinaryAccessWorks with data set #4" assertions="1" time="0.000676"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv_Grid_BinaryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Grid/BinaryTest.php" tests="12" assertions="13" failures="0" errors="0" time="0.018326">
+        <testcase name="testGridCanBeCreatedCorrectlyWithHex" class="Wdv_Grid_BinaryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Grid/BinaryTest.php" line="40" assertions="2" time="0.007776"/>
+        <testcase name="testGridThrowsExceptionOnWronParameters" class="Wdv_Grid_BinaryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Grid/BinaryTest.php" line="53" assertions="1" time="0.000724"/>
+        <testsuite name="Wdv_Grid_BinaryTest::testGridReturnsCorrectBox" tests="7" assertions="7" failures="0" errors="0" time="0.007953">
+          <testcase name="testGridReturnsCorrectBox with data set #0" assertions="1" time="0.000990"/>
+          <testcase name="testGridReturnsCorrectBox with data set #1" assertions="1" time="0.001050"/>
+          <testcase name="testGridReturnsCorrectBox with data set #2" assertions="1" time="0.001334"/>
+          <testcase name="testGridReturnsCorrectBox with data set #3" assertions="1" time="0.000964"/>
+          <testcase name="testGridReturnsCorrectBox with data set #4" assertions="1" time="0.001302"/>
+          <testcase name="testGridReturnsCorrectBox with data set #5" assertions="1" time="0.001266"/>
+          <testcase name="testGridReturnsCorrectBox with data set #6" assertions="1" time="0.001047"/>
+        </testsuite>
+        <testsuite name="Wdv_Grid_BinaryTest::testGridReturnsCorrectSegment" tests="3" assertions="3" failures="0" errors="0" time="0.001873">
+          <testcase name="testGridReturnsCorrectSegment with data set #0" assertions="1" time="0.000673"/>
+          <testcase name="testGridReturnsCorrectSegment with data set #1" assertions="1" time="0.000615"/>
+          <testcase name="testGridReturnsCorrectSegment with data set #2" assertions="1" time="0.000585"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv\Grid\HexAccessTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Grid/HexAccessTest.php" tests="2" assertions="2" failures="2" errors="0" time="0.004045">
+        <testsuite name="Wdv\Grid\HexAccessTest::testBinaryAccessWorks" tests="2" assertions="2" failures="2" errors="0" time="0.004045">
+          <testcase name="testBinaryAccessWorks with data set #0" assertions="1" time="0.002213">
+            <failure type="PHPUnit_Framework_ExpectationFailedException">Wdv\Grid\HexAccessTest::testBinaryAccessWorks with data set #0 (Wdv\Grid\Element Object (...), '9')
+Failed asserting that two strings are identical.
+--- Expected
++++ Actual
+@@ @@
+-9
++000000200000000000000000000000000000
+
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Grid/HexAccessTest.php:44
+</failure>
+          </testcase>
+          <testcase name="testBinaryAccessWorks with data set #1" assertions="1" time="0.001832">
+            <failure type="PHPUnit_Framework_ExpectationFailedException">Wdv\Grid\HexAccessTest::testBinaryAccessWorks with data set #1 (Wdv\Grid\Element Object (...), '8')
+Failed asserting that two strings are identical.
+--- Expected
++++ Actual
+@@ @@
+-8
++000000200000000000000000000000000000
+
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Grid/HexAccessTest.php:44
+</failure>
+          </testcase>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv\Grid\SegmenterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Grid/SegmenterTest.php" tests="8" assertions="8" failures="0" errors="0" time="0.010444">
+        <testsuite name="Wdv\Grid\SegmenterTest::testGridReturnsCorrectBox" tests="8" assertions="8" failures="0" errors="0" time="0.010444">
+          <testcase name="testGridReturnsCorrectBox with data set #0" assertions="1" time="0.001816"/>
+          <testcase name="testGridReturnsCorrectBox with data set #1" assertions="1" time="0.001174"/>
+          <testcase name="testGridReturnsCorrectBox with data set #2" assertions="1" time="0.001342"/>
+          <testcase name="testGridReturnsCorrectBox with data set #3" assertions="1" time="0.001263"/>
+          <testcase name="testGridReturnsCorrectBox with data set #4" assertions="1" time="0.001248"/>
+          <testcase name="testGridReturnsCorrectBox with data set #5" assertions="1" time="0.001161"/>
+          <testcase name="testGridReturnsCorrectBox with data set #6" assertions="1" time="0.001223"/>
+          <testcase name="testGridReturnsCorrectBox with data set #7" assertions="1" time="0.001217"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="WdvTest\Helper\ConfluenceTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Helper/ConfluenceTest.php" tests="2" assertions="3" failures="0" errors="0" time="0.073256">
+        <testcase name="testThatFailingPDOThrowsException" class="WdvTest\Helper\ConfluenceTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Helper/ConfluenceTest.php" line="39" assertions="1" time="0.045792"/>
+        <testcase name="testThatCorrectValueIsReturned" class="WdvTest\Helper\ConfluenceTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Helper/ConfluenceTest.php" line="54" assertions="2" time="0.027464"/>
+      </testsuite>
+      <testsuite name="Wdv_Helper_Converter_HtmlToPdflibTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Helper/Converter/HtmlToPdflibTest.php" tests="4" assertions="4" failures="4" errors="0" time="0.021447">
+        <testsuite name="Wdv_Helper_Converter_HtmlToPdflibTest::testConversion" tests="4" assertions="4" failures="4" errors="0" time="0.021447">
+          <testcase name="testConversion with data set #0" assertions="1" time="0.016593">
+            <failure type="PHPUnit_Framework_ExpectationFailedException">Wdv_Helper_Converter_HtmlToPdflibTest::testConversion with data set #0 ('&lt;p&gt;Test &lt;strong&gt;strong and &lt;/...ed&lt;/p&gt;', '&lt;&amp;p&gt;Test &lt;&amp;bold&gt;strong and &lt;&amp;...mbined')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'&lt;&amp;p&gt;Test &lt;&amp;bold&gt;strong and &lt;&amp;p&gt;&lt;&amp;italic&gt;Italic texts&lt;&amp;p&gt; combined'
++'&lt;&amp;p&gt;Test &lt;&amp;bold&gt;strong and &lt;&amp;p&gt;&lt;&amp;italic&gt;Italic texts&lt;&amp;p&gt; combined
++'
+
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Helper/Converter/HtmlToPdflibTest.php:41
+</failure>
+            <system-out>    </system-out>
+          </testcase>
+          <testcase name="testConversion with data set #1" assertions="1" time="0.001645">
+            <failure type="PHPUnit_Framework_ExpectationFailedException">Wdv_Helper_Converter_HtmlToPdflibTest::testConversion with data set #1 ('&lt;p&gt;Test &lt;strong&gt;strong and &lt;e...ed&lt;/p&gt;', '&lt;&amp;p&gt;Test &lt;&amp;bold&gt;strong and &lt;&amp;...mbined')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'&lt;&amp;p&gt;Test &lt;&amp;bold&gt;strong and &lt;&amp;bolditalic&gt;Italic&lt;&amp;bold&gt;&lt;&amp;p&gt;&lt;&amp;italic&gt; texts&lt;&amp;p&gt; combined'
++'&lt;&amp;p&gt;Test &lt;&amp;bold&gt;strong and &lt;&amp;bolditalic&gt;Italic&lt;&amp;bold&gt;&lt;&amp;p&gt;&lt;&amp;italic&gt; texts&lt;&amp;p&gt; combined
++'
+
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Helper/Converter/HtmlToPdflibTest.php:41
+</failure>
+          </testcase>
+          <testcase name="testConversion with data set #2" assertions="1" time="0.001564">
+            <failure type="PHPUnit_Framework_ExpectationFailedException">Wdv_Helper_Converter_HtmlToPdflibTest::testConversion with data set #2 ('&lt;p&gt;Test &lt;strong style="test"&gt;...ed&lt;/p&gt;', '&lt;&amp;p&gt;Test &lt;&amp;bold&gt;strong and &lt;&amp;...mbined')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'&lt;&amp;p&gt;Test &lt;&amp;bold&gt;strong and &lt;&amp;bolditalic&gt;Italic&lt;&amp;bold&gt;&lt;&amp;p&gt;&lt;&amp;italic&gt; texts&lt;&amp;p&gt; combined'
++'&lt;&amp;p&gt;Test &lt;&amp;bold&gt;strong and &lt;&amp;bolditalic&gt;Italic&lt;&amp;bold&gt;&lt;&amp;p&gt;&lt;&amp;italic&gt; texts&lt;&amp;p&gt; combined
++'
+
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Helper/Converter/HtmlToPdflibTest.php:41
+</failure>
+          </testcase>
+          <testcase name="testConversion with data set #3" assertions="1" time="0.001646">
+            <failure type="PHPUnit_Framework_ExpectationFailedException">Wdv_Helper_Converter_HtmlToPdflibTest::testConversion with data set #3 ('&lt;p&gt;Täst &lt;strong style="test"...ed&lt;/p&gt;', '&lt;&amp;p&gt;Täst &lt;&amp;bold&gt;ströng ünd...mbined')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'&lt;&amp;p&gt;Täst &lt;&amp;bold&gt;ströng ünd &lt;&amp;bolditalic&gt;Italic&lt;&amp;bold&gt;&lt;&amp;p&gt;&lt;&amp;italic&gt; texts&lt;&amp;p&gt; combined'
++'&lt;&amp;p&gt;Täst &lt;&amp;bold&gt;ströng ünd &lt;&amp;bolditalic&gt;Italic&lt;&amp;bold&gt;&lt;&amp;p&gt;&lt;&amp;italic&gt; texts&lt;&amp;p&gt; combined
++'
+
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Helper/Converter/HtmlToPdflibTest.php:41
+</failure>
+          </testcase>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv_Helper_DimensionViaRatioTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Helper/DimensionViaRatioTest.php" tests="12" assertions="15" failures="0" errors="0" time="0.073571">
+        <testcase name="testSettingDimension" class="Wdv_Helper_DimensionViaRatioTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Helper/DimensionViaRatioTest.php" line="35" assertions="4" time="0.051782"/>
+        <testsuite name="Wdv_Helper_DimensionViaRatioTest::testGettingRatio" tests="5" assertions="5" failures="0" errors="0" time="0.014043">
+          <testcase name="testGettingRatio with data set #0" assertions="1" time="0.008178"/>
+          <testcase name="testGettingRatio with data set #1" assertions="1" time="0.001779"/>
+          <testcase name="testGettingRatio with data set #2" assertions="1" time="0.001449"/>
+          <testcase name="testGettingRatio with data set #3" assertions="1" time="0.001328"/>
+          <testcase name="testGettingRatio with data set #4" assertions="1" time="0.001309"/>
+        </testsuite>
+        <testsuite name="Wdv_Helper_DimensionViaRatioTest::testGettingHeightByRatio" tests="3" assertions="3" failures="0" errors="0" time="0.004012">
+          <testcase name="testGettingHeightByRatio with data set #0" assertions="1" time="0.001285"/>
+          <testcase name="testGettingHeightByRatio with data set #1" assertions="1" time="0.001340"/>
+          <testcase name="testGettingHeightByRatio with data set #2" assertions="1" time="0.001387"/>
+        </testsuite>
+        <testsuite name="Wdv_Helper_DimensionViaRatioTest::testGettingWidthByRatio" tests="3" assertions="3" failures="0" errors="0" time="0.003734">
+          <testcase name="testGettingWidthByRatio with data set #0" assertions="1" time="0.001258"/>
+          <testcase name="testGettingWidthByRatio with data set #1" assertions="1" time="0.001279"/>
+          <testcase name="testGettingWidthByRatio with data set #2" assertions="1" time="0.001197"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv_Helper_PageformatTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Helper/PageformatTest.php" tests="1" assertions="159" failures="0" errors="0" time="0.016086">
+        <testcase name="testPageFormatGetsTranslatedCorrectly" class="Wdv_Helper_PageformatTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Helper/PageformatTest.php" line="30" assertions="159" time="0.016086"/>
+      </testsuite>
+      <testsuite name="Wdv\Helper\ParensParserTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Helper/ParensParserTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.023070">
+        <testcase name="testParensParser" class="Wdv\Helper\ParensParserTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Helper/ParensParserTest.php" line="37" assertions="1" time="0.023070"/>
+      </testsuite>
+      <testsuite name="Wdv_Helper_StringTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Helper/StringTest.php" tests="11" assertions="13" failures="0" errors="0" time="0.007117">
+        <testcase name="testContinuousArrayIsConverted" class="Wdv_Helper_StringTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Helper/StringTest.php" line="30" assertions="2" time="0.000901"/>
+        <testcase name="testNonContinuousArrayIsConverted" class="Wdv_Helper_StringTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Helper/StringTest.php" line="38" assertions="2" time="0.000796"/>
+        <testsuite name="Wdv_Helper_StringTest::testRealPath" tests="6" assertions="6" failures="0" errors="0" time="0.003671">
+          <testcase name="testRealPath with data set #0" assertions="1" time="0.000752"/>
+          <testcase name="testRealPath with data set #1" assertions="1" time="0.000651"/>
+          <testcase name="testRealPath with data set #2" assertions="1" time="0.000552"/>
+          <testcase name="testRealPath with data set #3" assertions="1" time="0.000567"/>
+          <testcase name="testRealPath with data set #4" assertions="1" time="0.000583"/>
+          <testcase name="testRealPath with data set #5" assertions="1" time="0.000566"/>
+        </testsuite>
+        <testsuite name="Wdv_Helper_StringTest::testConvertHex" tests="3" assertions="3" failures="0" errors="0" time="0.001749">
+          <testcase name="testConvertHex with data set #0" assertions="1" time="0.000616"/>
+          <testcase name="testConvertHex with data set #1" assertions="1" time="0.000573"/>
+          <testcase name="testConvertHex with data set #2" assertions="1" time="0.000560"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv_Helper_SystemCallTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Helper/SystemCallTest.php" tests="3" assertions="19" failures="0" errors="0" time="0.053117">
+        <testcase name="testCreationOfClass" class="Wdv_Helper_SystemCallTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Helper/SystemCallTest.php" line="57" assertions="4" time="0.000727"/>
+        <testcase name="testCall" class="Wdv_Helper_SystemCallTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Helper/SystemCallTest.php" line="65" assertions="13" time="0.051644"/>
+        <testcase name="testFactoryCall" class="Wdv_Helper_SystemCallTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Helper/SystemCallTest.php" line="86" assertions="2" time="0.000746"/>
+      </testsuite>
+      <testsuite name="WdvTest\Helper\TextTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Helper/TextTest.php" tests="2" assertions="2" failures="1" errors="0" time="0.031981">
+        <testsuite name="WdvTest\Helper\TextTest::testThatConversionOfHtmlToTextWorksAsExpected" tests="2" assertions="2" failures="1" errors="0" time="0.031981">
+          <testcase name="testThatConversionOfHtmlToTextWorksAsExpected with data set #0" assertions="1" time="0.030569"/>
+          <testcase name="testThatConversionOfHtmlToTextWorksAsExpected with data set #1" assertions="1" time="0.001412">
+            <failure type="PHPUnit_Framework_ExpectationFailedException">WdvTest\Helper\TextTest::testThatConversionOfHtmlToTextWorksAsExpected with data set #1 ('&lt;h1&gt;test&lt;/h1&gt;&lt;p&gt;test&lt;/p&gt;', 'test\n\ntest')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'test
+-
+-test'
++'testtest'
+
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Helper/TextTest.php:35
+</failure>
+          </testcase>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv_Node_Abstract_DbobjectTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Node/Abstract/DbobjectTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.000705">
+        <testsuite name="Wdv_Node_Abstract_DbobjectTest::testAddValue" tests="1" assertions="1" failures="0" errors="0" time="0.000705">
+          <testcase name="testAddValue with data set #0" assertions="1" time="0.000705"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv_Node_Abstract_ListTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Node/Abstract/ListTest.php" tests="0" assertions="0" failures="0" errors="0" time="0.000000"/>
+      <testsuite name="Wdv_Node_Contact_GroupTypeTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Node/Contact/GroupTypeTest.php" tests="0" assertions="0" failures="0" errors="0" time="0.000000"/>
+      <testsuite name="Wdv_Node_RegionTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Node/RegionTest.php" tests="0" assertions="0" failures="0" errors="0" time="0.000000">
+        <testsuite name="Wdv_Node_RegionTest::testRegionValidity" tests="0" assertions="0" failures="0" errors="0" time="0.000000"/>
+      </testsuite>
+      <testsuite name="Wdv_Node_TreeNodeTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Node/TreeNodeTest.php" tests="0" assertions="0" failures="0" errors="0" time="0.000000"/>
+      <testsuite name="Wdv_Notification_NotificationRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Notification/NotificationRegistryTest.php" tests="5" assertions="8" failures="0" errors="0" time="0.059254">
+        <testcase name="testNotificationRegistryObjectGetsCreated" class="Wdv_Notification_NotificationRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Notification/NotificationRegistryTest.php" line="81" assertions="2" time="0.049322"/>
+        <testcase name="testNotificationRegistryAdding" class="Wdv_Notification_NotificationRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Notification/NotificationRegistryTest.php" line="87" assertions="1" time="0.003093"/>
+        <testcase name="testNotificationRegistryRemoving" class="Wdv_Notification_NotificationRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Notification/NotificationRegistryTest.php" line="92" assertions="2" time="0.003130"/>
+        <testcase name="testCreateObjectWithConfig" class="Wdv_Notification_NotificationRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Notification/NotificationRegistryTest.php" line="101" assertions="2" time="0.001678"/>
+        <testcase name="testNotificationAddingRegistryDb" class="Wdv_Notification_NotificationRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Notification/NotificationRegistryTest.php" line="108" assertions="1" time="0.002031"/>
+      </testsuite>
+      <testsuite name="Wdv\PDFlib\OptionsTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/PDFlib/OptionsTest.php" tests="2" assertions="2" failures="0" errors="0" time="0.024585">
+        <testcase name="testCreation" class="Wdv\PDFlib\OptionsTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/PDFlib/OptionsTest.php" line="38" assertions="1" time="0.023850"/>
+        <testcase name="testSettingOptionsToStringWorks" class="Wdv\PDFlib\OptionsTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/PDFlib/OptionsTest.php" line="43" assertions="1" time="0.000735"/>
+      </testsuite>
+      <testsuite name="Wdv\Pageplan\FoldingManual\DefaultManualTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php" tests="30" assertions="0" failures="0" errors="30" time="0.027634">
+        <testsuite name="Wdv\Pageplan\FoldingManual\DefaultManualTest::testLeftConnectedPage" tests="15" assertions="0" failures="0" errors="15" time="0.012730">
+          <testcase name="testLeftConnectedPage with data set #0" assertions="0" time="0.000847">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testLeftConnectedPage with data set #0 (1, false, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 52
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:52
+</error>
+          </testcase>
+          <testcase name="testLeftConnectedPage with data set #1" assertions="0" time="0.000749">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testLeftConnectedPage with data set #1 (2, false, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 52
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:52
+</error>
+          </testcase>
+          <testcase name="testLeftConnectedPage with data set #2" assertions="0" time="0.001029">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testLeftConnectedPage with data set #2 (3, true, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 52
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:52
+</error>
+          </testcase>
+          <testcase name="testLeftConnectedPage with data set #3" assertions="0" time="0.000866">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testLeftConnectedPage with data set #3 (4, false, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 52
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:52
+</error>
+          </testcase>
+          <testcase name="testLeftConnectedPage with data set #4" assertions="0" time="0.000783">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testLeftConnectedPage with data set #4 (5, true, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 52
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:52
+</error>
+          </testcase>
+          <testcase name="testLeftConnectedPage with data set #5" assertions="0" time="0.000869">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testLeftConnectedPage with data set #5 (6, false, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 52
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:52
+</error>
+          </testcase>
+          <testcase name="testLeftConnectedPage with data set #6" assertions="0" time="0.000775">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testLeftConnectedPage with data set #6 (7, true, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 52
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:52
+</error>
+          </testcase>
+          <testcase name="testLeftConnectedPage with data set #7" assertions="0" time="0.000805">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testLeftConnectedPage with data set #7 (8, false, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 52
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:52
+</error>
+          </testcase>
+          <testcase name="testLeftConnectedPage with data set #8" assertions="0" time="0.000758">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testLeftConnectedPage with data set #8 (16, false, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 52
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:52
+</error>
+          </testcase>
+          <testcase name="testLeftConnectedPage with data set #9" assertions="0" time="0.000739">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testLeftConnectedPage with data set #9 (1, false, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 52
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:52
+</error>
+          </testcase>
+          <testcase name="testLeftConnectedPage with data set #10" assertions="0" time="0.000723">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testLeftConnectedPage with data set #10 (2, false, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 52
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:52
+</error>
+          </testcase>
+          <testcase name="testLeftConnectedPage with data set #11" assertions="0" time="0.000726">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testLeftConnectedPage with data set #11 (3, true, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 52
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:52
+</error>
+          </testcase>
+          <testcase name="testLeftConnectedPage with data set #12" assertions="0" time="0.000703">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testLeftConnectedPage with data set #12 (4, true, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 52
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:52
+</error>
+          </testcase>
+          <testcase name="testLeftConnectedPage with data set #13" assertions="0" time="0.001248">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testLeftConnectedPage with data set #13 (5, false, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 52
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:52
+</error>
+          </testcase>
+          <testcase name="testLeftConnectedPage with data set #14" assertions="0" time="0.001110">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testLeftConnectedPage with data set #14 (6, true, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 52
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:52
+</error>
+          </testcase>
+        </testsuite>
+        <testsuite name="Wdv\Pageplan\FoldingManual\DefaultManualTest::testRightConnectedPage" tests="15" assertions="0" failures="0" errors="15" time="0.014904">
+          <testcase name="testRightConnectedPage with data set #0" assertions="0" time="0.000752">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testRightConnectedPage with data set #0 (1, false, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 95
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:95
+</error>
+          </testcase>
+          <testcase name="testRightConnectedPage with data set #1" assertions="0" time="0.000737">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testRightConnectedPage with data set #1 (2, true, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 95
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:95
+</error>
+          </testcase>
+          <testcase name="testRightConnectedPage with data set #2" assertions="0" time="0.000719">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testRightConnectedPage with data set #2 (3, false, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 95
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:95
+</error>
+          </testcase>
+          <testcase name="testRightConnectedPage with data set #3" assertions="0" time="0.000732">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testRightConnectedPage with data set #3 (4, true, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 95
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:95
+</error>
+          </testcase>
+          <testcase name="testRightConnectedPage with data set #4" assertions="0" time="0.000753">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testRightConnectedPage with data set #4 (5, false, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 95
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:95
+</error>
+          </testcase>
+          <testcase name="testRightConnectedPage with data set #5" assertions="0" time="0.000764">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testRightConnectedPage with data set #5 (6, true, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 95
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:95
+</error>
+          </testcase>
+          <testcase name="testRightConnectedPage with data set #6" assertions="0" time="0.000734">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testRightConnectedPage with data set #6 (7, false, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 95
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:95
+</error>
+          </testcase>
+          <testcase name="testRightConnectedPage with data set #7" assertions="0" time="0.000750">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testRightConnectedPage with data set #7 (8, true, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 95
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:95
+</error>
+          </testcase>
+          <testcase name="testRightConnectedPage with data set #8" assertions="0" time="0.000718">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testRightConnectedPage with data set #8 (16, false, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 95
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:95
+</error>
+          </testcase>
+          <testcase name="testRightConnectedPage with data set #9" assertions="0" time="0.000747">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testRightConnectedPage with data set #9 (1, false, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 95
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:95
+</error>
+          </testcase>
+          <testcase name="testRightConnectedPage with data set #10" assertions="0" time="0.000763">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testRightConnectedPage with data set #10 (2, true, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 95
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:95
+</error>
+          </testcase>
+          <testcase name="testRightConnectedPage with data set #11" assertions="0" time="0.000721">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testRightConnectedPage with data set #11 (3, true, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 95
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:95
+</error>
+          </testcase>
+          <testcase name="testRightConnectedPage with data set #12" assertions="0" time="0.001070">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testRightConnectedPage with data set #12 (4, false, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 95
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:95
+</error>
+          </testcase>
+          <testcase name="testRightConnectedPage with data set #13" assertions="0" time="0.004144">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testRightConnectedPage with data set #13 (5, true, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 95
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:95
+</error>
+          </testcase>
+          <testcase name="testRightConnectedPage with data set #14" assertions="0" time="0.000800">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\FoldingManual\DefaultManualTest::testRightConnectedPage with data set #14 (6, false, Wdv\Pageplan\FoldingManual\Configuration Object (...))
+TypeError: Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php on line 95
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManual.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/DefaultManualTest.php:95
+</error>
+          </testcase>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv\Pageplan\FoldingManual\FoldingManualListTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/FoldingManualListTest.php" tests="2" assertions="2" failures="1" errors="0" time="0.194755">
+        <testcase name="testInstantiation" class="Wdv\Pageplan\FoldingManual\FoldingManualListTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/FoldingManualListTest.php" line="37" assertions="2" time="0.192971">
+          <failure type="PHPUnit_Framework_ExpectationFailedException">Wdv\Pageplan\FoldingManual\FoldingManualListTest::testInstantiation
+Org_Heigl\FileFinder\ClassMapList Object (...) does not match expected type "array".
+
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/FoldingManualListTest.php:47
+</failure>
+        </testcase>
+        <testcase name="testIteration" class="Wdv\Pageplan\FoldingManual\FoldingManualListTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/FoldingManual/FoldingManualListTest.php" line="50" assertions="0" time="0.001784"/>
+      </testsuite>
+      <testsuite name="Wdv\Pageplan\LayoutCalculatorTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/LayoutCalculatorTest.php" tests="1" assertions="0" failures="1" errors="0" time="0.027897">
+        <testsuite name="Wdv\Pageplan\LayoutCalculatorTest::testPagenumberAlignment" tests="1" assertions="0" failures="1" errors="0" time="0.027897">
+          <testcase name="Warning" assertions="0" time="0.027897">
+            <warning type="PHPUnit_Framework_Warning">Warning
+The data provider specified for Wdv\Pageplan\LayoutCalculatorTest::testPagenumberAlignment is invalid.
+Argument 1 passed to Wdv\Pageplan\FoldingManual\DefaultManual::__construct() must be an instance of Wdv\Pageplan\FoldingManual\Configuration, instance of Zend_Config given, called in /Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/LayoutCalculatorTest.php on line 66
+
+</warning>
+          </testcase>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv\Pageplan\MeasurementsTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/MeasurementsTest.php" tests="12" assertions="84" failures="0" errors="0" time="0.027941">
+        <testsuite name="Wdv\Pageplan\MeasurementsTest::testSettingValues" tests="12" assertions="84" failures="0" errors="0" time="0.027941">
+          <testcase name="testSettingValues with data set #0" assertions="7" time="0.018986"/>
+          <testcase name="testSettingValues with data set #1" assertions="7" time="0.001089"/>
+          <testcase name="testSettingValues with data set #2" assertions="7" time="0.000903"/>
+          <testcase name="testSettingValues with data set #3" assertions="7" time="0.000885"/>
+          <testcase name="testSettingValues with data set #4" assertions="7" time="0.000892"/>
+          <testcase name="testSettingValues with data set #5" assertions="7" time="0.000890"/>
+          <testcase name="testSettingValues with data set #6" assertions="7" time="0.000727"/>
+          <testcase name="testSettingValues with data set #7" assertions="7" time="0.000720"/>
+          <testcase name="testSettingValues with data set #8" assertions="7" time="0.000717"/>
+          <testcase name="testSettingValues with data set #9" assertions="7" time="0.000704"/>
+          <testcase name="testSettingValues with data set #10" assertions="7" time="0.000680"/>
+          <testcase name="testSettingValues with data set #11" assertions="7" time="0.000748"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv\Pageplan\MeasuresTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/MeasuresTest.php" tests="15" assertions="105" failures="0" errors="0" time="0.010332">
+        <testsuite name="Wdv\Pageplan\MeasuresTest::testSettingValues" tests="15" assertions="105" failures="0" errors="0" time="0.010332">
+          <testcase name="testSettingValues with data set #0" assertions="7" time="0.001141"/>
+          <testcase name="testSettingValues with data set #1" assertions="7" time="0.000678"/>
+          <testcase name="testSettingValues with data set #2" assertions="7" time="0.000690"/>
+          <testcase name="testSettingValues with data set #3" assertions="7" time="0.000669"/>
+          <testcase name="testSettingValues with data set #4" assertions="7" time="0.000661"/>
+          <testcase name="testSettingValues with data set #5" assertions="7" time="0.000659"/>
+          <testcase name="testSettingValues with data set #6" assertions="7" time="0.000637"/>
+          <testcase name="testSettingValues with data set #7" assertions="7" time="0.000642"/>
+          <testcase name="testSettingValues with data set #8" assertions="7" time="0.000637"/>
+          <testcase name="testSettingValues with data set #9" assertions="7" time="0.000674"/>
+          <testcase name="testSettingValues with data set #10" assertions="7" time="0.000656"/>
+          <testcase name="testSettingValues with data set #11" assertions="7" time="0.000650"/>
+          <testcase name="testSettingValues with data set #12" assertions="7" time="0.000643"/>
+          <testcase name="testSettingValues with data set #13" assertions="7" time="0.000642"/>
+          <testcase name="testSettingValues with data set #14" assertions="7" time="0.000653"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv\Pageplan\Renderer\Pdf\HeadContentFormatterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/Renderer/HeadContentFormatterTest.php" tests="3" assertions="0" failures="0" errors="3" time="0.364927">
+        <testcase name="testCreatingInstance" class="Wdv\Pageplan\Renderer\Pdf\HeadContentFormatterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/Renderer/HeadContentFormatterTest.php" line="35" assertions="0" time="0.259344">
+          <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\Renderer\Pdf\HeadContentFormatterTest::testCreatingInstance
+Error: Class 'Wdv\Pageplan\Renderer\Pdf\HeadContentFormatter' not found
+
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/Renderer/HeadContentFormatterTest.php:39
+</error>
+        </testcase>
+        <testcase name="testSettingAdditionalInfos" class="Wdv\Pageplan\Renderer\Pdf\HeadContentFormatterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/Renderer/HeadContentFormatterTest.php" line="45" assertions="0" time="0.000930">
+          <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\Renderer\Pdf\HeadContentFormatterTest::testSettingAdditionalInfos
+Error: Class 'Wdv\Pageplan\Renderer\Pdf\HeadContentFormatter' not found
+
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/Renderer/HeadContentFormatterTest.php:49
+</error>
+        </testcase>
+        <testcase name="testToString" class="Wdv\Pageplan\Renderer\Pdf\HeadContentFormatterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/Renderer/HeadContentFormatterTest.php" line="58" assertions="0" time="0.104653">
+          <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\Renderer\Pdf\HeadContentFormatterTest::testToString
+Error: Class 'Wdv\Pageplan\Renderer\Pdf\HeadContentFormatter' not found
+
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/Renderer/HeadContentFormatterTest.php:74
+</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="Wdv\Pageplan\Renderer\Pdf\HeadContentPositionTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/Renderer/HeadContentPositionTest.php" tests="5" assertions="2" failures="0" errors="4" time="0.034865">
+        <testcase name="testCreatingInstance" class="Wdv\Pageplan\Renderer\Pdf\HeadContentPositionTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/Renderer/HeadContentPositionTest.php" line="37" assertions="2" time="0.027580"/>
+        <testcase name="testGettingLeftPosition" class="Wdv\Pageplan\Renderer\Pdf\HeadContentPositionTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/Renderer/HeadContentPositionTest.php" line="47" assertions="0" time="0.002909">
+          <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\Renderer\Pdf\HeadContentPositionTest::testGettingLeftPosition
+BadMethodCallException: Method Mockery_8_Wdv_Pageplan_LayoutCalculatorInterface::getMeasuresObject() does not exist on this mock object
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/Renderer/Pdf/HeadContentPosition.php:44
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/Renderer/HeadContentPositionTest.php:57
+</error>
+        </testcase>
+        <testcase name="testGettingTopPosition" class="Wdv\Pageplan\Renderer\Pdf\HeadContentPositionTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/Renderer/HeadContentPositionTest.php" line="60" assertions="0" time="0.001523">
+          <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\Renderer\Pdf\HeadContentPositionTest::testGettingTopPosition
+BadMethodCallException: Method Mockery_8_Wdv_Pageplan_LayoutCalculatorInterface::getMeasuresObject() does not exist on this mock object
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/Renderer/Pdf/HeadContentPosition.php:49
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/Renderer/HeadContentPositionTest.php:73
+</error>
+        </testcase>
+        <testcase name="testGettingRigthPosition" class="Wdv\Pageplan\Renderer\Pdf\HeadContentPositionTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/Renderer/HeadContentPositionTest.php" line="76" assertions="0" time="0.001528">
+          <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\Renderer\Pdf\HeadContentPositionTest::testGettingRigthPosition
+BadMethodCallException: Method Mockery_8_Wdv_Pageplan_LayoutCalculatorInterface::getMeasuresObject() does not exist on this mock object
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/Renderer/Pdf/HeadContentPosition.php:44
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/Renderer/Pdf/HeadContentPosition.php:69
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/Renderer/HeadContentPositionTest.php:90
+</error>
+        </testcase>
+        <testcase name="testGettingBottomPosition" class="Wdv\Pageplan\Renderer\Pdf\HeadContentPositionTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/Renderer/HeadContentPositionTest.php" line="93" assertions="0" time="0.001325">
+          <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pageplan\Renderer\Pdf\HeadContentPositionTest::testGettingBottomPosition
+BadMethodCallException: Method Mockery_8_Wdv_Pageplan_LayoutCalculatorInterface::getMeasuresObject() does not exist on this mock object
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pageplan/Renderer/Pdf/HeadContentPosition.php:60
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/Renderer/HeadContentPositionTest.php:110
+</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="Wdv\Pageplan\Renderer\NodeDataProvider\ContainerTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/Renderer/NodeDataProvider/ContainerTest.php" tests="1" assertions="2" failures="1" errors="0" time="0.216733">
+        <testcase name="testCreationOfArray" class="Wdv\Pageplan\Renderer\NodeDataProvider\ContainerTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/Renderer/NodeDataProvider/ContainerTest.php" line="36" assertions="2" time="0.216733">
+          <failure type="PHPUnit_Framework_ExpectationFailedException">Wdv\Pageplan\Renderer\NodeDataProvider\ContainerTest::testCreationOfArray
+Failed asserting that two arrays are equal.
+--- Expected
++++ Actual
+@@ @@
+     'info' =&gt; Array (
++        'Information' =&gt; Array (...)
+     )
+     'elements' =&gt; Array (...)
+     'contrastcolor' =&gt; Array (...)
+ )
+
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pageplan/Renderer/NodeDataProvider/ContainerTest.php:85
+</failure>
+        </testcase>
+      </testsuite>
+      <testsuite name="Wdv_Pattern_Observer_ObserverTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pattern/Observer/ObserverTest.php" tests="2" assertions="2" failures="0" errors="0" time="0.298960">
+        <testcase name="testJabberObjectGestInstantiatedCorrectly" class="Wdv_Pattern_Observer_ObserverTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pattern/Observer/ObserverTest.php" line="104" assertions="1" time="0.124634"/>
+        <testcase name="testMailObjectGetsInstantiatedCorrectly" class="Wdv_Pattern_Observer_ObserverTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pattern/Observer/ObserverTest.php" line="127" assertions="1" time="0.174326"/>
+      </testsuite>
+      <testsuite name="Wdv_PcosTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/PcosTest.php" tests="0" assertions="0" failures="0" errors="0" time="0.000000">
+        <testsuite name="Wdv_PcosTest::testGetWidth" tests="0" assertions="0" failures="0" errors="0" time="0.000000"/>
+      </testsuite>
+      <testsuite name="Wdv_Pdf_Annotation_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Annotation/AbstractTest.php" tests="11" assertions="33" failures="0" errors="0" time="0.293470">
+        <testcase name="testSetGetChangeDate" class="Wdv_Pdf_Annotation_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Annotation/AbstractTest.php" line="30" assertions="2" time="0.029260"/>
+        <testcase name="testSetGetCreateDate" class="Wdv_Pdf_Annotation_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Annotation/AbstractTest.php" line="39" assertions="2" time="0.001800"/>
+        <testcase name="testSetGetContent" class="Wdv_Pdf_Annotation_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Annotation/AbstractTest.php" line="48" assertions="2" time="0.000891"/>
+        <testcase name="testSetGetName" class="Wdv_Pdf_Annotation_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Annotation/AbstractTest.php" line="56" assertions="2" time="0.000814"/>
+        <testcase name="testSetGetPage" class="Wdv_Pdf_Annotation_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Annotation/AbstractTest.php" line="65" assertions="2" time="0.000668"/>
+        <testcase name="testSetGetUser" class="Wdv_Pdf_Annotation_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Annotation/AbstractTest.php" line="73" assertions="5" time="0.225358"/>
+        <testcase name="testSetGetNode" class="Wdv_Pdf_Annotation_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Annotation/AbstractTest.php" line="94" assertions="5" time="0.001170"/>
+        <testcase name="testSetGetRect" class="Wdv_Pdf_Annotation_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Annotation/AbstractTest.php" line="115" assertions="2" time="0.000614"/>
+        <testcase name="testSetGetParameters" class="Wdv_Pdf_Annotation_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Annotation/AbstractTest.php" line="125" assertions="7" time="0.028343"/>
+        <testcase name="testGettingType" class="Wdv_Pdf_Annotation_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Annotation/AbstractTest.php" line="141" assertions="1" time="0.000946"/>
+        <testcase name="testGettingArray" class="Wdv_Pdf_Annotation_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Annotation/AbstractTest.php" line="147" assertions="3" time="0.003606"/>
+      </testsuite>
+      <testsuite name="Wdv_Pdf_AnnotationIntegrationTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/AnnotationIntegrationTest.php" tests="0" assertions="0" failures="0" errors="0" time="0.000000"/>
+      <testsuite name="Wdv\Pdf\Converter\SinglePageToMultiPageConverterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Converter/SinglePageToMultiPageConverterTest.php" tests="5" assertions="0" failures="0" errors="5" time="0.068679">
+        <testcase name="testConvertingPdfFile" class="Wdv\Pdf\Converter\SinglePageToMultiPageConverterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Converter/SinglePageToMultiPageConverterTest.php" line="42" assertions="0" time="0.061170">
+          <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pdf\Converter\SinglePageToMultiPageConverterTest::testConvertingPdfFile
+Error: Call to a member function get() on null
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/PDFlib.php:176
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pdf/Converter/SinglePageToMultiPageConverter.php:115
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Converter/SinglePageToMultiPageConverterTest.php:47
+</error>
+        </testcase>
+        <testcase name="testConvertingSecondPdfFile" class="Wdv\Pdf\Converter\SinglePageToMultiPageConverterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Converter/SinglePageToMultiPageConverterTest.php" line="55" assertions="0" time="0.001805">
+          <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pdf\Converter\SinglePageToMultiPageConverterTest::testConvertingSecondPdfFile
+Error: Call to a member function get() on null
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/PDFlib.php:176
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pdf/Converter/SinglePageToMultiPageConverter.php:115
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Converter/SinglePageToMultiPageConverterTest.php:60
+</error>
+        </testcase>
+        <testcase name="testConvertingWestRotatedPdfFile" class="Wdv\Pdf\Converter\SinglePageToMultiPageConverterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Converter/SinglePageToMultiPageConverterTest.php" line="66" assertions="0" time="0.002543">
+          <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pdf\Converter\SinglePageToMultiPageConverterTest::testConvertingWestRotatedPdfFile
+Error: Call to a member function get() on null
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/PDFlib.php:176
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pdf/Converter/SinglePageToMultiPageConverter.php:115
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Converter/SinglePageToMultiPageConverterTest.php:72
+</error>
+        </testcase>
+        <testcase name="testConvertingEastRotatedPdfFile" class="Wdv\Pdf\Converter\SinglePageToMultiPageConverterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Converter/SinglePageToMultiPageConverterTest.php" line="80" assertions="0" time="0.001622">
+          <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pdf\Converter\SinglePageToMultiPageConverterTest::testConvertingEastRotatedPdfFile
+Error: Call to a member function get() on null
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/PDFlib.php:176
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pdf/Converter/SinglePageToMultiPageConverter.php:115
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Converter/SinglePageToMultiPageConverterTest.php:86
+</error>
+        </testcase>
+        <testcase name="testConvertingSouthRotatedPdfFile" class="Wdv\Pdf\Converter\SinglePageToMultiPageConverterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Converter/SinglePageToMultiPageConverterTest.php" line="94" assertions="0" time="0.001539">
+          <error type="PHPUnit_Framework_ExceptionWrapper">Wdv\Pdf\Converter\SinglePageToMultiPageConverterTest::testConvertingSouthRotatedPdfFile
+Error: Call to a member function get() on null
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/PDFlib.php:176
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Pdf/Converter/SinglePageToMultiPageConverter.php:115
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Converter/SinglePageToMultiPageConverterTest.php:100
+</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="Wdv_Pdf_Parser_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/AbstractTest.php" tests="2" assertions="5" failures="0" errors="0" time="0.001309">
+        <testcase name="testInstantiation" class="Wdv_Pdf_Parser_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/AbstractTest.php" line="32" assertions="1" time="0.000653"/>
+        <testcase name="testSettingAndGettingTheParser" class="Wdv_Pdf_Parser_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/AbstractTest.php" line="37" assertions="4" time="0.000656"/>
+      </testsuite>
+      <testsuite name="Wdv_Pdf_Parser_Annotation_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/Annotation/AbstractTest.php" tests="9" assertions="46" failures="9" errors="0" time="0.072392">
+        <testcase name="testParsingRectangle" class="Wdv_Pdf_Parser_Annotation_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/Annotation/AbstractTest.php" line="35" assertions="6" time="0.030130">
+          <warning type="PHPUnit_Framework_Warning">Wdv_Pdf_Parser_Annotation_AbstractTest::testParsingRectangle
+PHPUnit_Framework_TestCase::getMock() is deprecated, use PHPUnit_Framework_TestCase::createMock() or PHPUnit_Framework_TestCase::getMockBuilder() instead
+
+</warning>
+        </testcase>
+        <testcase name="testParsingNonavailableCreationDate" class="Wdv_Pdf_Parser_Annotation_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/Annotation/AbstractTest.php" line="104" assertions="5" time="0.001471">
+          <warning type="PHPUnit_Framework_Warning">Wdv_Pdf_Parser_Annotation_AbstractTest::testParsingNonavailableCreationDate
+PHPUnit_Framework_TestCase::getMock() is deprecated, use PHPUnit_Framework_TestCase::createMock() or PHPUnit_Framework_TestCase::getMockBuilder() instead
+
+</warning>
+        </testcase>
+        <testcase name="testParsingAvailableCreationDate" class="Wdv_Pdf_Parser_Annotation_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/Annotation/AbstractTest.php" line="125" assertions="5" time="0.003947">
+          <warning type="PHPUnit_Framework_Warning">Wdv_Pdf_Parser_Annotation_AbstractTest::testParsingAvailableCreationDate
+PHPUnit_Framework_TestCase::getMock() is deprecated, use PHPUnit_Framework_TestCase::createMock() or PHPUnit_Framework_TestCase::getMockBuilder() instead
+
+</warning>
+        </testcase>
+        <testcase name="testParsingAvailableChangeDate" class="Wdv_Pdf_Parser_Annotation_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/Annotation/AbstractTest.php" line="147" assertions="5" time="0.003799">
+          <warning type="PHPUnit_Framework_Warning">Wdv_Pdf_Parser_Annotation_AbstractTest::testParsingAvailableChangeDate
+PHPUnit_Framework_TestCase::getMock() is deprecated, use PHPUnit_Framework_TestCase::createMock() or PHPUnit_Framework_TestCase::getMockBuilder() instead
+
+</warning>
+        </testcase>
+        <testcase name="testParsingNonAvailableChangeDate" class="Wdv_Pdf_Parser_Annotation_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/Annotation/AbstractTest.php" line="168" assertions="5" time="0.001512">
+          <warning type="PHPUnit_Framework_Warning">Wdv_Pdf_Parser_Annotation_AbstractTest::testParsingNonAvailableChangeDate
+PHPUnit_Framework_TestCase::getMock() is deprecated, use PHPUnit_Framework_TestCase::createMock() or PHPUnit_Framework_TestCase::getMockBuilder() instead
+
+</warning>
+        </testcase>
+        <testcase name="testParsingAvailableId" class="Wdv_Pdf_Parser_Annotation_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/Annotation/AbstractTest.php" line="188" assertions="5" time="0.001717">
+          <warning type="PHPUnit_Framework_Warning">Wdv_Pdf_Parser_Annotation_AbstractTest::testParsingAvailableId
+PHPUnit_Framework_TestCase::getMock() is deprecated, use PHPUnit_Framework_TestCase::createMock() or PHPUnit_Framework_TestCase::getMockBuilder() instead
+
+</warning>
+        </testcase>
+        <testcase name="testParsingNonAvailableId" class="Wdv_Pdf_Parser_Annotation_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/Annotation/AbstractTest.php" line="210" assertions="5" time="0.025258">
+          <warning type="PHPUnit_Framework_Warning">Wdv_Pdf_Parser_Annotation_AbstractTest::testParsingNonAvailableId
+PHPUnit_Framework_TestCase::getMock() is deprecated, use PHPUnit_Framework_TestCase::createMock() or PHPUnit_Framework_TestCase::getMockBuilder() instead
+
+</warning>
+        </testcase>
+        <testcase name="testParsingNonAvailableFlags" class="Wdv_Pdf_Parser_Annotation_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/Annotation/AbstractTest.php" line="230" assertions="5" time="0.002147">
+          <warning type="PHPUnit_Framework_Warning">Wdv_Pdf_Parser_Annotation_AbstractTest::testParsingNonAvailableFlags
+PHPUnit_Framework_TestCase::getMock() is deprecated, use PHPUnit_Framework_TestCase::createMock() or PHPUnit_Framework_TestCase::getMockBuilder() instead
+
+</warning>
+        </testcase>
+        <testcase name="testParsingFlags" class="Wdv_Pdf_Parser_Annotation_AbstractTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/Annotation/AbstractTest.php" line="250" assertions="5" time="0.002411">
+          <warning type="PHPUnit_Framework_Warning">Wdv_Pdf_Parser_Annotation_AbstractTest::testParsingFlags
+PHPUnit_Framework_TestCase::getMock() is deprecated, use PHPUnit_Framework_TestCase::createMock() or PHPUnit_Framework_TestCase::getMockBuilder() instead
+
+</warning>
+        </testcase>
+      </testsuite>
+      <testsuite name="Wdv_Pdf_Parser_Backend_PdflibTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/Backend/PdflibTest.php" tests="9" assertions="17" failures="7" errors="0" time="0.051560">
+        <testcase name="testInstantiation" class="Wdv_Pdf_Parser_Backend_PdflibTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/Backend/PdflibTest.php" line="46" assertions="2" time="0.038320"/>
+        <testcase name="testGettingNullValue" class="Wdv_Pdf_Parser_Backend_PdflibTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/Backend/PdflibTest.php" line="58" assertions="1" time="0.000918"/>
+        <testcase name="testGettingNumber" class="Wdv_Pdf_Parser_Backend_PdflibTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/Backend/PdflibTest.php" line="63" assertions="2" time="0.002977">
+          <warning type="PHPUnit_Framework_Warning">Wdv_Pdf_Parser_Backend_PdflibTest::testGettingNumber
+PHPUnit_Framework_TestCase::getMock() is deprecated, use PHPUnit_Framework_TestCase::createMock() or PHPUnit_Framework_TestCase::getMockBuilder() instead
+
+</warning>
+        </testcase>
+        <testcase name="testGettingString" class="Wdv_Pdf_Parser_Backend_PdflibTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/Backend/PdflibTest.php" line="73" assertions="2" time="0.000944">
+          <warning type="PHPUnit_Framework_Warning">Wdv_Pdf_Parser_Backend_PdflibTest::testGettingString
+PHPUnit_Framework_TestCase::getMock() is deprecated, use PHPUnit_Framework_TestCase::createMock() or PHPUnit_Framework_TestCase::getMockBuilder() instead
+
+</warning>
+        </testcase>
+        <testcase name="testGettingDictKeys" class="Wdv_Pdf_Parser_Backend_PdflibTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/Backend/PdflibTest.php" line="95" assertions="2" time="0.002357">
+          <warning type="PHPUnit_Framework_Warning">Wdv_Pdf_Parser_Backend_PdflibTest::testGettingDictKeys
+PHPUnit_Framework_TestCase::getMock() is deprecated, use PHPUnit_Framework_TestCase::createMock() or PHPUnit_Framework_TestCase::getMockBuilder() instead
+
+</warning>
+        </testcase>
+        <testcase name="testGettingStreamValue" class="Wdv_Pdf_Parser_Backend_PdflibTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/Backend/PdflibTest.php" line="108" assertions="2" time="0.001385">
+          <warning type="PHPUnit_Framework_Warning">Wdv_Pdf_Parser_Backend_PdflibTest::testGettingStreamValue
+PHPUnit_Framework_TestCase::getMock() is deprecated, use PHPUnit_Framework_TestCase::createMock() or PHPUnit_Framework_TestCase::getMockBuilder() instead
+
+</warning>
+        </testcase>
+        <testcase name="testGettingContentType" class="Wdv_Pdf_Parser_Backend_PdflibTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/Backend/PdflibTest.php" line="118" assertions="2" time="0.001489">
+          <warning type="PHPUnit_Framework_Warning">Wdv_Pdf_Parser_Backend_PdflibTest::testGettingContentType
+PHPUnit_Framework_TestCase::getMock() is deprecated, use PHPUnit_Framework_TestCase::createMock() or PHPUnit_Framework_TestCase::getMockBuilder() instead
+
+</warning>
+        </testcase>
+        <testcase name="testGettingLength" class="Wdv_Pdf_Parser_Backend_PdflibTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/Backend/PdflibTest.php" line="129" assertions="2" time="0.002006">
+          <warning type="PHPUnit_Framework_Warning">Wdv_Pdf_Parser_Backend_PdflibTest::testGettingLength
+PHPUnit_Framework_TestCase::getMock() is deprecated, use PHPUnit_Framework_TestCase::createMock() or PHPUnit_Framework_TestCase::getMockBuilder() instead
+
+</warning>
+        </testcase>
+        <testcase name="testGettingNameValue" class="Wdv_Pdf_Parser_Backend_PdflibTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/Backend/PdflibTest.php" line="139" assertions="2" time="0.001164">
+          <warning type="PHPUnit_Framework_Warning">Wdv_Pdf_Parser_Backend_PdflibTest::testGettingNameValue
+PHPUnit_Framework_TestCase::getMock() is deprecated, use PHPUnit_Framework_TestCase::createMock() or PHPUnit_Framework_TestCase::getMockBuilder() instead
+
+</warning>
+        </testcase>
+      </testsuite>
+      <testsuite name="Wdv_Pdf_Parser_FactoryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/FactoryTest.php" tests="5" assertions="8" failures="0" errors="0" time="0.051086">
+        <testcase name="testInstantiation" class="Wdv_Pdf_Parser_FactoryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/FactoryTest.php" line="40" assertions="1" time="0.021788"/>
+        <testcase name="testSettingAndGettingTheParser" class="Wdv_Pdf_Parser_FactoryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/FactoryTest.php" line="46" assertions="4" time="0.001013"/>
+        <testcase name="testGettingParser" class="Wdv_Pdf_Parser_FactoryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/FactoryTest.php" line="57" assertions="1" time="0.014279"/>
+        <testcase name="testGettingInvalidParserFails" class="Wdv_Pdf_Parser_FactoryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/FactoryTest.php" line="65" assertions="1" time="0.012284"/>
+        <testcase name="testGettingUnknownParserFails" class="Wdv_Pdf_Parser_FactoryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Pdf/Parser/FactoryTest.php" line="73" assertions="1" time="0.001722"/>
+      </testsuite>
+      <testsuite name="DimensionRatioFactoryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Service/DimensionRatioFactoryTest.php" tests="1" assertions="2" failures="0" errors="0" time="0.017693">
+        <testcase name="testFactoryWorks" class="DimensionRatioFactoryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Service/DimensionRatioFactoryTest.php" line="35" assertions="2" time="0.017693"/>
+      </testsuite>
+      <testsuite name="Wdv\Service\Filter\SanitizeFilenameFactoryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Service/Filter/SanitizeFilenameFactoryTest.php" tests="8" assertions="8" failures="0" errors="0" time="0.029894">
+        <testsuite name="Wdv\Service\Filter\SanitizeFilenameFactoryTest::testFilterEquals" tests="8" assertions="8" failures="0" errors="0" time="0.029894">
+          <testcase name="testFilterEquals with data set #0" assertions="1" time="0.025187"/>
+          <testcase name="testFilterEquals with data set #1" assertions="1" time="0.000748"/>
+          <testcase name="testFilterEquals with data set #2" assertions="1" time="0.000640"/>
+          <testcase name="testFilterEquals with data set #3" assertions="1" time="0.000695"/>
+          <testcase name="testFilterEquals with data set #4" assertions="1" time="0.000679"/>
+          <testcase name="testFilterEquals with data set #5" assertions="1" time="0.000655"/>
+          <testcase name="testFilterEquals with data set #6" assertions="1" time="0.000657"/>
+          <testcase name="testFilterEquals with data set #7" assertions="1" time="0.000633"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv_Service_HyphenatorFactoryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Service/HyphenatorFactoryTest.php" tests="1" assertions="3" failures="0" errors="0" time="0.030455">
+        <testcase name="testHyphenatorIsInstantiatedCorrectly" class="Wdv_Service_HyphenatorFactoryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Service/HyphenatorFactoryTest.php" line="35" assertions="3" time="0.030455"/>
+      </testsuite>
+      <testsuite name="TopicToContainerConverterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Service/NodeConverter/TopicToContainerConverterTest.php" tests="5" assertions="0" failures="0" errors="5" time="0.456860">
+        <testcase name="testPdfFolderCopy" class="TopicToContainerConverterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Service/NodeConverter/TopicToContainerConverterTest.php" line="37" assertions="0" time="0.185114">
+          <error type="PHPUnit_Framework_ExceptionWrapper">TopicToContainerConverterTest::testPdfFolderCopy
+TypeError: Argument 1 passed to Wdv_Service_NodeConverter_TopicToContainerConverter::copyPdfFolder() must be an instance of Wdv_Node_Folder_Pdf, instance of Mockery_0_Wdv_Node_Abstract given
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Service/NodeConverter/TopicToContainerConverter.php:452
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Service/NodeConverter/TopicToContainerConverterTest.php:52
+</error>
+        </testcase>
+        <testcase name="testImageFolderCopy" class="TopicToContainerConverterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Service/NodeConverter/TopicToContainerConverterTest.php" line="57" assertions="0" time="0.062194">
+          <error type="PHPUnit_Framework_ExceptionWrapper">TopicToContainerConverterTest::testImageFolderCopy
+TypeError: Argument 1 passed to Wdv_Service_NodeConverter_TopicToContainerConverter::copyImageFolder() must be an instance of Wdv_Node_Folder_Image, instance of Mockery_0_Wdv_Node_Abstract given
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Service/NodeConverter/TopicToContainerConverter.php:355
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Service/NodeConverter/TopicToContainerConverterTest.php:72
+</error>
+        </testcase>
+        <testcase name="testAudioFolderCopy" class="TopicToContainerConverterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Service/NodeConverter/TopicToContainerConverterTest.php" line="77" assertions="0" time="0.047651">
+          <error type="PHPUnit_Framework_ExceptionWrapper">TopicToContainerConverterTest::testAudioFolderCopy
+TypeError: Argument 1 passed to Wdv_Service_NodeConverter_TopicToContainerConverter::copyAudioFolder() must be an instance of Wdv_Node_Folder_Audio, instance of Mockery_0_Wdv_Node_Abstract given
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Service/NodeConverter/TopicToContainerConverter.php:423
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Service/NodeConverter/TopicToContainerConverterTest.php:92
+</error>
+        </testcase>
+        <testcase name="testVideoFolderCopy" class="TopicToContainerConverterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Service/NodeConverter/TopicToContainerConverterTest.php" line="97" assertions="0" time="0.043200">
+          <error type="PHPUnit_Framework_ExceptionWrapper">TopicToContainerConverterTest::testVideoFolderCopy
+TypeError: Argument 1 passed to Wdv_Service_NodeConverter_TopicToContainerConverter::copyVideoFolder() must be an instance of Wdv_Node_Folder_Video, instance of Mockery_0_Wdv_Node_Abstract given
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Service/NodeConverter/TopicToContainerConverter.php:392
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Service/NodeConverter/TopicToContainerConverterTest.php:112
+</error>
+        </testcase>
+        <testcase name="testTextContentCopy" class="TopicToContainerConverterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Service/NodeConverter/TopicToContainerConverterTest.php" line="117" assertions="0" time="0.118701">
+          <error type="PHPUnit_Framework_ExceptionWrapper">TopicToContainerConverterTest::testTextContentCopy
+BadMethodCallException: Method Mockery_0_Wdv_Node_Abstract::getTextContentObject() does not exist on this mock object
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Service/NodeConverter/TopicToContainerConverter.php:311
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Service/NodeConverter/TopicToContainerConverterTest.php:137
+</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="Wdv_State_StateRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/State/StateRegistryTest.php" tests="2" assertions="3" failures="0" errors="0" time="0.001584">
+        <testcase name="testStateRegistryObjectGetsCreated" class="Wdv_State_StateRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/State/StateRegistryTest.php" line="58" assertions="2" time="0.000794"/>
+        <testcase name="testStateRegistryDbThrowsException" class="Wdv_State_StateRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/State/StateRegistryTest.php" line="67" assertions="1" time="0.000790"/>
+      </testsuite>
+      <testsuite name="Wdv_State_StateTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/State/StateTest.php" tests="7" assertions="17" failures="0" errors="0" time="0.004467">
+        <testcase name="testStateObjectGetsCreated" class="Wdv_State_StateTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/State/StateTest.php" line="55" assertions="2" time="0.000617"/>
+        <testcase name="testForStateId" class="Wdv_State_StateTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/State/StateTest.php" line="61" assertions="1" time="0.000599"/>
+        <testcase name="testForName" class="Wdv_State_StateTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/State/StateTest.php" line="67" assertions="2" time="0.000619"/>
+        <testcase name="testForDescription" class="Wdv_State_StateTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/State/StateTest.php" line="74" assertions="1" time="0.000604"/>
+        <testcase name="testForOrder" class="Wdv_State_StateTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/State/StateTest.php" line="80" assertions="1" time="0.000637"/>
+        <testcase name="testForResources" class="Wdv_State_StateTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/State/StateTest.php" line="86" assertions="2" time="0.000642"/>
+        <testcase name="testWdvStateFactory" class="Wdv_State_StateTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/State/StateTest.php" line="94" assertions="8" time="0.000748"/>
+      </testsuite>
+      <testsuite name="Wdv_Tree_SorterRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Tree/SorterRegistryTest.php" tests="3" assertions="5" failures="0" errors="0" time="0.067512">
+        <testcase name="testInstantiation" class="Wdv_Tree_SorterRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Tree/SorterRegistryTest.php" line="53" assertions="1" time="0.065021"/>
+        <testcase name="testSingletonPattern" class="Wdv_Tree_SorterRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Tree/SorterRegistryTest.php" line="59" assertions="3" time="0.001045"/>
+        <testcase name="testToArray" class="Wdv_Tree_SorterRegistryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Tree/SorterRegistryTest.php" line="68" assertions="1" time="0.001446"/>
+      </testsuite>
+      <testsuite name="Wdv_Tree_SorterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Tree/SorterTest.php" tests="7" assertions="19" failures="0" errors="0" time="0.005434">
+        <testcase name="testInstantiation" class="Wdv_Tree_SorterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Tree/SorterTest.php" line="63" assertions="1" time="0.000697"/>
+        <testcase name="testFactoryCreation" class="Wdv_Tree_SorterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Tree/SorterTest.php" line="69" assertions="4" time="0.000781"/>
+        <testcase name="testSetFor" class="Wdv_Tree_SorterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Tree/SorterTest.php" line="81" assertions="4" time="0.000748"/>
+        <testcase name="testSetItems" class="Wdv_Tree_SorterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Tree/SorterTest.php" line="92" assertions="4" time="0.000859"/>
+        <testcase name="testSetLabel" class="Wdv_Tree_SorterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Tree/SorterTest.php" line="104" assertions="3" time="0.000683"/>
+        <testcase name="testGetFor" class="Wdv_Tree_SorterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Tree/SorterTest.php" line="114" assertions="2" time="0.000622"/>
+        <testcase name="testToArray" class="Wdv_Tree_SorterTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Tree/SorterTest.php" line="131" assertions="1" time="0.001044"/>
+      </testsuite>
+      <testsuite name="Wdv_Validate_AndTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Validate/AndTest.php" tests="4" assertions="4" failures="0" errors="0" time="0.054328">
+        <testsuite name="Wdv_Validate_AndTest::testValidating" tests="4" assertions="4" failures="0" errors="0" time="0.054328">
+          <testcase name="testValidating with data set #0" assertions="1" time="0.051318"/>
+          <testcase name="testValidating with data set #1" assertions="1" time="0.001048"/>
+          <testcase name="testValidating with data set #2" assertions="1" time="0.001033"/>
+          <testcase name="testValidating with data set #3" assertions="1" time="0.000929"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="WdvTest\Validate\ColorProfileTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Validate/ColorProfileTest.php" tests="2" assertions="2" failures="0" errors="0" time="0.170318">
+        <testcase name="testThatImagesWithoutProfileFailValidation" class="WdvTest\Validate\ColorProfileTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Validate/ColorProfileTest.php" line="35" assertions="1" time="0.040683"/>
+        <testcase name="testThatImagesWithProfileContainExpectedProfile" class="WdvTest\Validate\ColorProfileTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Validate/ColorProfileTest.php" line="41" assertions="1" time="0.129635"/>
+      </testsuite>
+      <testsuite name="Wdv_Validate_EditionPagesTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Validate/EditionPagesTest.php" tests="7" assertions="15" failures="0" errors="0" time="0.068507">
+        <testcase name="testSettingProjecttype" class="Wdv_Validate_EditionPagesTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Validate/EditionPagesTest.php" line="34" assertions="3" time="0.061845"/>
+        <testcase name="testValidationFailsWithoutProjecttype" class="Wdv_Validate_EditionPagesTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Validate/EditionPagesTest.php" line="46" assertions="2" time="0.001121"/>
+        <testcase name="testValidationFailsWithString" class="Wdv_Validate_EditionPagesTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Validate/EditionPagesTest.php" line="54" assertions="2" time="0.001147"/>
+        <testsuite name="Wdv_Validate_EditionPagesTest::testValidationWorks" tests="4" assertions="8" failures="0" errors="0" time="0.004394">
+          <testcase name="testValidationWorks with data set #0" assertions="2" time="0.001133"/>
+          <testcase name="testValidationWorks with data set #1" assertions="2" time="0.001018"/>
+          <testcase name="testValidationWorks with data set #2" assertions="2" time="0.001077"/>
+          <testcase name="testValidationWorks with data set #3" assertions="2" time="0.001166"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="WdvTest\Validate\Image\ColorSpaceTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Validate/Image/ColorSpaceTest.php" tests="5" assertions="5" failures="0" errors="0" time="0.044380">
+        <testsuite name="WdvTest\Validate\Image\ColorSpaceTest::testThatImagesWithCorrectColorSpaceAreValid" tests="3" assertions="3" failures="0" errors="0" time="0.037367">
+          <testcase name="testThatImagesWithCorrectColorSpaceAreValid with data set #0" assertions="1" time="0.030528"/>
+          <testcase name="testThatImagesWithCorrectColorSpaceAreValid with data set #1" assertions="1" time="0.003236"/>
+          <testcase name="testThatImagesWithCorrectColorSpaceAreValid with data set #2" assertions="1" time="0.003603"/>
+        </testsuite>
+        <testsuite name="WdvTest\Validate\Image\ColorSpaceTest::testThatImagesWithWrongLayersAreInvalid" tests="2" assertions="2" failures="0" errors="0" time="0.007013">
+          <testcase name="testThatImagesWithWrongLayersAreInvalid with data set #0" assertions="1" time="0.003521"/>
+          <testcase name="testThatImagesWithWrongLayersAreInvalid with data set #1" assertions="1" time="0.003492"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="WdvTest\Validate\Image\LayersTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Validate/Image/LayersTest.php" tests="3" assertions="3" failures="0" errors="0" time="0.034339">
+        <testsuite name="WdvTest\Validate\Image\LayersTest::testThatImagesWithCorrectLayersAreValid" tests="1" assertions="1" failures="0" errors="0" time="0.028627">
+          <testcase name="testThatImagesWithCorrectLayersAreValid with data set #0" assertions="1" time="0.028627"/>
+        </testsuite>
+        <testsuite name="WdvTest\Validate\Image\LayersTest::testThatImagesWithWrongLayersAreInvalid" tests="2" assertions="2" failures="0" errors="0" time="0.005712">
+          <testcase name="testThatImagesWithWrongLayersAreInvalid with data set #0" assertions="1" time="0.001612"/>
+          <testcase name="testThatImagesWithWrongLayersAreInvalid with data set #1" assertions="1" time="0.004100"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv_Validate_IpRangeTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Validate/IpRangeTest.php" tests="5" assertions="10" failures="0" errors="0" time="0.037934">
+        <testcase name="testIpAddress" class="Wdv_Validate_IpRangeTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Validate/IpRangeTest.php" line="53" assertions="2" time="0.033995"/>
+        <testcase name="testWildcard" class="Wdv_Validate_IpRangeTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Validate/IpRangeTest.php" line="60" assertions="2" time="0.000928"/>
+        <testcase name="testMaskIp" class="Wdv_Validate_IpRangeTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Validate/IpRangeTest.php" line="67" assertions="2" time="0.000738"/>
+        <testcase name="testMaskBit" class="Wdv_Validate_IpRangeTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Validate/IpRangeTest.php" line="74" assertions="2" time="0.000772"/>
+        <testcase name="testRange" class="Wdv_Validate_IpRangeTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Validate/IpRangeTest.php" line="81" assertions="2" time="0.001501"/>
+      </testsuite>
+      <testsuite name="Wdv_Validate_OrTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Validate/OrTest.php" tests="6" assertions="6" failures="0" errors="0" time="0.016357">
+        <testsuite name="Wdv_Validate_OrTest::testValidating" tests="6" assertions="6" failures="0" errors="0" time="0.016357">
+          <testcase name="testValidating with data set #0" assertions="1" time="0.012751"/>
+          <testcase name="testValidating with data set #1" assertions="1" time="0.000705"/>
+          <testcase name="testValidating with data set #2" assertions="1" time="0.000774"/>
+          <testcase name="testValidating with data set #3" assertions="1" time="0.000748"/>
+          <testcase name="testValidating with data set #4" assertions="1" time="0.000634"/>
+          <testcase name="testValidating with data set #5" assertions="1" time="0.000745"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv_Validate_PdfSizeTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Validate/PdfSizeTest.php" tests="0" assertions="0" failures="0" errors="0" time="0.000000">
+        <testsuite name="Wdv_Validate_PdfSizeTest::testTolerances" tests="0" assertions="0" failures="0" errors="0" time="0.000000"/>
+        <testsuite name="Wdv_Validate_PdfSizeTest::testToleranceCalculator" tests="0" assertions="0" failures="0" errors="0" time="0.000000"/>
+      </testsuite>
+      <testsuite name="Wdv_Validate_TextContainsTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Validate/TextContainsTest.php" tests="4" assertions="2" failures="0" errors="2" time="0.019015">
+        <testsuite name="Wdv_Validate_TextContainsTest::testText" tests="4" assertions="2" failures="0" errors="2" time="0.019015">
+          <testcase name="testText with data set #0" assertions="0" time="0.016834">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv_Validate_TextContainsTest::testText with data set #0 (array('***URL***'), 'testtext', false)
+ErrorException: Missing argument 1 for Zend_Validate_Abstract::_error(), called in /Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Validate/TextContains.php on line 87 and defined
+
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Validate/Abstract.php:284
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Validate/TextContains.php:87
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Validate/TextContainsTest.php:59
+</error>
+          </testcase>
+          <testcase name="testText with data set #1" assertions="1" time="0.000701"/>
+          <testcase name="testText with data set #2" assertions="0" time="0.000809">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdv_Validate_TextContainsTest::testText with data set #2 ('***URL***', 'testtext', false)
+ErrorException: Missing argument 1 for Zend_Validate_Abstract::_error(), called in /Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Validate/TextContains.php on line 87 and defined
+
+/Volumes/Rest/Dev/Sites/gitcompass/vendor/zendframework/zendframework1/library/Zend/Validate/Abstract.php:284
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Validate/TextContains.php:87
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/Validate/TextContainsTest.php:59
+</error>
+          </testcase>
+          <testcase name="testText with data set #3" assertions="1" time="0.000670"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdv_View_Helper_EscapeTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/View/Helper/EscapeTest.php" tests="6" assertions="12" failures="0" errors="0" time="0.031350">
+        <testsuite name="Wdv_View_Helper_EscapeTest::testAll" tests="6" assertions="12" failures="0" errors="0" time="0.031350">
+          <testcase name="testAll with data set #0" assertions="2" time="0.026775"/>
+          <testcase name="testAll with data set #1" assertions="2" time="0.000976"/>
+          <testcase name="testAll with data set #2" assertions="2" time="0.000917"/>
+          <testcase name="testAll with data set #3" assertions="2" time="0.000898"/>
+          <testcase name="testAll with data set #4" assertions="2" time="0.000931"/>
+          <testcase name="testAll with data set #5" assertions="2" time="0.000853"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdvtest\View\Renderer\JsonTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/View/Renderer/JsonTest.php" tests="6" assertions="6" failures="0" errors="0" time="0.239962">
+        <testsuite name="Wdvtest\View\Renderer\JsonTest::testEquals" tests="6" assertions="6" failures="0" errors="0" time="0.239962">
+          <testcase name="testEquals with data set #0" assertions="1" time="0.231312"/>
+          <testcase name="testEquals with data set #1" assertions="1" time="0.001543"/>
+          <testcase name="testEquals with data set #2" assertions="1" time="0.001720"/>
+          <testcase name="testEquals with data set #3" assertions="1" time="0.002686"/>
+          <testcase name="testEquals with data set #4" assertions="1" time="0.001276"/>
+          <testcase name="testEquals with data set #5" assertions="1" time="0.001425"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Wdvtest\View\RendererFactoryTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/View/RendererFactoryTest.php" tests="2" assertions="1" failures="0" errors="1" time="0.338871">
+        <testsuite name="Wdvtest\View\RendererFactoryTest::testFactoryEquals" tests="2" assertions="1" failures="0" errors="1" time="0.338871">
+          <testcase name="testFactoryEquals with data set #0" assertions="1" time="0.070478"/>
+          <testcase name="testFactoryEquals with data set #1" assertions="0" time="0.268393">
+            <error type="PHPUnit_Framework_ExceptionWrapper">Wdvtest\View\RendererFactoryTest::testFactoryEquals with data set #1 ('smarty', '\Wdv_View_Smarty')
+UnexpectedValueException: DirectoryIterator::__construct(/app/locale): failed to open dir: No such file or directory
+
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/Translate.php:96
+/Volumes/Rest/Dev/Sites/gitcompass/lib/zf/Wdv/View/RendererFactory.php:57
+/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Wdv/View/RendererFactoryTest.php:63
+</error>
+          </testcase>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" tests="54" assertions="198" failures="0" errors="0" time="0.054080">
+        <testcase name="testRoleRegistryAddAndGetOne" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="74" assertions="2" time="0.000729"/>
+        <testcase name="testRoleRegistryRemoveOne" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="90" assertions="1" time="0.000682"/>
+        <testcase name="testRoleRegistryRemoveOneNonExistent" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="103" assertions="1" time="0.000953"/>
+        <testcase name="testRoleRegistryRemoveAll" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="118" assertions="1" time="0.000648"/>
+        <testcase name="testRoleRegistryAddInheritsNonExistent" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="131" assertions="1" time="0.000835"/>
+        <testcase name="testRoleRegistryInheritsNonExistent" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="146" assertions="2" time="0.001057"/>
+        <testcase name="testRoleRegistryInherits" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="169" assertions="13" time="0.001343"/>
+        <testcase name="testRoleRegistryInheritsMultiple" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="201" assertions="8" time="0.000928"/>
+        <testcase name="testRoleRegistryDuplicate" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="231" assertions="1" time="0.000723"/>
+        <testcase name="testRoleRegistryDuplicateId" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="249" assertions="1" time="0.000734"/>
+        <testcase name="testResourceAddAndGetOne" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="268" assertions="2" time="0.000645"/>
+        <testcase name="testResourceRemoveOne" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="283" assertions="1" time="0.000641"/>
+        <testcase name="testResourceRemoveOneNonExistent" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="296" assertions="1" time="0.000834"/>
+        <testcase name="testResourceRemoveAll" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="311" assertions="1" time="0.000617"/>
+        <testcase name="testResourceAddInheritsNonExistent" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="324" assertions="1" time="0.000814"/>
+        <testcase name="testResourceInheritsNonExistent" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="339" assertions="2" time="0.001024"/>
+        <testcase name="testResourceInherits" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="362" assertions="7" time="0.000804"/>
+        <testcase name="testResourceDuplicate" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="385" assertions="1" time="0.000699"/>
+        <testcase name="testResourceDuplicateId" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="402" assertions="1" time="0.000725"/>
+        <testcase name="testIsAllowedNonExistent" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="420" assertions="2" time="0.000812"/>
+        <testcase name="testDefaultDeny" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="441" assertions="1" time="0.000598"/>
+        <testcase name="testDefaultAssert" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="451" assertions="2" time="0.000643"/>
+        <testcase name="testDefaultRuleSet" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="463" assertions="2" time="0.000632"/>
+        <testcase name="testDefaultPrivilegeDeny" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="476" assertions="1" time="0.000590"/>
+        <testcase name="testDefaultRuleSetPrivilege" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="486" assertions="2" time="0.000660"/>
+        <testcase name="testPrivilegeAllow" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="499" assertions="1" time="0.000609"/>
+        <testcase name="testPrivilegeDeny" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="510" assertions="1" time="0.000620"/>
+        <testcase name="testPrivileges" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="522" assertions="7" time="0.000740"/>
+        <testcase name="testPrivilegeAssert" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="541" assertions="2" time="0.000647"/>
+        <testcase name="testRoleDefaultDeny" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="554" assertions="1" time="0.000644"/>
+        <testcase name="testRoleDefaultRuleSet" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="566" assertions="2" time="0.000725"/>
+        <testcase name="testRoleDefaultPrivilegeDeny" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="581" assertions="1" time="0.000709"/>
+        <testcase name="testRoleDefaultRuleSetPrivilege" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="593" assertions="2" time="0.000758"/>
+        <testcase name="testRolePrivilegeAllow" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="608" assertions="1" time="0.000689"/>
+        <testcase name="testRolePrivilegeDeny" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="621" assertions="1" time="0.000742"/>
+        <testcase name="testRolePrivileges" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="635" assertions="7" time="0.001050"/>
+        <testcase name="testRolePrivilegeAssert" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="656" assertions="2" time="0.000840"/>
+        <testcase name="testRemoveDefaultDeny" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="671" assertions="2" time="0.002732"/>
+        <testcase name="testRemoveDefaultDenyAssert" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="683" assertions="2" time="0.000827"/>
+        <testcase name="testRemoveDefaultAllow" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="696" assertions="2" time="0.000788"/>
+        <testcase name="testRemoveDefaultAllowNonExistent" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="709" assertions="1" time="0.000653"/>
+        <testcase name="testRemoveDefaultDenyNonExistent" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="720" assertions="1" time="0.000660"/>
+        <testcase name="testRoleDefaultAllowRuleWithResourceDenyRule" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="733" assertions="1" time="0.000885"/>
+        <testcase name="testRoleDefaultAllowRuleWithPrivilegeDenyRule" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="751" assertions="1" time="0.000797"/>
+        <testcase name="testRulesRemove" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="766" assertions="5" time="0.001836"/>
+        <testcase name="testRuleRoleRemove" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="782" assertions="3" time="0.002174"/>
+        <testcase name="testRuleRoleRemoveAll" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="803" assertions="3" time="0.001032"/>
+        <testcase name="testRulesResourceRemove" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="824" assertions="3" time="0.000865"/>
+        <testcase name="testRulesResourceRemoveAll" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="845" assertions="3" time="0.000804"/>
+        <testcase name="testCMSExample" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="866" assertions="78" time="0.008312"/>
+        <testcase name="testRoleInheritanceSupportsCheckingOnlyParents" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="1034" assertions="1" time="0.000921"/>
+        <testcase name="testZf2234" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="1048" assertions="4" time="0.001111"/>
+        <testcase name="testAclPositiveForNullValNull" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="1090" assertions="1" time="0.000762"/>
+        <testcase name="testAclPositiveForNullNullNull" class="Zend_AclTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/lib/zf/Zend/AclTest.php" line="1110" assertions="1" time="0.000778"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="wdvCompass FunctionTest Suite" tests="18" assertions="18" failures="0" errors="0" time="0.011446">
+      <testsuite name="JsonEncodeLegacyTest" file="/Volumes/Rest/Dev/Sites/gitcompass/tests/functions/jsonEncodeLegacyTest.php" tests="18" assertions="18" failures="0" errors="0" time="0.011446">
+        <testsuite name="JsonEncodeLegacyTest::testSimpleData" tests="9" assertions="9" failures="0" errors="0" time="0.005825">
+          <testcase name="testSimpleData with data set #0" assertions="1" time="0.000759"/>
+          <testcase name="testSimpleData with data set #1" assertions="1" time="0.000623"/>
+          <testcase name="testSimpleData with data set #2" assertions="1" time="0.000625"/>
+          <testcase name="testSimpleData with data set #3" assertions="1" time="0.000609"/>
+          <testcase name="testSimpleData with data set #4" assertions="1" time="0.000619"/>
+          <testcase name="testSimpleData with data set #5" assertions="1" time="0.000637"/>
+          <testcase name="testSimpleData with data set #6" assertions="1" time="0.000652"/>
+          <testcase name="testSimpleData with data set #7" assertions="1" time="0.000620"/>
+          <testcase name="testSimpleData with data set #8" assertions="1" time="0.000681"/>
+        </testsuite>
+        <testsuite name="JsonEncodeLegacyTest::testREsultEqualsBuildInFunction" tests="9" assertions="9" failures="0" errors="0" time="0.005621">
+          <testcase name="testREsultEqualsBuildInFunction with data set #0" assertions="1" time="0.000651"/>
+          <testcase name="testREsultEqualsBuildInFunction with data set #1" assertions="1" time="0.000664"/>
+          <testcase name="testREsultEqualsBuildInFunction with data set #2" assertions="1" time="0.000615"/>
+          <testcase name="testREsultEqualsBuildInFunction with data set #3" assertions="1" time="0.000639"/>
+          <testcase name="testREsultEqualsBuildInFunction with data set #4" assertions="1" time="0.000599"/>
+          <testcase name="testREsultEqualsBuildInFunction with data set #5" assertions="1" time="0.000626"/>
+          <testcase name="testREsultEqualsBuildInFunction with data set #6" assertions="1" time="0.000635"/>
+          <testcase name="testREsultEqualsBuildInFunction with data set #7" assertions="1" time="0.000601"/>
+          <testcase name="testREsultEqualsBuildInFunction with data set #8" assertions="1" time="0.000591"/>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

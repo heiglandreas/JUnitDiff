@@ -25,7 +25,7 @@
  * @link      http://github.com/heiglandreas/org.heigl.junitdiff
  */
 
-namespace Org_Heigl\JUnitDiff\Commands;
+namespace Org_Heigl\JUnitDiff\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -48,23 +48,29 @@ class DiffCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        $output->writeln([
+            '<fg=yellow>JUnitDiff (%version%) by Andreas Heigl and contributors</>',
+            '',
+        ]);
+
         $array1 = $this->parseJunitFile($input->getOption('input1'));
         $array2 = $this->parseJunitFile($input->getOption('input2'));
 
-//        ksort($array1);
-//        ksort($array2);
+        $array = $this->merge($array1, $array2);
 
-        $output->writeln('Check');
-
-        foreach ($array2 as $key => $value) {
-            if (! isset($array1[$key])) {
-                $output->writeln('New Test: ' . $key);
+        foreach ($array as $key => $value) {
+            if (! isset($value['base'])) {
+                $output->writeln('<bg=green;fg=black>+</> ' . $key);
+                continue;
+            }
+            if (! isset($value['current'])) {
+                $output->writeln('<bg=red;fg=yellow>-</> ' . $key);
                 continue;
             }
 
-            if ($array1[$key] != $array2[$key]) {
+            if ($value['base'] != $value['current']) {
                 $output->writeln(sprintf(
-                    'Test %s changed from %s to %s',
+                    '<bg=blue;fg=yellow>o</> %s changed from <fg=cyan>%s</> to <fg=magenta>%s</>',
                     $key,
                     $array1[$key],
                     $array2[$key]
@@ -72,14 +78,33 @@ class DiffCommand extends Command
                 continue;
             }
         }
+        
+        $output->writeln([
+            '',
+            sprintf(
+                '<fg=yellow>Analyzed %s tests in total, %s tests in file %s and %s tests in file %s',
+                count($array),
+                count($array1),
+                basename($input->getOption('input1')),
+                count($array2),
+                basename($input->getOption('input2'))
+            )
+        ]);
+    }
 
+    protected function merge(array $array1, array $array2)
+    {
         foreach ($array1 as $key => $value) {
-            if (! isset($array1[$key])) {
-                $output->writeln('Removed Test: ' . $key);
-                continue;
-            }
+            $merged[$key]['base'] = $value;
         }
 
+        foreach($array2 as $key => $value) {
+            $merged[$key]['current'] = $value;
+        }
+
+        ksort($merged);
+
+        return $merged;
     }
 
     protected function parseJunitFile($filename)
