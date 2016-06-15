@@ -31,6 +31,7 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
+use Org_Heigl\JUnitDiff\Version;
 
 class DiffCommand extends Command
 {
@@ -49,7 +50,7 @@ class DiffCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $output->writeln([
-            '<fg=yellow>JUnitDiff (%version%) by Andreas Heigl and contributors</>',
+            '<fg=yellow>JUnitDiff (' . Version::NUMBER . ') by Andreas Heigl and contributors.</>',
             '',
         ]);
 
@@ -78,7 +79,7 @@ class DiffCommand extends Command
                 continue;
             }
         }
-        
+
         $output->writeln('');
         if ($output->getVerbosity() >= OutputInterface::VERBOSITY_VERBOSE) {
             $output->writeln([
