@@ -3,6 +3,7 @@
     "description": "Create a diff between 2 junit-files",
     "type": "library",
     "require": {
+        "php" : "^5.5||^7.0",
         "symfony/console": "^3.1"
     },
     "license": "MIT",
@@ -15,6 +16,11 @@
     "autoload" : {
         "psr-4" : {
             "Org_Heigl\\JUnitDiff\\" : "src/"
+        }
+    },
+    "autoload-dev" : {
+        "psr-4" : {
+            "Org_Heigl\\JUnitDiffTest\\" : "tests/"
         }
     },
     "bin" : ["app/junitdiff"],
