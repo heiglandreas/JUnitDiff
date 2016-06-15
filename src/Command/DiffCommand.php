@@ -53,8 +53,21 @@ class DiffCommand extends Command
             '',
         ]);
 
-        $array1 = $this->parseJunitFile($input->getOption('input1'));
-        $array2 = $this->parseJunitFile($input->getOption('input2'));
+        try {
+            $file1  = $input->getOption('input1');
+            $array1 = $this->parseJunitFile($file1);
+        } catch(\Exception $e) {
+            $output->writeln('<bg=red;fg=white>  ' . $e->getMessage() . '  </>');
+            return;
+        }
+
+        try {
+            $file2  = $input->getOption('input2');
+            $array2 = $this->parseJunitFile($file2);
+        } catch (\Exception $e) {
+            $output->writeln('<bg=red;fg=white> ' . $e->getMessage() . '  </>');
+            return;
+        }
 
         $array = $this->merge($array1, $array2);
 
@@ -84,16 +97,16 @@ class DiffCommand extends Command
             $output->writeln([
                 sprintf(
                     '<bg=green;fg=black>+</>: This test was added in file %s',
-                    $input->getOption('input2')
+                    $file2
                 ),
                 sprintf(
                     '<bg=red;fg=yellow>-</>: This test was removed in file %s',
-                    $input->getOption('input2')
+                    $file2
                 ),
                 sprintf(
                     '<bg=blue;fg=yellow>o</>: The test-result changed between file %s and %s',
-                    $input->getOption('input1'),
-                    $input->getOption('input2')
+                    $file1,
+                    $file2
                 ),
                 ''
             ]);
@@ -102,9 +115,9 @@ class DiffCommand extends Command
             '<fg=yellow>Analyzed %s tests in total, %s tests in file %s and %s tests in file %s',
             count($array),
             count($array1),
-            basename($input->getOption('input1')),
+            basename($file1),
             count($array2),
-            basename($input->getOption('input2'))
+            basename($file2)
         ));
     }
 
@@ -125,8 +138,19 @@ class DiffCommand extends Command
 
     protected function parseJunitFile($filename)
     {
+        if (! is_readable($filename)) {
+            throw new \UnexpectedValueException(sprintf(
+                'File %s is not readable',
+                basename($filename)
+            ));
+        }
         $dom = new \DOMDocument(1.0, 'UTF-8');
-        $dom->load($filename);
+        if (false === @$dom->load($filename)) {
+            throw new \UnexpectedValueException(sprintf(
+                'File %s seems not to be a JUnit-File',
+                basename($filename)
+            ));
+        }
 
         $xpath = new \DOMXPath($dom);
 

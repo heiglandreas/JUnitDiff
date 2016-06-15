@@ -61,4 +61,44 @@ Analyzed 615 tests in total, 613 tests in file log1.xml and 613 tests in file lo
 ', $commandTester->getDisplay());
 
     }
+
+    public function testThatNonExistingFilesRaiseError()
+    {
+        $application = new Application();
+        $application->add(new DiffCommand());
+
+        $command = $application->find('diff');
+        $commandTester = new CommandTester($command);
+        $commandTester->execute(
+            array(
+                '--input1' => __DIR__ . '/../_assets/log1.xml',
+                '--input2' => __DIR__ . '/../_assets/log.xm',
+            )
+        );
+
+        $this->assertEquals('JUnitDiff (%version%) by Andreas Heigl and contributors
+
+ File log.xm is not readable  
+', $commandTester->getDisplay());
+    }
+
+    public function testThatInvalidFileRaisesError()
+    {
+        $application = new Application();
+        $application->add(new DiffCommand());
+
+        $command = $application->find('diff');
+        $commandTester = new CommandTester($command);
+        $commandTester->execute(
+            array(
+                '--input1' => __DIR__ . '/../_assets/log1.xml',
+                '--input2' => __DIR__ . '/../_assets/log.empty',
+            )
+        );
+
+        $this->assertEquals('JUnitDiff (%version%) by Andreas Heigl and contributors
+
+ File log.empty seems not to be a JUnit-File  
+', $commandTester->getDisplay());
+    }
 }
