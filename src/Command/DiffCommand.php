@@ -49,7 +49,7 @@ class DiffCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $output->writeln([
-            '<fg=yellow>JUnitDiff (%version%) by Andreas Heigl and contributors</>',
+            $this->getApplication()->getLongVersion(),
             '',
         ]);
 

@@ -34,7 +34,8 @@ require JUNITDIFF_COMPOSER_INSTALL;
 use Symfony\Component\Console\Application;
 
 $app = new Application();
-$app->setName('JUnitDiff (%version%) by Andreas Heigl and contributors');
+$app->setVersion('0.2.0');
+$app->setName('JUnitDiff (by Andreas Heigl and contributors)');
 
 $app->add(new \Org_Heigl\JUnitDiff\Command\DiffCommand());
 $app->run();
