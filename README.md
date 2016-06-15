@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/heiglandreas/JUnitDiff.svg?branch=master)](https://travis-ci.org/heiglandreas/JUnitDiff)
+
 # JUnitDiff
 
 A small CLI to check which tests have changed between test runs.
