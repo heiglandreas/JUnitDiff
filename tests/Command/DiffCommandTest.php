@@ -49,7 +49,7 @@ class DiffCommandTest extends \PHPUnit_Framework_TestCase
             )
         );
 
-        $this->assertEquals('JUnitDiff (%version%) by Andreas Heigl and contributors
+        $this->assertEquals('Console Tool
 
 - Org_Heigl_HyphenatorTest::testHyphenateEntweder
 + Org_Heigl_HyphenatorTest::testHyphenatorSingletonReturnsHyphenatorObject
