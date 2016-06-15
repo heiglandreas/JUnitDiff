@@ -25,41 +25,9 @@
  * @link      http://github.com/heiglandreas/org.heigl.junitdiff
  */
 
-namespace Org_Heigl\JUnitDiffTest\Command;
+namespace Org_Heigl\JUnitDiff;
 
-use Org_Heigl\JUnitDiff\Command\DiffCommand;
-use Org_Heigl\JUnitDiff\Version;
-use Symfony\Component\Console\Application;
-use Symfony\Component\Console\Tester\CommandTester;
-
-class DiffCommandTest extends \PHPUnit_Framework_TestCase
+class Version
 {
-
-    public function testExecute()
-    {
-        // mock the Kernel or create one depending on your needs
-        $application = new Application();
-        $application->add(new DiffCommand());
-
-        $command = $application->find('diff');
-        $commandTester = new CommandTester($command);
-        $commandTester->execute(
-            array(
-                '--input1' => __DIR__ . '/../_assets/log1.xml',
-                '--input2' => __DIR__ . '/../_assets/log.xml',
-            )
-        );
-
-        $this->assertEquals('JUnitDiff (' . Version::NUMBER . ') by Andreas Heigl and contributors.
-
-- Org_Heigl_HyphenatorTest::testHyphenateEntweder
-+ Org_Heigl_HyphenatorTest::testHyphenatorSingletonReturnsHyphenatorObject
-o PdfAnnotationsModelTest::testStoringIdWorks changed from success to error
-+ Wdv_Acl_DbTest::testSettingDefaultModelWithInstance
-- Wdv_Filter_HyphenCleanerTest::testHyphenCleanerFilter with data set #2
-
-Analyzed 615 tests in total, 613 tests in file log1.xml and 613 tests in file log.xml
-', $commandTester->getDisplay());
-
-    }
+    const NUMBER = '0.2.0';
 }

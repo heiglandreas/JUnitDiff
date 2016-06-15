@@ -32,9 +32,11 @@ require JUNITDIFF_COMPOSER_INSTALL;
 
 // import the Symfony Console Application
 use Symfony\Component\Console\Application;
+use Org_Heigl\JUnitDiff\Version;
 
+$name = 'JUnitDiff (' . Version::NUMBER . ') by Andreas Heigl and contributors.';
 $app = new Application();
-$app->setName('JUnitDiff (%version%) by Andreas Heigl and contributors');
+$app->setName($name);
 
 $app->add(new \Org_Heigl\JUnitDiff\Command\DiffCommand());
 $app->run();
