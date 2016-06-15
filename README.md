@@ -1,30 +1,29 @@
 # JUnitDiff
 
-A small CLI to check which tests have changed
+A small CLI to check which tests have changed between test runs.
 
-This is early alpha-stage. PRs ans improvement-ideas are more than welcome
+This software is in an early alpha-stage. PRs and improvement-ideas are more than welcome.
 
 ## Installation
 
-JUnitDiff is best installed using ```composer```
+JUnitDiff is best installed globally using `composer`.
 
 ```bash
-$ composer require --dev org_heigl/junitdiff
+$ composer global require --dev org_heigl/junitdiff
 ```
 
 ## Usage
 
-JUnitDiff compares two JUnit-Files. They can be generated with f.e. ```phpunit```
+JUnitDiff compares two JUnit log files which can be generated with e.g. `phpunit`.
 
 ```bash
 $ phpunit --log-junit logfile.xml
 ```
 
-When you have two files from two different runs you can check what tests have
-changed between those runs by calling this:
+When you have two JUnit log files from two different test runs available you can check which tests have changed between those with `junitdiff`.
 
 ```bash
-$ junitdiff diff -1 <path to the first logfile> -2 <path to the last logfile>
+$ junitdiff diff -1 </path/to/first/logfile> -2 </path/to/last/logfile>
 ```
 
 An example output might be:
