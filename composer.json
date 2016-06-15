@@ -20,5 +20,8 @@
     "bin" : ["app/junitdiff"],
     "require-dev": {
         "phpunit/phpunit": "^5.4"
+    },
+    "scripts": {
+        "test": "phpunit"
     }
 }
