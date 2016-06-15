@@ -79,17 +79,33 @@ class DiffCommand extends Command
             }
         }
         
-        $output->writeln([
-            '',
-            sprintf(
-                '<fg=yellow>Analyzed %s tests in total, %s tests in file %s and %s tests in file %s',
-                count($array),
-                count($array1),
-                basename($input->getOption('input1')),
-                count($array2),
-                basename($input->getOption('input2'))
-            )
-        ]);
+        $output->writeln('');
+        if ($output->getVerbosity() >= OutputInterface::VERBOSITY_VERBOSE) {
+            $output->writeln([
+                sprintf(
+                    '<bg=green;fg=black>+</>: This test was added in file %s',
+                    $input->getOption('input2')
+                ),
+                sprintf(
+                    '<bg=red;fg=yellow>-</>: This test was removed in file %s',
+                    $input->getOption('input2')
+                ),
+                sprintf(
+                    '<bg=blue;fg=yellow>o</>: The test-result changed between file %s and %s',
+                    $input->getOption('input1'),
+                    $input->getOption('input2')
+                ),
+                ''
+            ]);
+        }
+        $output->writeln(sprintf(
+            '<fg=yellow>Analyzed %s tests in total, %s tests in file %s and %s tests in file %s',
+            count($array),
+            count($array1),
+            basename($input->getOption('input1')),
+            count($array2),
+            basename($input->getOption('input2'))
+        ));
     }
 
     protected function merge(array $array1, array $array2)
