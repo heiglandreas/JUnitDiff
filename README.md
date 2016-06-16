@@ -25,15 +25,15 @@ $ phpunit --log-junit logfile.xml
 When you have two JUnit log files from two different test runs available you can check which tests have changed between those with `junitdiff`.
 
 ```bash
-$ junitdiff diff -1 </path/to/first/logfile> -2 </path/to/last/logfile>
+$ junitdiff compare </path/to/first/logfile> </path/to/last/logfile>
 ```
 
 An example output might be:
 
 ```bash
-Test MyTest::testStoringIdWorks changed from success to error
-New Test MyTest::testStoringIdWorksBetter with data set #7
-Removed Test MyTest::testStoringIdWorksBest
+[o] Test MyTest::testStoringIdWorks changed from success to error
+[+] New Test MyTest::testStoringIdWorksBetter with data set #7
+[-] Removed Test MyTest::testStoringIdWorksBest
 ```
 
 ## Caveat
