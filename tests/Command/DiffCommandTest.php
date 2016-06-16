@@ -76,7 +76,7 @@ Analyzed 615 tests in total, 613 tests in file log1.xml and 613 tests in file lo
             )
         );
 
-        $this->assertEquals('JUnitDiff (%version%) by Andreas Heigl and contributors
+        $this->assertEquals('Console Tool
 
  File log.xm is not readable  
 ', $commandTester->getDisplay());
@@ -96,7 +96,7 @@ Analyzed 615 tests in total, 613 tests in file log1.xml and 613 tests in file lo
             )
         );
 
-        $this->assertEquals('JUnitDiff (%version%) by Andreas Heigl and contributors
+        $this->assertEquals('Console Tool
 
  File log.empty seems not to be a JUnit-File  
 ', $commandTester->getDisplay());
@@ -112,7 +112,7 @@ Analyzed 615 tests in total, 613 tests in file log1.xml and 613 tests in file lo
         $commandTester = new CommandTester($command);
         $commandTester->execute([]);
 
-        $this->assertEquals('JUnitDiff (%version%) by Andreas Heigl and contributors
+        $this->assertEquals('Console Tool
 
   File  is not readable  
 ', $commandTester->getDisplay());
