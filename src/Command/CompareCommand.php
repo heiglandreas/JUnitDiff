@@ -62,7 +62,7 @@ class CompareCommand extends Command
         $style->title($this->getApplication()->getLongVersion());
 
 
-        $parser = new JUnitParser($style);
+        $parser = new JUnitParser();
         $merger = new JUnitMerger(new MergeResult($style));
         try {
             $mergeResult = $merger->merge(

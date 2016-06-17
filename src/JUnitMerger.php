@@ -42,13 +42,12 @@ class JUnitMerger
 
     /**
      * @param array $array1
-     * @param array $array26
+     * @param array $array2
      *
      * @return array
      */
     public function merge(array $array1, array $array2)
     {
-        $merged = [];
         foreach ($array1 as $key => $value) {
             $this->mergeResult->addBase($key, $value);
         }
