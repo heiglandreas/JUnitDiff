@@ -24,29 +24,44 @@
  * @author    Andreas Heigl<andreas@heigl.org>
  * @copyright 2016-2016 Andreas Heigl
  * @license   http://www.opensource.org/licenses/mit-license.php MIT-License
- * @since     16.06.2016
+ * @since     17.06.2016
  * @link      http://github.com/heiglandreas/org.heigl.junitdiff
  */
 
-namespace Org_Heigl\JUnitDiffTest\Writer;
+namespace Org_Heigl\JUnitDiffTest;
 
 use Mockery as M;
-use Org_Heigl\JUnitDiff\Writer\FileSummary;
+use Org_Heigl\JUnitDiff\JUnitParser;
 
-class FileSummaryTest extends \PHPUnit_Framework_TestCase
+class JUnitParserTest extends \PHPUnit_Framework_TestCase
 {
-    public function testThatSummaryWorks()
+    /** @expectedException \UnexpectedValueException */
+    public function testParsingAnInvalidFileThrowsException()
     {
-        $styleInterface = M::mock('\Symfony\Component\Console\Style\StyleInterface');
-        $styleInterface->shouldReceive('text')
-            ->with('<fg=yellow>Analyzed 12 tests in total, 23 tests in file a and 22 tests in file b</>');
-
-        $mergeresult = M::mock('\Org_Heigl\JUnitDiff\MergeResult');
-        $mergeresult->shouldReceive('countTotal')->andReturn(12);
-        $mergeresult->shouldReceive('countBase')->andReturn(23);
-        $mergeresult->shouldReceive('countCurrent')->andReturn(22);
-
-        $fileSummary = new FileSummary($styleInterface, 'a', 'b');
-        $this->assertNull($fileSummary->write($mergeresult));
+        $parser = new JUnitParser();
+        $parser->parseFile(__DIR__ . '/_assets/log.empty');
     }
+
+    /** @expectedException \UnexpectedValueException */
+    public function testThatParsingAnNonexistendFileThrowsException()
+    {
+        $parser = new JUnitParser();
+        $parser->parseFile(__DIR__ . '/_assets/not_available_at_all');
+    }
+
+    public function testThatParsingAJunitFileResultsInAnArray()
+    {
+        $parser = new JUnitParser();
+        $result = $parser->parseFile(__DIR__ . '/_assets/exampleJUnit.xml');
+
+        $expectedResult = [
+            'JUnitXmlReporter.constructor::should default path to an empty string' => 'failure',
+            'JUnitXmlReporter.constructor::should default consolidate to true' => 'skipped',
+            'JUnitXmlReporter.constructor::should default useDotNotation to true' => 'success',
+        ];    
+            
+        $this->assertEquals($expectedResult, $result);
+
+    }
+
 }

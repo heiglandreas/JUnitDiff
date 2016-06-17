@@ -22,31 +22,51 @@
  * THE SOFTWARE.
  *
  * @author    Andreas Heigl<andreas@heigl.org>
- * @copyright 2016-2016 Andreas Heigl
+ * @copyright Andreas Heigl
  * @license   http://www.opensource.org/licenses/mit-license.php MIT-License
- * @since     16.06.2016
+ * @since     17.06.2016
  * @link      http://github.com/heiglandreas/org.heigl.junitdiff
  */
 
-namespace Org_Heigl\JUnitDiffTest\Writer;
+namespace Org_Heigl\JUnitDiffTest;
 
+use Org_Heigl\JUnitDiff\JUnitMerger;
 use Mockery as M;
-use Org_Heigl\JUnitDiff\Writer\FileSummary;
 
-class FileSummaryTest extends \PHPUnit_Framework_TestCase
+class JUnitMergerTest extends \PHPUnit_Framework_TestCase
 {
-    public function testThatSummaryWorks()
+    public function testThatSettingMergerWorks()
     {
-        $styleInterface = M::mock('\Symfony\Component\Console\Style\StyleInterface');
-        $styleInterface->shouldReceive('text')
-            ->with('<fg=yellow>Analyzed 12 tests in total, 23 tests in file a and 22 tests in file b</>');
-
         $mergeresult = M::mock('\Org_Heigl\JUnitDiff\MergeResult');
-        $mergeresult->shouldReceive('countTotal')->andReturn(12);
-        $mergeresult->shouldReceive('countBase')->andReturn(23);
-        $mergeresult->shouldReceive('countCurrent')->andReturn(22);
 
-        $fileSummary = new FileSummary($styleInterface, 'a', 'b');
-        $this->assertNull($fileSummary->write($mergeresult));
+        $merger = new JUnitMerger($mergeresult);
+
+        $this->assertAttributeSame($mergeresult, 'mergeResult', $merger);
+    }
+
+    public function testThatMergingTwoArraysWorks()
+    {
+        $mergeresult = M::mock('\Org_Heigl\JUnitDiff\MergeResult');
+        $mergeresult->shouldReceive('addBase')->withArgs(['a', 'a']);
+        $mergeresult->shouldReceive('addBase')->withArgs(['b', 'b']);
+        $mergeresult->shouldReceive('addBase')->withArgs(['d', 'd']);
+        $mergeresult->shouldReceive('addCurrent')->withArgs(['a', 'a']);
+        $mergeresult->shouldReceive('addCurrent')->withArgs(['c', 'c']);
+        $mergeresult->shouldReceive('addCurrent')->withArgs(['d', 'e']);
+
+        $array1 = [
+            'a' => 'a',
+            'b' => 'b',
+            'd' => 'd',
+        ];
+
+        $array2 = [
+            'a' => 'a',
+            'c' => 'c',
+            'd' => 'e',
+        ];
+
+        $merger = new JUnitMerger($mergeresult);
+        $this->assertSame($mergeresult, $merger->merge($array1, $array2));
     }
 }
