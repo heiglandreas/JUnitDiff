@@ -30,37 +30,38 @@
 
 namespace Org_Heigl\JUnitDiffTest\Command;
 
-use Org_Heigl\JUnitDiff\Command\DiffCommand;
+use Org_Heigl\JUnitDiff\Command\CompareCommand;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Tester\CommandTester;
 
-class DiffCommandTest extends \PHPUnit_Framework_TestCase
+class CompareCommandTest extends \PHPUnit_Framework_TestCase
 {
 
     public function testExecute()
     {
         // mock the Kernel or create one depending on your needs
         $application = new Application();
-        $application->add(new DiffCommand());
+        $application->add(new CompareCommand());
 
-        $command = $application->find('diff');
+        $command = $application->find('compare');
         $commandTester = new CommandTester($command);
         $commandTester->execute(
             array(
-                '--input1' => __DIR__ . '/../_assets/log1.xml',
-                '--input2' => __DIR__ . '/../_assets/log.xml',
+                'base'    => __DIR__ . '/../_assets/log1.xml',
+                'current' => __DIR__ . '/../_assets/log.xml',
             )
         );
 
-        $this->assertEquals('Console Tool
+        $this->assertEquals('
+Console Tool
+============
 
-- Org_Heigl_HyphenatorTest::testHyphenateEntweder
-+ Org_Heigl_HyphenatorTest::testHyphenatorSingletonReturnsHyphenatorObject
-o PdfAnnotationsModelTest::testStoringIdWorks changed from success to error
-+ Wdv_Acl_DbTest::testSettingDefaultModelWithInstance
-- Wdv_Filter_HyphenCleanerTest::testHyphenCleanerFilter with data set #2
-
-Analyzed 615 tests in total, 613 tests in file log1.xml and 613 tests in file log.xml
+ - Org_Heigl_HyphenatorTest::testHyphenateEntweder
+ + Org_Heigl_HyphenatorTest::testHyphenatorSingletonReturnsHyphenatorObject
+ o PdfAnnotationsModelTest::testStoringIdWorks changed from success to error
+ + Wdv_Acl_DbTest::testSettingDefaultModelWithInstance
+ - Wdv_Filter_HyphenCleanerTest::testHyphenCleanerFilter with data set #2
+ Analyzed 615 tests in total, 613 tests in file log1.xml and 613 tests in file log.xml
 ', $commandTester->getDisplay());
 
     }
@@ -68,56 +69,47 @@ Analyzed 615 tests in total, 613 tests in file log1.xml and 613 tests in file lo
     public function testThatNonExistingFilesRaiseError()
     {
         $application = new Application();
-        $application->add(new DiffCommand());
+        $application->add(new CompareCommand());
 
-        $command = $application->find('diff');
+        $command = $application->find('compare');
         $commandTester = new CommandTester($command);
         $commandTester->execute(
             array(
-                '--input1' => __DIR__ . '/../_assets/log1.xml',
-                '--input2' => __DIR__ . '/../_assets/log.xm',
+                'base'    => __DIR__ . '/../_assets/log1.xml',
+                'current' => __DIR__ . '/../_assets/log.xm',
             )
         );
 
-        $this->assertEquals('Console Tool
-
- File log.xm is not readable  
-', $commandTester->getDisplay());
+        $this->assertContains('[ERROR] File log.xm is not readable', $commandTester->getDisplay());
     }
 
     public function testThatInvalidFileRaisesError()
     {
         $application = new Application();
-        $application->add(new DiffCommand());
+        $application->add(new CompareCommand());
 
-        $command = $application->find('diff');
+        $command = $application->find('compare');
         $commandTester = new CommandTester($command);
         $commandTester->execute(
             array(
-                '--input1' => __DIR__ . '/../_assets/log1.xml',
-                '--input2' => __DIR__ . '/../_assets/log.empty',
+                'base'    => __DIR__ . '/../_assets/log1.xml',
+                'current' => __DIR__ . '/../_assets/log.empty',
             )
         );
 
-        $this->assertEquals('Console Tool
-
- File log.empty seems not to be a JUnit-File  
-', $commandTester->getDisplay());
+        $this->assertContains('[ERROR] File log.empty seems not to be a JUnit-File', $commandTester->getDisplay());
     }
 
 
     public function testThatNoFileRaisesError()
     {
         $application = new Application();
-        $application->add(new DiffCommand());
+        $application->add(new CompareCommand());
 
-        $command = $application->find('diff');
+        $command = $application->find('compare');
         $commandTester = new CommandTester($command);
-        $commandTester->execute([]);
+        $commandTester->execute(['base' => '', 'current' => '']);
 
-        $this->assertEquals('Console Tool
-
-  File  is not readable  
-', $commandTester->getDisplay());
+        $this->assertContains('[ERROR] File  is not readable', $commandTester->getDisplay());
     }
 }
