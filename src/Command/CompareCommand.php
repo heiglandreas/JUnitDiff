@@ -47,10 +47,10 @@ class CompareCommand extends Command
     protected function configure()
     {
         $this->setName('compare')
-             ->setDescription('Compare two JUnit log files')
+             ->setDescription('Compares two JUnit log files')
              ->setDefinition(array(
-                 new InputArgument('input1', InputArgument::REQUIRED, 'First input file'),
-                 new InputArgument('input2', InputArgument::REQUIRED, 'Second input file')
+                 new InputArgument('base', InputArgument::REQUIRED, 'Base file for the comparison'),
+                 new InputArgument('current', InputArgument::REQUIRED, 'Current file to compare against the base file')
              ))
              ->setHelp('');
     }
@@ -66,8 +66,8 @@ class CompareCommand extends Command
         $merger = new JUnitMerger(new MergeResult($style));
         try {
             $mergeResult = $merger->merge(
-                $parser->parseFile($input->getArgument('input1')),
-                $parser->parseFile($input->getArgument('input2'))
+                $parser->parseFile($input->getArgument('base')),
+                $parser->parseFile($input->getArgument('current'))
             );
 
 
@@ -84,8 +84,8 @@ class CompareCommand extends Command
         if ($output->getVerbosity() >= Output::VERBOSITY_VERBOSE) {
             $writer = new Legend(
                 $style,
-                basename($input->getArgument('input1')),
-                basename($input->getArgument('input2'))
+                basename($input->getArgument('base')),
+                basename($input->getArgument('current'))
             );
             $writer->write($mergeResult);
         }
@@ -93,8 +93,8 @@ class CompareCommand extends Command
         if ($output->getVerbosity() >= Output::VERBOSITY_QUIET) {
             $writer = new FileSummary(
                 $style,
-                basename($input->getArgument('input1')),
-                basename($input->getArgument('input2'))
+                basename($input->getArgument('base')),
+                basename($input->getArgument('current'))
             );
 
             $writer->write($mergeResult);
