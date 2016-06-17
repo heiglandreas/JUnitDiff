@@ -1,4 +1,7 @@
 [![Build Status](https://travis-ci.org/heiglandreas/JUnitDiff.svg?branch=master)](https://travis-ci.org/heiglandreas/JUnitDiff)
+[![Code Climate](https://codeclimate.com/github/heiglandreas/JUnitDiff/badges/gpa.svg)](https://codeclimate.com/github/heiglandreas/JUnitDiff)
+[![Test Coverage](https://codeclimate.com/github/heiglandreas/JUnitDiff/badges/coverage.svg)](https://codeclimate.com/github/heiglandreas/JUnitDiff/coverage)
+[![Coverage Status](https://coveralls.io/repos/github/heiglandreas/JUnitDiff/badge.svg?branch=master)](https://coveralls.io/github/heiglandreas/JUnitDiff?branch=master)
 
 # JUnitDiff
 
