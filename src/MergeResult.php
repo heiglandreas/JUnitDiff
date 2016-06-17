@@ -37,7 +37,7 @@ class MergeResult implements \Iterator
 {
     use IteratorTrait;
 
-    protected $content;
+    protected $content = [];
 
     protected $style;
 
