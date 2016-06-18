@@ -30,6 +30,7 @@
 
 namespace Org_Heigl\JUnitDiff\Command;
 
+use Org_Heigl\JUnitDiff\JUnitParser;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -56,9 +57,11 @@ class DiffCommand extends Command
             '',
         ]);
 
+        $parser = new JUnitParser();
+
         try {
             $file1  = $input->getOption('input1');
-            $array1 = $this->parseJunitFile($file1);
+            $array1 = $parser->parseFile($file1);
         } catch(\Exception $e) {
             $output->writeln('<bg=red;fg=white>  ' . $e->getMessage() . '  </>');
             return;
@@ -66,7 +69,7 @@ class DiffCommand extends Command
 
         try {
             $file2  = $input->getOption('input2');
-            $array2 = $this->parseJunitFile($file2);
+            $array2 = $parser->parseFile($file2);
         } catch (\Exception $e) {
             $output->writeln('<bg=red;fg=white> ' . $e->getMessage() . '  </>');
             return;
@@ -137,50 +140,5 @@ class DiffCommand extends Command
         ksort($merged);
 
         return $merged;
-    }
-
-    protected function parseJunitFile($filename)
-    {
-        if (! is_readable($filename)) {
-            throw new \UnexpectedValueException(sprintf(
-                'File %s is not readable',
-                basename($filename)
-            ));
-        }
-        $dom = new \DOMDocument(1.0, 'UTF-8');
-        if (false === @$dom->load($filename)) {
-            throw new \UnexpectedValueException(sprintf(
-                'File %s seems not to be a JUnit-File',
-                basename($filename)
-            ));
-        }
-
-        $xpath = new \DOMXPath($dom);
-
-        $result = [];
-
-        $items = $xpath->query('//testcase');
-        foreach ($items as $item) {
-
-            if ($item->hasAttribute('class')) {
-                $class = $item->getAttribute('class');
-            } else {
-                $class = explode('::', $item->parentNode->getAttribute('name'))[0];
-            }
-
-            $type = 'success';
-
-            foreach ($item->childNodes as $child) {
-                if ($child->nodeType != XML_ELEMENT_NODE) {
-                    continue;
-                }
-                $type = $child->nodeName;
-            }
-
-            $result[$class . '::' . $item->getAttribute('name')] = $type;
-
-        }
-
-        return $result;
     }
 }

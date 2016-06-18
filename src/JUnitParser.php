@@ -31,6 +31,22 @@ namespace Org_Heigl\JUnitDiff;
 
 class JUnitParser
 {
+    public function __construct()
+    {
+        libxml_use_internal_errors(true);
+    }
+
+    public function getLastLibXmlError()
+    {
+        $error = libxml_get_last_error();
+        if (! $error instanceof \LibXMLError) {
+            return false;
+        }
+
+        libxml_clear_errors();
+        return $error;
+    }
+
     /**
      * @param string $filename
      *
@@ -45,7 +61,9 @@ class JUnitParser
             ));
         }
         $dom = new \DOMDocument(1.0, 'UTF-8');
-        if (false === @$dom->load($filename)) {
+        $dom->load($filename);
+
+        if ($this->getLastLibXmlError()) {
             throw new \UnexpectedValueException(sprintf(
                 'File %s seems not to be a JUnit-File',
                 basename($filename)
