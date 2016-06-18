@@ -129,6 +129,7 @@ class DiffCommand extends Command
 
     protected function merge(array $array1, array $array2)
     {
+        $merged = [];
         foreach ($array1 as $key => $value) {
             $merged[$key]['base'] = $value;
         }
