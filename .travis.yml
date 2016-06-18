@@ -1,23 +1,29 @@
 language: php
 
-php:
-  - hhvm
-  - nightly
-  - 7
-  - 5.6
-  - 5.5
-
 matrix:
   fast_finish: true
+  include:
+    - php: nightly
+    - php: hhvm
+    - php: 7.0
+      env:
+        - TEST_COVERAGE=true
+    - php: 5.6
+    - php: 5.5
 
 addons:
     code_climate:
         repo_token: $CODECLIMATE_TOKEN
 
-before_script:
-#  - if [ $TRAVIS_PHP_VERSION != "hhvm" ]; then phpenv config-rm xdebug.ini ; fi
-  - composer self-update
-  - composer install -n
+before_install:
+  - travis_retry composer self-update
+  - if [[ $TEST_COVERAGE != 'true' ]]; then phpenv config-rm xdebug.ini || return 0 ; fi
 
+install:
+  - if [[ $TEST_COVERAGE == 'true' && $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then travis_retry composer require --dev satooshi/php-coveralls ; fi
+  - composer install
 script:
 - composer test
+
+after_script:
+  - if [[ $TEST_COVERAGE == 'true' && $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then travis_retry coveralls -v ; fi
