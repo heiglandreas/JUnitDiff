@@ -26,4 +26,4 @@ script:
 - composer test
 
 after_script:
-  - if [[ $TEST_COVERAGE == 'true' && $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then travis_retry coveralls -v ; fi
+  - if [[ $TEST_COVERAGE == 'true' && $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then travis_retry vendor/bin/coveralls -v ; fi

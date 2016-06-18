@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/heiglandreas/JUnitDiff.svg?branch=master)](https://travis-ci.org/heiglandreas/JUnitDiff)
 [![Code Climate](https://codeclimate.com/github/heiglandreas/JUnitDiff/badges/gpa.svg)](https://codeclimate.com/github/heiglandreas/JUnitDiff)
-[![Test Coverage](https://codeclimate.com/github/heiglandreas/JUnitDiff/badges/coverage.svg)](https://codeclimate.com/github/heiglandreas/JUnitDiff/coverage)
 [![Coverage Status](https://coveralls.io/repos/github/heiglandreas/JUnitDiff/badge.svg?branch=master)](https://coveralls.io/github/heiglandreas/JUnitDiff?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/heiglandreas/JUnitDiff/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/heiglandreas/JUnitDiff/?branch=master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/46c6fa0c-fcfd-468f-82e1-2c23256e1cd6/mini.png)](https://insight.sensiolabs.com/projects/46c6fa0c-fcfd-468f-82e1-2c23256e1cd6)
