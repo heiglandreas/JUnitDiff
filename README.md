@@ -4,6 +4,11 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/heiglandreas/JUnitDiff/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/heiglandreas/JUnitDiff/?branch=master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/46c6fa0c-fcfd-468f-82e1-2c23256e1cd6/mini.png)](https://insight.sensiolabs.com/projects/46c6fa0c-fcfd-468f-82e1-2c23256e1cd6)
 
+[![Latest Stable Version](https://poser.pugx.org/org_heigl/junitdiff/v/stable)](https://packagist.org/packages/org_heigl/junitdiff)
+[![Total Downloads](https://poser.pugx.org/org_heigl/junitdiff/downloads)](https://packagist.org/packages/org_heigl/junitdiff)
+[![License](https://poser.pugx.org/org_heigl/junitdiff/license)](https://packagist.org/packages/org_heigl/junitdiff)
+[![composer.lock](https://poser.pugx.org/org_heigl/junitdiff/composerlock)](https://packagist.org/packages/org_heigl/junitdiff)
+
 # JUnitDiff
 
 A small CLI to check which tests have changed between test runs.
