@@ -30,6 +30,6 @@
         "mockery/mockery": "^0.9.5"
     },
     "scripts": {
-        "test": "phpunit --coverage-text"
+        "test": "phpunit --coverage-text --coverage-clover clover.xml"
     }
 }
