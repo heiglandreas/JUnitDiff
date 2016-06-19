@@ -77,9 +77,8 @@ class JUnitParser
         $items = $xpath->query('//testcase');
         foreach ($items as $item) {
 
-            if ($item->hasAttribute('class')) {
-                $class = $item->getAttribute('class');
-            } else {
+            $class = $item->getAttribute('class');
+            if (! $class) {
                 $class = explode('::', $item->parentNode->getAttribute('name'))[0];
             }
 
