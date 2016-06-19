@@ -9,6 +9,7 @@
 [![Latest Stable Version](https://poser.pugx.org/org_heigl/junitdiff/v/stable)](https://packagist.org/packages/org_heigl/junitdiff)
 [![Total Downloads](https://poser.pugx.org/org_heigl/junitdiff/downloads)](https://packagist.org/packages/org_heigl/junitdiff)
 [![License](https://poser.pugx.org/org_heigl/junitdiff/license)](https://packagist.org/packages/org_heigl/junitdiff)
+[![Dependency Status](https://www.versioneye.com/user/projects/5766582207354000415185ba/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5766582207354000415185ba)
 [![composer.lock](https://poser.pugx.org/org_heigl/junitdiff/composerlock)](https://packagist.org/packages/org_heigl/junitdiff)
 
 # JUnitDiff
