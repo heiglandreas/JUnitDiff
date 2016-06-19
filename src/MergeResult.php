@@ -82,25 +82,25 @@ class MergeResult implements \Iterator
 
     public function countBase()
     {
-        $i = 0;
+        $counter = 0;
         foreach ($this->content as $value) {
             if (isset($value['base'])) {
-                $i++;
+                $counter++;
             }
         }
 
-        return $i;
+        return $counter;
     }
 
     public function countCurrent()
     {
-        $i = 0;
+        $counter = 0;
         foreach ($this->content as $value) {
             if (isset($value['current'])) {
-                $i++;
+                $counter++;
             }
         }
 
-        return $i;
+        return $counter;
     }
 }
