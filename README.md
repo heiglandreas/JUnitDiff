@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/heiglandreas/JUnitDiff.svg?branch=master)](https://travis-ci.org/heiglandreas/JUnitDiff)
 [![Code Climate](https://codeclimate.com/github/heiglandreas/JUnitDiff/badges/gpa.svg)](https://codeclimate.com/github/heiglandreas/JUnitDiff)
+[![Test Coverage](https://codeclimate.com/github/heiglandreas/JUnitDiff/badges/coverage.svg)](https://codeclimate.com/github/heiglandreas/JUnitDiff/coverage)
 [![Coverage Status](https://coveralls.io/repos/github/heiglandreas/JUnitDiff/badge.svg?branch=master)](https://coveralls.io/github/heiglandreas/JUnitDiff?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/heiglandreas/JUnitDiff/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/heiglandreas/JUnitDiff/?branch=master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/1a2e1db4315f42efb79056e3f6c6bcbb)](https://www.codacy.com/app/github_70/JUnitDiff?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=heiglandreas/JUnitDiff&amp;utm_campaign=Badge_Grade)
