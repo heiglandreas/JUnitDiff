@@ -1,6 +1,9 @@
 * text=auto
 
 /tests export-ignore
+/tools export-ignore
+/.codeclimate.yml export-ignore
+/.coveralls.yml export-ignore
 /.editorconfig export-ignore
 /.gitattributes export-ignore
 /.gitignore export-ignore
