@@ -159,5 +159,79 @@ class MergeResultTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals(3, $mergeResult->countCurrent());
     }
-}
 
+    public function testThatCountingNewWorks()
+    {
+        $style = M::mock('\Symfony\Component\Console\Style\StyleInterface');
+        $mergeResult = new MergeResult($style);
+
+        $this->assertAttributeEquals([], 'content', $mergeResult);
+        $mergeResult->addCurrent('e', 'b');
+        $mergeResult->addCurrent('d', 'b');
+        $mergeResult->addCurrent('c', 'b');
+        $mergeResult->addCurrent('b', 'b');
+        $mergeResult->addCurrent('a', 'b');
+        $mergeResult->addBase('c', 'a');
+        $mergeResult->addBase('b', 'b');
+
+        $this->assertAttributeEquals([
+            'c' => ['current' => 'b', 'base' => 'a'],
+            'b' => ['current' => 'b', 'base' => 'b'],
+            'a' => ['current' => 'b'],
+            'd' => ['current' => 'b'],
+            'e' => ['current' => 'b'],
+        ], 'content', $mergeResult);
+
+        $this->assertEquals(3, $mergeResult->countNew());
+    }
+
+    public function testThatCountingRemovedWorks()
+    {
+        $style = M::mock('\Symfony\Component\Console\Style\StyleInterface');
+        $mergeResult = new MergeResult($style);
+
+        $this->assertAttributeEquals([], 'content', $mergeResult);
+        $mergeResult->addCurrent('c', 'b');
+        $mergeResult->addCurrent('b', 'b');
+        $mergeResult->addCurrent('a', 'b');
+        $mergeResult->addBase('c', 'a');
+        $mergeResult->addBase('b', 'b');
+        $mergeResult->addBase('d', 'b');
+        $mergeResult->addBase('e', 'b');
+
+        $this->assertAttributeEquals([
+            'c' => ['current' => 'b', 'base' => 'a'],
+            'b' => ['current' => 'b', 'base' => 'b'],
+            'a' => ['current' => 'b'],
+            'd' => ['base' => 'b'],
+            'e' => ['base' => 'b'],
+        ], 'content', $mergeResult);
+
+        $this->assertEquals(2, $mergeResult->countRemoved());
+    }
+
+    public function testThatCountingChangedWorks()
+    {
+        $style = M::mock('\Symfony\Component\Console\Style\StyleInterface');
+        $mergeResult = new MergeResult($style);
+
+        $this->assertAttributeEquals([], 'content', $mergeResult);
+        $mergeResult->addCurrent('c', 'b');
+        $mergeResult->addCurrent('b', 'b');
+        $mergeResult->addCurrent('a', 'b');
+        $mergeResult->addBase('c', 'a');
+        $mergeResult->addBase('b', 'a');
+        $mergeResult->addBase('d', 'b');
+        $mergeResult->addBase('e', 'b');
+
+        $this->assertAttributeEquals([
+            'c' => ['current' => 'b', 'base' => 'a'],
+            'b' => ['current' => 'b', 'base' => 'a'],
+            'a' => ['current' => 'b'],
+            'd' => ['base' => 'b'],
+            'e' => ['base' => 'b'],
+        ], 'content', $mergeResult);
+
+        $this->assertEquals(2, $mergeResult->countChanged());
+    }
+}
