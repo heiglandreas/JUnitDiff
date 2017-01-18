@@ -19,6 +19,9 @@ addons:
 before_install:
   - travis_retry composer self-update
   - if [[ $TEST_COVERAGE != 'true' ]]; then phpenv config-rm xdebug.ini || return 0 ; fi
+  - echo $DECRYPT_KEY | gpg --passphrase-fd 0 JUnitDiffSigning.asc.gpg
+  - gpg --batch --yes --import JUnitDiffSigning.asc
+
 
 install:
   - if [[ $TEST_COVERAGE == 'true' && $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then travis_retry composer require --dev satooshi/php-coveralls ; fi
@@ -27,7 +30,7 @@ install:
 
 script:
   - composer test
-  - if [[ $BUILD_PHAR == 'true' && $TRAVIS_TAG != '' ]]; then composer buildphar ; fi
+  - if [[ $BUILD_PHAR == 'true' && $TRAVIS_TAG != '' ]]; then composer buildphar && echo $SIGN_KEY | gpg --passphrase-fd 0 -u AE11B9CEBADB342A --armor --detach-sig build/junitdiff.phar ; fi
 
 after_script:
   - if [[ $TEST_COVERAGE == 'true' && $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then travis_retry vendor/bin/coveralls -v ; fi
@@ -36,7 +39,9 @@ after_script:
 deploy:
   provider: releases
   api_key: $GITHUB_API_KEY
-  file: build/junitdiff.phar
+  file:
+    - build/junitdiff.phar
+    - build/junitdiff.phar.asc
   skip_cleanup: true
   on:
     tags: true
