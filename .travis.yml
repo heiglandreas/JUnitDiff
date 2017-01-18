@@ -19,8 +19,7 @@ addons:
 before_install:
   - travis_retry composer self-update
   - if [[ $TEST_COVERAGE != 'true' ]]; then phpenv config-rm xdebug.ini || return 0 ; fi
-  - echo $DECRYPT_KEY | gpg --passphrase-fd 0 JUnitDiffSigning.asc.gpg
-  - gpg --batch --yes --import JUnitDiffSigning.asc
+  - if [[ $BUILD_PHAR == 'true' && $TRAVIS_TAG != '' ]]; then echo $DECRYPT_KEY | gpg --passphrase-fd 0 JUnitDiffSigning.asc.gpg && gpg --batch --yes --import JUnitDiffSigning.asc ; fi
 
 
 install:
