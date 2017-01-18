@@ -8,7 +8,7 @@ matrix:
     - php: 7.0
       env:
         - TEST_COVERAGE=true
-        - CREATE_PHAR=true
+        - BUILD_PHAR=true
     - php: 7.1
     - php: 5.6
 
@@ -24,9 +24,20 @@ install:
   - if [[ $TEST_COVERAGE == 'true' && $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then travis_retry composer require --dev satooshi/php-coveralls ; fi
   - if [[ $TEST_COVERAGE == 'true' && $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then travis_retry composer require --dev codeclimate/php-test-reporter:dev-master ; fi
   - composer install
+
 script:
-- composer test
+  - composer test
+  - if [[ $BUILD_PHAR == 'true' && $TRAVIS_TAG != '' ]]; then composer buildphar ; fi
 
 after_script:
   - if [[ $TEST_COVERAGE == 'true' && $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then travis_retry vendor/bin/coveralls -v ; fi
   - if [[ $TEST_COVERAGE == 'true' && $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then vendor/bin/test-reporter --coverage-report=clover.xml ; fi
+
+deploy:
+  provider: releases
+  api_key: $GITHUB_API_KEY
+  file: build/junitdiff.phar
+  skip_cleanup: true
+  on:
+    tags: true
+    php: '7.0'
