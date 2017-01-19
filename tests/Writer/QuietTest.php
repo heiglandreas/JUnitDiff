@@ -31,11 +31,11 @@
 namespace Org_Heigl\JUnitDiffTest\Writer;
 
 use Mockery as M;
-use Org_Heigl\JUnitDiff\Writer\FileChanges;
+use Org_Heigl\JUnitDiff\Writer\Quiet;
 
-class FileChangesTest extends \PHPUnit_Framework_TestCase
+class QuietTest extends \PHPUnit_Framework_TestCase
 {
-    public function testThatChangesSummaryWorks()
+    public function testThatQuietSummaryWorks()
     {
         $styleInterface = M::mock('\Symfony\Component\Console\Style\StyleInterface');
         $styleInterface->shouldReceive('text')
@@ -46,7 +46,7 @@ class FileChangesTest extends \PHPUnit_Framework_TestCase
         $mergeresult->shouldReceive('countRemoved')->andReturn(5);
         $mergeresult->shouldReceive('countChanged')->andReturn(7);
 
-        $fileChanges = new FileChanges($styleInterface, 'a', 'b');
-        $this->assertNull($fileChanges->write($mergeresult));
+        $quiet = new Quiet($styleInterface, 'a', 'b');
+        $this->assertNull($quiet->write($mergeresult));
     }
 }

@@ -33,7 +33,7 @@ namespace Org_Heigl\JUnitDiff\Writer;
 use Org_Heigl\JUnitDiff\MergeResult;
 use Symfony\Component\Console\Style\StyleInterface;
 
-class FileChanges implements WriterInterface
+class Quiet implements WriterInterface
 {
     protected $style;
 
