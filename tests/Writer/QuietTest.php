@@ -38,8 +38,8 @@ class QuietTest extends \PHPUnit_Framework_TestCase
     public function testThatQuietSummaryWorks()
     {
         $styleInterface = M::mock('\Symfony\Component\Console\Style\StyleInterface');
-        $styleInterface->shouldReceive('text')
-            ->with('<fg=yellow>Added: 3, Removed: 5, Changed: 7</>');
+        $styleInterface->shouldReceive('writeQuiet')
+            ->with('Added: <fg=green>3</>, Removed: <fg=red>5</>, Changed: <fg=yellow>7</>');
 
         $mergeresult = M::mock('\Org_Heigl\JUnitDiff\MergeResult');
         $mergeresult->shouldReceive('countNew')->andReturn(3);

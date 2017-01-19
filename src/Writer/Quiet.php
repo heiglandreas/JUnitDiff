@@ -50,8 +50,8 @@ class Quiet implements WriterInterface
 
     public function write(MergeResult $mergeResult)
     {
-        $this->style->text(sprintf(
-            '<fg=yellow>Added: %s, Removed: %s, Changed: %s</>',
+        $this->style->writeQuiet(sprintf(
+            'Added: <fg=green>%s</>, Removed: <fg=red>%s</>, Changed: <fg=yellow>%s</>',
             $mergeResult->countNew(),
             $mergeResult->countRemoved(),
             $mergeResult->countChanged()

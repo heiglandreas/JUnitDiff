@@ -33,5 +33,10 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 
 class DiffStyle extends SymfonyStyle
 {
-
+    public function writeQuiet($message)
+    {
+        $this->setVerbosity(self::VERBOSITY_NORMAL);
+        $this->text($message);
+        $this->setVerbosity(self::VERBOSITY_QUIET);
+    }
 }
