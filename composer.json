@@ -34,11 +34,19 @@
         "buildphar" : [
             "rm -rf vendor",
             "composer install --no-dev --prefer-dist",
-            "curl -o phar-composer -L `curl -s https://api.github.com/repos/clue/phar-composer/releases | grep browser_download_url | head -n 1 | cut -d '\"' -f 4`",
-            "chmod 755 phar-composer",
-            "chmod 755 phar-composer",
-            "mkdir ./build",
-            "./phar-composer build . build/"
+            "curl -o createPhar -L `curl -s https://api.github.com/repos/MacFJA/PharBuilder/releases | grep browser_download_url | head -n 1 | cut -d '\"' -f 4`",
+            "chmod 755 createPhar",
+            "mkdir -p ./build",
+            "php -d phar.readonly=0 ./createPhar package"
         ]
+    },
+    "extra": {
+        "phar-builder": {
+            "compression": "GZip",
+            "name": "junitdiff.phar",
+            "output-dir": "../build",
+            "entry-point": "./app/junitdiff",
+            "include-dev": false
+        }
     }
 }
