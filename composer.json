@@ -37,7 +37,7 @@
             "curl -o createPhar -L `curl -s https://api.github.com/repos/MacFJA/PharBuilder/releases | grep browser_download_url | head -n 1 | cut -d '\"' -f 4`",
             "chmod 755 createPhar",
             "mkdir -p ./build",
-            "php -d phar.readonly=0 ./createPhar package"
+            "php -d phar.readonly=0 ./createPhar package composer.json"
         ]
     },
     "extra": {
