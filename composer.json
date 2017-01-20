@@ -44,7 +44,7 @@
         "phar-builder": {
             "compression": "GZip",
             "name": "junitdiff.phar",
-            "output-dir": "../build",
+            "output-dir": "./build",
             "entry-point": "./app/junitdiff",
             "include-dev": false,
             "include" : [
