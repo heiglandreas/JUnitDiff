@@ -46,7 +46,12 @@
             "name": "junitdiff.phar",
             "output-dir": "../build",
             "entry-point": "./app/junitdiff",
-            "include-dev": false
+            "include-dev": false,
+            "include" : [
+                "app",
+                "src"
+            ],
+            "skip-shebang" : false
         }
     }
 }
