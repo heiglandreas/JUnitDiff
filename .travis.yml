@@ -8,7 +8,6 @@ matrix:
     - php: 7.0
       env:
         - TEST_COVERAGE=true
-        - BUILD_PHAR=true
     - php: 7.1
     - php: 5.6
 
@@ -19,7 +18,6 @@ addons:
 before_install:
   - travis_retry composer self-update
   - if [[ $TEST_COVERAGE != 'true' ]]; then phpenv config-rm xdebug.ini || return 0 ; fi
-  - if [[ $BUILD_PHAR == 'true' && $TRAVIS_TAG != '' ]]; then echo $DECRYPT_KEY | gpg --passphrase-fd 0 JUnitDiffSigning.asc.gpg && gpg --batch --yes --import JUnitDiffSigning.asc ; fi
 
 
 install:
@@ -29,11 +27,15 @@ install:
 
 script:
   - composer test
-  - if [[ $BUILD_PHAR == 'true' && $TRAVIS_TAG != '' ]]; then composer buildphar && echo $SIGN_KEY | gpg --passphrase-fd 0 -u AE11B9CEBADB342A --armor --detach-sig build/junitdiff.phar ; fi
 
 after_script:
   - if [[ $TEST_COVERAGE == 'true' && $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then travis_retry vendor/bin/coveralls -v ; fi
   - if [[ $TEST_COVERAGE == 'true' && $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then vendor/bin/test-reporter --coverage-report=clover.xml ; fi
+
+before_deploy:
+  - composer buildphar
+  - echo $DECRYPT_KEY | gpg --passphrase-fd 0 JUnitDiffSigning.asc.gpg && gpg --batch --yes --import JUnitDiffSigning.asc
+  - echo $SIGN_KEY | gpg --passphrase-fd 0 -u AE11B9CEBADB342A --armor --detach-sig build/junitdiff.phar 
 
 deploy:
   provider: releases
@@ -44,4 +46,4 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
-    php: '7.0'
+    php: 7.0
