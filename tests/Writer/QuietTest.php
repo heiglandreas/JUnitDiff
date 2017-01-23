@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Copyright (c) Andreas Heigl<andreas@heigl.org>
  *
@@ -27,16 +28,25 @@
  * @link      http://github.com/heiglandreas/org.heigl.junitdiff
  */
 
-namespace Org_Heigl\JUnitDiff\Style;
+namespace Org_Heigl\JUnitDiffTest\Writer;
 
-use Symfony\Component\Console\Style\SymfonyStyle;
+use Mockery as M;
+use Org_Heigl\JUnitDiff\Writer\Quiet;
 
-class DiffStyle extends SymfonyStyle
+class QuietTest extends \PHPUnit_Framework_TestCase
 {
-    public function writeQuiet($message)
+    public function testThatQuietSummaryWorks()
     {
-        $this->setVerbosity(self::VERBOSITY_NORMAL);
-        $this->text($message);
-        $this->setVerbosity(self::VERBOSITY_QUIET);
+        $styleInterface = M::mock('\Symfony\Component\Console\Style\StyleInterface');
+        $styleInterface->shouldReceive('writeQuiet')
+            ->with('Added: <fg=green>3</>, Removed: <fg=red>5</>, Changed: <fg=yellow>7</>');
+
+        $mergeresult = M::mock('\Org_Heigl\JUnitDiff\MergeResult');
+        $mergeresult->shouldReceive('countNew')->andReturn(3);
+        $mergeresult->shouldReceive('countRemoved')->andReturn(5);
+        $mergeresult->shouldReceive('countChanged')->andReturn(7);
+
+        $quiet = new Quiet($styleInterface, 'a', 'b');
+        $this->assertNull($quiet->write($mergeresult));
     }
 }

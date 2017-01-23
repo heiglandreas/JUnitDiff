@@ -103,4 +103,42 @@ class MergeResult implements \Iterator
 
         return $counter;
     }
+
+    public function countNew()
+    {
+        $counter = 0;
+        foreach ($this->content as $value) {
+            if (isset($value['base'])) {
+                continue;
+            }
+            $counter++;
+        }
+
+        return $counter;
+    }
+
+    public function countRemoved()
+    {
+        $counter = 0;
+        foreach ($this->content as $value) {
+            if (isset($value['current'])) {
+                continue;
+            }
+            $counter++;
+        }
+
+        return $counter;
+    }
+
+    public function countChanged()
+    {
+        $counter = 0;
+        foreach ($this->content as $value) {
+            if (isset($value['base']) && isset($value['current']) && $value['base'] != $value['current']) {
+                $counter++;
+            }
+        }
+
+        return $counter;
+    }
 }
