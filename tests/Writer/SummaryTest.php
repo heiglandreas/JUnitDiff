@@ -32,21 +32,21 @@ namespace Org_Heigl\JUnitDiffTest\Writer;
 
 use Mockery as M;
 use Org_Heigl\JUnitDiff\Writer\Quiet;
+use Org_Heigl\JUnitDiff\Writer\Summary;
 
-class QuietTest extends \PHPUnit_Framework_TestCase
+class SummaryTest extends \PHPUnit_Framework_TestCase
 {
     public function testThatQuietSummaryWorks()
     {
         $styleInterface = M::mock('\Symfony\Component\Console\Style\StyleInterface');
         $styleInterface->shouldReceive('writeQuiet')
-            ->with('Added: <fg=green>3</>, Removed: <fg=red>5</>, Changed: <fg=yellow>7</>');
-
+            ->with('Added:<bg=green;fg=black> 3 </>, Removed:<bg=red;fg=yellow> 5 </>, Changed:<bg=blue;fg=yellow> 7 </>');
         $mergeresult = M::mock('\Org_Heigl\JUnitDiff\MergeResult');
         $mergeresult->shouldReceive('countNew')->andReturn(3);
         $mergeresult->shouldReceive('countRemoved')->andReturn(5);
         $mergeresult->shouldReceive('countChanged')->andReturn(7);
 
-        $quiet = new Quiet($styleInterface, 'a', 'b');
+        $quiet = new Summary($styleInterface, 'a', 'b');
         $this->assertNull($quiet->write($mergeresult));
     }
 }

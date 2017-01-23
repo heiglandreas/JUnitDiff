@@ -37,6 +37,7 @@ use Org_Heigl\JUnitDiff\Writer\FileSummary;
 use Org_Heigl\JUnitDiff\Writer\Legend;
 use Org_Heigl\JUnitDiff\Writer\Standard;
 use Org_Heigl\JUnitDiff\Writer\Quiet;
+use Org_Heigl\JUnitDiff\Writer\Summary;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -101,8 +102,8 @@ class CompareCommand extends Command
             $writer->write($mergeResult);
         }
 
-        if ($output->getVerbosity() == Output::VERBOSITY_QUIET) {
-            $writer = new Quiet(
+        if ($output->getVerbosity() >= Output::VERBOSITY_QUIET) {
+            $writer = new Summary(
                 $style,
                 basename($input->getArgument('base')),
                 basename($input->getArgument('current'))

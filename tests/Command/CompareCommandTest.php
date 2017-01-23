@@ -63,6 +63,7 @@ Console Tool
  + Wdv_Acl_DbTest::testSettingDefaultModelWithInstance
  - Wdv_Filter_HyphenCleanerTest::testHyphenCleanerFilter with data set #2
  Analyzed 615 tests in total, 613 tests in file log1.xml and 613 tests in file log.xml
+ Added: 2 , Removed: 2 , Changed: 1 
 ', $commandTester->getDisplay());
 
     }
@@ -86,7 +87,7 @@ Console Tool
         );
 
         $this->assertEquals('
- Added: 2, Removed: 2, Changed: 1
+ Added: 2 , Removed: 2 , Changed: 1 
 ', $commandTester->getDisplay());
     }
 

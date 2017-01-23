@@ -33,7 +33,7 @@ namespace Org_Heigl\JUnitDiff\Writer;
 use Org_Heigl\JUnitDiff\MergeResult;
 use Symfony\Component\Console\Style\StyleInterface;
 
-class Quiet implements WriterInterface
+class Summary implements WriterInterface
 {
     protected $style;
 
@@ -51,7 +51,7 @@ class Quiet implements WriterInterface
     public function write(MergeResult $mergeResult)
     {
         $this->style->writeQuiet(sprintf(
-            'Added: <fg=green>%s</>, Removed: <fg=red>%s</>, Changed: <fg=yellow>%s</>',
+            'Added:<bg=green;fg=black> %s </>, Removed:<bg=red;fg=yellow> %s </>, Changed:<bg=blue;fg=yellow> %s </>',
             $mergeResult->countNew(),
             $mergeResult->countRemoved(),
             $mergeResult->countChanged()
