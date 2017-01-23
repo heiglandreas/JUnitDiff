@@ -33,6 +33,7 @@ namespace Org_Heigl\JUnitDiffTest\Command;
 use Org_Heigl\JUnitDiff\Command\CompareCommand;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Tester\CommandTester;
+use Symfony\Component\Console\Output\OutputInterface;
 
 class CompareCommandTest extends \PHPUnit_Framework_TestCase
 {
@@ -62,8 +63,32 @@ Console Tool
  + Wdv_Acl_DbTest::testSettingDefaultModelWithInstance
  - Wdv_Filter_HyphenCleanerTest::testHyphenCleanerFilter with data set #2
  Analyzed 615 tests in total, 613 tests in file log1.xml and 613 tests in file log.xml
+ Added: 2 , Removed: 2 , Changed: 1 
 ', $commandTester->getDisplay());
 
+    }
+
+    public function testExecuteQuietly()
+    {
+        // mock the Kernel or create one depending on your needs
+        $application = new Application();
+        $application->add(new CompareCommand());
+
+        $command = $application->find('compare');
+        $commandTester = new CommandTester($command);
+        $commandTester->execute(
+            array(
+                'base'    => __DIR__ . '/../_assets/log1.xml',
+                'current' => __DIR__ . '/../_assets/log.xml',
+            ),
+            array(
+                'verbosity' => OutputInterface::VERBOSITY_QUIET
+            )
+        );
+
+        $this->assertEquals('
+ Added: 2 , Removed: 2 , Changed: 1 
+', $commandTester->getDisplay());
     }
 
     public function testThatNonExistingFilesRaiseError()

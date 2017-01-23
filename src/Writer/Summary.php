@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Copyright (c) Andreas Heigl<andreas@heigl.org>
  *
@@ -27,16 +28,33 @@
  * @link      http://github.com/heiglandreas/org.heigl.junitdiff
  */
 
-namespace Org_Heigl\JUnitDiff\Style;
+namespace Org_Heigl\JUnitDiff\Writer;
 
-use Symfony\Component\Console\Style\SymfonyStyle;
+use Org_Heigl\JUnitDiff\MergeResult;
+use Symfony\Component\Console\Style\StyleInterface;
 
-class DiffStyle extends SymfonyStyle
+class Summary implements WriterInterface
 {
-    public function writeQuiet($message)
+    protected $style;
+
+    protected $file1;
+
+    protected $file2;
+
+    public function __construct(StyleInterface $style, $file1, $file2)
     {
-        $this->setVerbosity(self::VERBOSITY_NORMAL);
-        $this->text($message);
-        $this->setVerbosity(self::VERBOSITY_QUIET);
+        $this->style = $style;
+        $this->file1 = $file1;
+        $this->file2 = $file2;
+    }
+
+    public function write(MergeResult $mergeResult)
+    {
+        $this->style->writeQuiet(sprintf(
+            'Added:<bg=green;fg=black> %s </>, Removed:<bg=red;fg=yellow> %s </>, Changed:<bg=blue;fg=yellow> %s </>',
+            $mergeResult->countNew(),
+            $mergeResult->countRemoved(),
+            $mergeResult->countChanged()
+        ));
     }
 }
