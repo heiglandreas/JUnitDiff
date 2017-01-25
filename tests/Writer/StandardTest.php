@@ -56,11 +56,11 @@ class StandardTest extends \PHPUnit_Framework_TestCase
         $mergeresult->shouldReceive('valid')->andReturnValues([true, true, true, true, true, false]);
         $mergeresult->shouldReceive('key')->andReturnValues(['a', 'b', 'c', 'd', 'e']);
         $mergeresult->shouldReceive('current')->andReturnValues([
-            ['base'=>'Success'],
-            ['base' => 'success', 'current' => 'success'],
-            ['current' => 'success'],
-            ['base' => 'success', 'current' => 'failure'],
-            ['base' => 'failure', 'current' => 'success'],
+            ['base'=>['result'=>'Success']],
+            ['base' => ['result'=>'success'], 'current' => ['result' => 'success']],
+            ['current' => ['result' => 'success']],
+            ['base' => ['result' => 'success'], 'current' => ['result' => 'failure']],
+            ['base' => ['result' => 'failure'], 'current' => ['result' => 'success']],
         ]);
 
         $fileSummary = new Standard($styleInterface, 'a', 'b');

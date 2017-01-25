@@ -56,12 +56,12 @@ class Standard implements WriterInterface
                 continue;
             }
 
-            if ($value['base'] != $value['current']) {
+            if ($value['base']['result'] != $value['current']['result']) {
                 $this->style->text(sprintf(
                     '<bg=blue;fg=yellow>o</> %s changed from <fg=cyan>%s</> to <fg=magenta>%s</>',
                     $key,
-                    $value['base'],
-                    $value['current']
+                    $value['base']['result'],
+                    $value['current']['result']
                 ));
                 continue;
             }

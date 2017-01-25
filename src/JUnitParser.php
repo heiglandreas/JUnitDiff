@@ -91,7 +91,32 @@ class JUnitParser
                 $type = $child->nodeName;
             }
 
-            $result[$class . '::' . $item->getAttribute('name')] = $type;
+            $message = $ftype = $addInfo = '';
+
+            switch ($type) {
+                case 'error':
+                case 'failure':
+                    if (! $child->hasAttributes()) {
+                        break;
+                    }
+                    $message = $child->attributes->getNamedItem('message');
+                    if ($message instanceof \DOMAttr) {
+                        $message = $message->value;
+                    }
+                    $ftype   = $child->attributes->getNamedItem('type');
+                    if ($ftype instanceof \DOMAttr) {
+                        $ftype = $ftype->value;
+                    }
+                    $addInfo = $child->textContent;
+                    break;
+            }
+
+            $result[$class . '::' . $item->getAttribute('name')] = [
+                'result'    => $type,
+                'message' => $message,
+                'type'   => $ftype,
+                'info'    => $addInfo,
+            ];
 
         }
 

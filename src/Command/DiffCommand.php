@@ -87,12 +87,12 @@ class DiffCommand extends Command
                 continue;
             }
 
-            if ($value['base'] != $value['current']) {
+            if ($value['base']['result'] != $value['current']['result']) {
                 $output->writeln(sprintf(
                     '<bg=blue;fg=yellow>o</> %s changed from <fg=cyan>%s</> to <fg=magenta>%s</>',
                     $key,
-                    $array1[$key],
-                    $array2[$key]
+                    $array1[$key]['result'],
+                    $array2[$key]['result']
                 ));
                 continue;
             }
