@@ -89,6 +89,7 @@ class JUnitParser
                     continue;
                 }
                 $type = $child->nodeName;
+                $element = clone($child);
             }
 
             $message = $ftype = $addInfo = '';
@@ -96,18 +97,19 @@ class JUnitParser
             switch ($type) {
                 case 'error':
                 case 'failure':
-                    if (! $child->hasAttributes()) {
+                    if (! $element->hasAttributes()) {
+                        var_Dump(get_Class($element));
                         break;
                     }
-                    $message = $child->attributes->getNamedItem('message');
+                    $message = $element->attributes->getNamedItem('message');
                     if ($message instanceof \DOMAttr) {
                         $message = $message->value;
                     }
-                    $ftype   = $child->attributes->getNamedItem('type');
+                    $ftype   = $element->attributes->getNamedItem('type');
                     if ($ftype instanceof \DOMAttr) {
                         $ftype = $ftype->value;
                     }
-                    $addInfo = $child->textContent;
+                    $addInfo = $element->textContent;
                     break;
             }
 

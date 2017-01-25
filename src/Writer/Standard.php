@@ -31,15 +31,19 @@
 namespace Org_Heigl\JUnitDiff\Writer;
 
 use Org_Heigl\JUnitDiff\MergeResult;
+use Symfony\Component\Console\Output\Output;
 use Symfony\Component\Console\Style\StyleInterface;
 
 class Standard implements WriterInterface
 {
     protected $style;
 
-    public function __construct(StyleInterface $style)
+    private $verbosity;
+
+    public function __construct(StyleInterface $style, $verbosity = Output::VERBOSITY_NORMAL)
     {
         $this->style = $style;
+        $this->verbosity = $verbosity;
     }
 
     public function write(MergeResult $mergeResult)
@@ -63,6 +67,26 @@ class Standard implements WriterInterface
                     $value['base']['result'],
                     $value['current']['result']
                 ));
+
+                if ($value['base']['result'] === 'success' &&
+                    $value['current']['message'] &&
+                    $this->verbosity >= Output::VERBOSITY_VERBOSE) {
+                    $this->style->text(sprintf(
+                        "\t<fg=yellow>%s</>: <fg=green>%s</>",
+                            $value['current']['type'],
+                            $value['current']['message']
+                    ));
+                }
+
+                if ($value['base']['result'] === 'success' &&
+                    $value['current']['info'] &&
+                    $this->verbosity >= Output::VERBOSITY_VERY_VERBOSE) {
+                    $this->style->text(sprintf(
+                        "\t<fg=cyan>%s</>",
+                        $value['current']['info']
+                    ));
+                }
+
                 continue;
             }
         }
