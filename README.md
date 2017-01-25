@@ -20,11 +20,32 @@ This software is in an early alpha-stage. PRs and improvement-ideas are more tha
 
 ## Installation
 
-JUnitDiff is best installed globally using `composer`.
+JUnitDiff can be installed in one of the two following ways:
 
+### composer.
+
+Run this in your projects root-folder to include JUnitDiff as development-dependency
 ```bash
 $ composer global require --dev org_heigl/junitdiff
 ```
+
+### Phar
+
+Download the latest release as PHAR-file from the [release-page](https://github.com/heiglandreas/JUnitDiff/releases/).
+
+The releases are signed using the JUNitDiff GPG-Key with ID AE11B9CEBADB342A and
+Fingerprint ```A84C BFAC 7147 9C6C E37E FF47 AE11 B9CE BADB 342A```.
+ 
+You can verify the phar-file using these commands:
+
+```bash
+gpg --keyserver pgp.mit.edu --recv-key 0xAE11B9CEBADB342A
+gpg --fingerprint AE11B9CEBADB342A
+gpg --verify junitdiff.phar.asc junitdiff.phar
+```
+
+Feel free to rename the file ```junitdiff.phar``` to ```junitdiff``` for easier
+execution.
 
 ## Usage
 
@@ -37,7 +58,7 @@ $ phpunit --log-junit logfile.xml
 When you have two JUnit log files from two different test runs available you can check which tests have changed between those with `junitdiff`.
 
 ```bash
-$ junitdiff compare </path/to/first/logfile> </path/to/last/logfile>
+$ php junitdiff.diff compare </path/to/first/logfile> </path/to/last/logfile>
 ```
 
 An example output might be:
@@ -50,7 +71,10 @@ An example output might be:
 
 ## Caveat
 
-Currently the JUnit-log file does not provide information (Or I was too stubborn to find it)
-about skipped or ignored tests. They will **not** be shown in the output! But as they are
+PHPUnit adds information about skipped or ignored tests into the JUnit-lof file starting with 
+PHPUnit 6.0! So files created with a previous version do not provide information
+about skipped or ignored tests. ([Thanks to Sebastian Bergmann for that info!](https://github.com/heiglandreas/JUnitDiff/issues/3))
+Until [Issue 3](https://github.com/heiglandreas/JUnitDiff/issues/3)
+is resolved  they will **not** be shown in the output! But as they are
 ignored or skipped and therefore not executed they are just like not existing tests at
-all, so it shouldn't be an issue.
+all, so it shouldn't be an issue. 
