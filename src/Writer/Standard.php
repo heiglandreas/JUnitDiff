@@ -61,7 +61,7 @@ class Standard implements WriterInterface
             }
 
             if ($value['base']['result'] != $value['current']['result']) {
-                $this->writeChangedTest($value['base'], $value['current']);
+                $this->writeChangedTest($value['base'], $value['current'], $key);
                 continue;
             }
         }
