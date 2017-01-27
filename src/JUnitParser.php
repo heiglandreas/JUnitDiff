@@ -98,7 +98,6 @@ class JUnitParser
                 case 'error':
                 case 'failure':
                     if (! $element->hasAttributes()) {
-                        var_Dump(get_Class($element));
                         break;
                     }
                     $message = $element->attributes->getNamedItem('message');
