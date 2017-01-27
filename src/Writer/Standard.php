@@ -52,43 +52,94 @@ class Standard implements WriterInterface
 
         foreach ($mergeResult as $key => $value) {
             if (! isset($value['base'])) {
-                $this->style->text('<bg=green;fg=black>+</> ' . $key);
+                $this->writeAddedTest($key);
                 continue;
             }
             if (! isset($value['current'])) {
-                $this->style->text('<bg=red;fg=yellow>-</> ' . $key);
+                $this->writeRemovedTest($key);
                 continue;
             }
 
             if ($value['base']['result'] != $value['current']['result']) {
-                $this->style->text(sprintf(
-                    '<bg=blue;fg=yellow>o</> %s changed from <fg=cyan>%s</> to <fg=magenta>%s</>',
-                    $key,
-                    $value['base']['result'],
-                    $value['current']['result']
-                ));
-
-                if ($value['base']['result'] === 'success' &&
-                    $value['current']['message'] &&
-                    $this->verbosity >= Output::VERBOSITY_VERBOSE) {
-                    $this->style->text(sprintf(
-                        "\t<fg=yellow>%s</>: <fg=green>%s</>",
-                            $value['current']['type'],
-                            $value['current']['message']
-                    ));
-                }
-
-                if ($value['base']['result'] === 'success' &&
-                    $value['current']['info'] &&
-                    $this->verbosity >= Output::VERBOSITY_VERY_VERBOSE) {
-                    $this->style->text(sprintf(
-                        "\t<fg=cyan>%s</>",
-                        $value['current']['info']
-                    ));
-                }
-
+                $this->writeChangedTest($value['base'], $value['current']);
                 continue;
             }
         }
+    }
+
+    /**
+     * @param string $key
+     *
+     * @return void;
+     */
+    private function writeAddedTest($key)
+    {
+        $this->style->text('<bg=green;fg=black>+</> ' . $key);
+    }
+
+    /**
+     * @param string $key
+     *
+     * @return void
+     */
+    private function writeRemovedTest($key)
+    {
+        $this->style->text('<bg=red;fg=yellow>-</> ' . $key);
+    }
+
+    /**
+     * @param array $base
+     * @param array $current
+     * @param string $key
+     *
+     * @return void
+     */
+    private function writeChangedTest($base, $current, $key)
+    {
+        $this->style->text(sprintf(
+            '<bg=blue;fg=yellow>o</> %s changed from <fg=cyan>%s</> to <fg=magenta>%s</>',
+            $key,
+            $base['result'],
+            $current['result']
+        ));
+
+        if ($base['result'] === 'success') {
+            $this->addVerboseInformationToChangedTest($current);
+            $this->addVeryVerboseInformationToChangedTest($current);
+        }
+
+    }
+
+    private function addVerboseInformationToChangedTest($current)
+    {
+        if (! $current['message']) {
+            return;
+        }
+
+        if ($this->verbosity < Output::VERBOSITY_VERBOSE) {
+            return;
+        }
+
+        $this->style->text(sprintf(
+            "\t<fg=yellow>%s</>: <fg=green>%s</>",
+            $current['type'],
+            $current['message']
+        ));
+    }
+
+    private function addVeryVerboseInformationToChangedTest($current)
+    {
+        if (! $current['info']) {
+            return;
+        }
+
+        if ($this->verbosity < Output::VERBOSITY_VERY_VERBOSE) {
+            return;
+        }
+
+        $this->style->text(sprintf(
+            "\t<fg=cyan>%s</>",
+            $current['info']
+        ));
     }
 }
