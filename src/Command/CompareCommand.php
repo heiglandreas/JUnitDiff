@@ -79,7 +79,7 @@ class CompareCommand extends Command
         }
 
         if ($output->getVerbosity() >= Output::VERBOSITY_NORMAL) {
-            $writer = new Standard($style);
+            $writer = new Standard($style, $output->getVerbosity());
             $writer->write($mergeResult);
         }
 

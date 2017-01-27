@@ -55,10 +55,103 @@ class JUnitParserTest extends \PHPUnit_Framework_TestCase
         $result = $parser->parseFile(__DIR__ . '/_assets/exampleJUnit.xml');
 
         $expectedResult = [
-            'JUnitXmlReporter.constructor::should default path to an empty string' => 'failure',
-            'JUnitXmlReporter.constructor::should default consolidate to true' => 'skipped',
-            'JUnitXmlReporter.constructor::should default useDotNotation to true' => 'success',
-        ];    
+            'JUnitXmlReporter.constructor::Errored and will stay errored' => [
+                'result' => 'error',
+                'message' => 'value of getMessage',
+                'type' => 'Exception',
+                'info' => 'This might be a stack-trace',
+            ],
+            'JUnitXmlReporter.constructor::Errored and will fail' => [
+                'result' => 'error',
+                'message' => 'value of getMessage',
+                'type' => 'Exception',
+                'info' => 'This might be a stack-trace',
+            ],
+            'JUnitXmlReporter.constructor::Errored and will be skipped' => [
+                'result' => 'error',
+                'message' => 'value of getMessage',
+                'type' => 'Exception',
+                'info' => 'This might be a stack-trace',
+            ],
+            'JUnitXmlReporter.constructor::Errored and will be restored' => [
+                'result' => 'error',
+                'message' => 'value of getMessage',
+                'type' => 'Exception',
+                'info' => 'This might be a stack-trace',
+            ],
+            'JUnitXmlReporter.constructor::Failed and will error' => [
+                'result' => 'failure',
+                'message' => 'value of getMessage',
+                'type' => 'assertEquals',
+                'info' => 'This might be a stack-trace',
+            ],
+            'JUnitXmlReporter.constructor::Failed and will stay failed' => [
+                'result' => 'failure',
+                'message' => 'value of getMessage',
+                'type' => 'assertEquals',
+                'info' => 'This might be a stack-trace',
+            ],
+            'JUnitXmlReporter.constructor::Failed and will be skipped' => [
+                'result' => 'failure',
+                'message' => 'value of getMessage',
+                'type' => 'assertEquals',
+                'info' => 'This might be a stack-trace',
+            ],
+            'JUnitXmlReporter.constructor::Failed and will be restored' => [
+                'result' => 'failure',
+                'message' => 'value of getMessage',
+                'type' => 'assertEquals',
+                'info' => 'This might be a stack-trace',
+            ],
+            'JUnitXmlReporter.constructor::Skipped and will error' => [
+                'result' => 'skipped',
+                'message' => '',
+                'type' => '',
+                'info' => ''
+            ],
+            'JUnitXmlReporter.constructor::Skipped and will fail' => [
+                'result' => 'skipped',
+                'message' => '',
+                'type' => '',
+                'info' => ''
+            ],
+            'JUnitXmlReporter.constructor::Skipped and will stay skipped' => [
+                'result' => 'skipped',
+                'message' => '',
+                'type' => '',
+                'info' => ''
+            ],
+            'JUnitXmlReporter.constructor::Skipped and will be restored' => [
+                'result' => 'skipped',
+                'message' => '',
+                'type' => '',
+                'info' => ''
+            ],
+            'JUnitXmlReporter.constructor::Success and will error' => [
+                'result' => 'success',
+                'message' => '',
+                'type' => '',
+                'info' => ''
+            ],
+            'JUnitXmlReporter.constructor::Success and will fail' => [
+                'result' => 'success',
+                'message' => '',
+                'type' => '',
+                'info' => ''
+            ],
+            'JUnitXmlReporter.constructor::Success and will be skipped' => [
+                'result' => 'success',
+                'message' => '',
+                'type' => '',
+                'info' => ''
+            ],
+            'JUnitXmlReporter.constructor::Success and will stay success' => [
+                'result' => 'success',
+                'message' => '',
+                'type' => '',
+                'info' => ''
+            ],
+        ];
             
         $this->assertEquals($expectedResult, $result);
 

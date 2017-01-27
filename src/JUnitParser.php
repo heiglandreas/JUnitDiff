@@ -84,14 +84,42 @@ class JUnitParser
 
             $type = 'success';
 
+            $element = new \DOMNode();
+
             foreach ($item->childNodes as $child) {
                 if ($child->nodeType != XML_ELEMENT_NODE) {
                     continue;
                 }
                 $type = $child->nodeName;
+                $element = clone($child);
             }
 
-            $result[$class . '::' . $item->getAttribute('name')] = $type;
+            $message = $ftype = $addInfo = '';
+
+            switch ($type) {
+                case 'error':
+                case 'failure':
+                    if (! $element->hasAttributes()) {
+                        break;
+                    }
+                    $message = $element->attributes->getNamedItem('message');
+                    if ($message instanceof \DOMAttr) {
+                        $message = $message->value;
+                    }
+                    $ftype   = $element->attributes->getNamedItem('type');
+                    if ($ftype instanceof \DOMAttr) {
+                        $ftype = $ftype->value;
+                    }
+                    $addInfo = $element->textContent;
+                    break;
+            }
+
+            $result[$class . '::' . $item->getAttribute('name')] = [
+                'result'    => $type,
+                'message' => $message,
+                'type'   => $ftype,
+                'info'    => $addInfo,
+            ];
 
         }
 

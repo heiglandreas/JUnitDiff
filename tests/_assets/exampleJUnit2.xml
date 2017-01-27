@@ -14,41 +14,41 @@
             <error message="value of getMessage" type="Exception">This might be a stack-trace</error>
         </testcase>
         <testcase classname="JUnitXmlReporter" name="Errored and will fail" time="0.006">
-            <error message="value of getMessage" type="Exception">This might be a stack-trace</error>
+            <failure message="value of getMessage" type="assertEquals">This might be a stack-trace</failure>
         </testcase>
         <testcase classname="JUnitXmlReporter" name="Errored and will be skipped" time="0.006">
-            <error message="value of getMessage" type="Exception">This might be a stack-trace</error>
+            <skipped />
         </testcase>
-        <testcase classname="JUnitXmlReporter" name="Errored and will be restored" time="0.006">
-            <error message="value of getMessage" type="Exception">This might be a stack-trace</error>
-        </testcase>
+        <testcase classname="JUnitXmlReporter" name="Errored and will be restored" time="0.006" />
         <testcase classname="JUnitXmlReporter" name="Failed and will error" time="0.006">
-            <failure message="value of getMessage" type="assertEquals">This might be a stack-trace</failure>
+            <error message="value of getMessage" type="Exception">This might be a stack-trace</error>
         </testcase>
         <testcase classname="JUnitXmlReporter" name="Failed and will stay failed" time="0.006">
             <failure message="value of getMessage" type="assertEquals">This might be a stack-trace</failure>
         </testcase>
         <testcase classname="JUnitXmlReporter" name="Failed and will be skipped" time="0.006">
-            <failure message="value of getMessage" type="assertEquals">This might be a stack-trace</failure>
-        </testcase>
-        <testcase classname="JUnitXmlReporter" name="Failed and will be restored" time="0.006">
-            <failure message="value of getMessage" type="assertEquals">This might be a stack-trace</failure>
-        </testcase>
-        <testcase classname="JUnitXmlReporter" name="Skipped and will error" time="0.006">
             <skipped />
+        </testcase>
+        <testcase classname="JUnitXmlReporter" name="Failed and will be restored" time="0.006" />
+        <testcase classname="JUnitXmlReporter" name="Skipped and will error" time="0.006">
+            <error message="value of getMessage" type="Exception">This might be a stack-trace</error>
         </testcase>
         <testcase classname="JUnitXmlReporter" name="Skipped and will fail" time="0.006">
-            <skipped />
+            <failure message="value of getMessage" type="assertEquals">This might be a stack-trace</failure>
         </testcase>
         <testcase classname="JUnitXmlReporter" name="Skipped and will stay skipped" time="0.006">
             <skipped />
         </testcase>
-        <testcase classname="JUnitXmlReporter" name="Skipped and will be restored" time="0.006">
+        <testcase classname="JUnitXmlReporter" name="Skipped and will be restored" time="0.006" />
+        <testcase classname="JUnitXmlReporter" name="Success and will error" time="0.006">
+            <error message="value of getMessage" type="Exception">This might be a stack-trace</error>
+        </testcase>
+        <testcase classname="JUnitXmlReporter" name="Success and will fail" time="0.006">
+            <failure message="value of getMessage" type="assertEquals">This might be a stack-trace</failure>
+        </testcase>
+        <testcase classname="JUnitXmlReporter" name="Success and will be skipped" time="0.006">
             <skipped />
         </testcase>
-        <testcase classname="JUnitXmlReporter" name="Success and will error" time="0.006" />
-        <testcase classname="JUnitXmlReporter" name="Success and will fail" time="0.006"/>
-        <testcase classname="JUnitXmlReporter" name="Success and will be skipped" time="0.006" />
         <testcase classname="JUnitXmlReporter" name="Success and will stay success" time="0.006" />
     </testsuite>
 </testsuites>
