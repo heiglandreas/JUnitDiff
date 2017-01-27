@@ -84,6 +84,8 @@ class JUnitParser
 
             $type = 'success';
 
+            $element = new \DOMNode();
+
             foreach ($item->childNodes as $child) {
                 if ($child->nodeType != XML_ELEMENT_NODE) {
                     continue;
