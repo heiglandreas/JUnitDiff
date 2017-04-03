@@ -16,8 +16,8 @@ cache:
   - junitlogs
 
 addons:
-    code_climate:
-        repo_token: $CODECLIMATE_REPO_TOKEN
+  code_climate:
+    repo_token: $CODECLIMATE_REPO_TOKEN
 
 before_install:
   - travis_retry composer self-update
