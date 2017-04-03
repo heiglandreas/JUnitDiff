@@ -10,6 +10,9 @@ matrix:
         - TEST_COVERAGE=true
     - php: 7.1
     - php: 5.6
+  allow_failures:
+    - php: nightly
+    - php: hhvm
 
 cache:
   directories:
@@ -32,7 +35,7 @@ install:
 
 script:
   - composer test
-  - if [[ -f junitlogs/`git merge-base HEAD master`.log ]]; then php junitdiff.phar compare junitlogs/`git merge-base HEAD master`.log junitlogs/`git rev-parse HEAD`.log; fi
+  - if [[ $TEST_COVERAGE == 'true' && $TRAVIS_PULL_REQUEST != 'false' && -f junitlogs/`git merge-base HEAD master`.log ]]; then php junitdiff.phar compare junitlogs/`git merge-base HEAD master`.log junitlogs/`git rev-parse HEAD`.log; fi
 
 after_script:
   - if [[ $TEST_COVERAGE == 'true' && $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then travis_retry vendor/bin/coveralls -v ; fi
