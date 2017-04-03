@@ -30,7 +30,7 @@
         "mockery/mockery": "^0.9.5"
     },
     "scripts": {
-        "test": "phpunit --coverage-text --coverage-clover clover.xml --log-junit junitlogs/`git rev-parse HEAD`.log",
+        "test": "phpunit --color --coverage-text --coverage-clover clover.xml --log-junit junitlogs/`git rev-parse HEAD`.log",
         "buildphar" : [
             "rm -rf vendor",
             "composer install --no-dev --prefer-dist",
