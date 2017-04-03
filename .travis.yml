@@ -10,14 +10,17 @@ matrix:
         - TEST_COVERAGE=true
     - php: 7.1
     - php: 5.6
+  allow_failures:
+    - php: nightly
+    - php: hhvm
 
 cache:
   directories:
   - junitlogs
 
 addons:
-    code_climate:
-        repo_token: $CODECLIMATE_REPO_TOKEN
+  code_climate:
+    repo_token: $CODECLIMATE_REPO_TOKEN
 
 before_install:
   - travis_retry composer self-update
@@ -28,9 +31,11 @@ install:
   - if [[ $TEST_COVERAGE == 'true' && $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then travis_retry composer require --dev satooshi/php-coveralls ; fi
   - if [[ $TEST_COVERAGE == 'true' && $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then travis_retry composer require --dev codeclimate/php-test-reporter:dev-master ; fi
   - composer install
+  - curl -LO https://github.com/heiglandreas/JUnitDiff/releases/download/0.5.0/junitdiff.phar
 
 script:
   - composer test
+  - if [[ $TEST_COVERAGE == 'true' && $TRAVIS_PULL_REQUEST != 'false' && -f junitlogs/`git merge-base HEAD master`.log ]]; then php junitdiff.phar compare junitlogs/`git merge-base HEAD master`.log junitlogs/`git rev-parse HEAD`.log; fi
 
 after_script:
   - if [[ $TEST_COVERAGE == 'true' && $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then travis_retry vendor/bin/coveralls -v ; fi
