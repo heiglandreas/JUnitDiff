@@ -11,6 +11,10 @@ matrix:
     - php: 7.1
     - php: 5.6
 
+cache:
+  directories:
+  - junitlogs
+
 addons:
     code_climate:
         repo_token: $CODECLIMATE_REPO_TOKEN
@@ -35,7 +39,7 @@ after_script:
 before_deploy:
   - composer buildphar
   - echo $DECRYPT_KEY | gpg --passphrase-fd 0 JUnitDiffSigning.asc.gpg && gpg --batch --yes --import JUnitDiffSigning.asc
-  - echo $SIGN_KEY | gpg --passphrase-fd 0 -u AE11B9CEBADB342A --armor --detach-sig build/junitdiff.phar 
+  - echo $SIGN_KEY | gpg --passphrase-fd 0 -u AE11B9CEBADB342A --armor --detach-sig build/junitdiff.phar
 
 deploy:
   provider: releases
