@@ -27,7 +27,7 @@
     "bin" : ["app/junitdiff"],
     "require-dev": {
         "phpunit/phpunit": "^4.8||^5.4",
-        "mockery/mockery": "^0.9.5"
+        "mockery/mockery": "^0.9.5 || ^1.0.0"
     },
     "scripts": {
         "test": "phpunit --color --coverage-text --coverage-clover clover.xml --log-junit junitlogs/`git rev-parse HEAD`.log",
