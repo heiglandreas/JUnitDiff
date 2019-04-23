@@ -50,10 +50,10 @@ class CompareCommand extends Command
     {
         $this->setName('compare')
              ->setDescription('Compares two JUnit log files')
-             ->setDefinition(array(
+             ->setDefinition([
                  new InputArgument('base', InputArgument::REQUIRED, 'Base file for the comparison'),
                  new InputArgument('current', InputArgument::REQUIRED, 'Current file to compare against the base file')
-             ))
+             ])
              ->setHelp('');
     }
 
@@ -71,8 +71,6 @@ class CompareCommand extends Command
                 $parser->parseFile($input->getArgument('base')),
                 $parser->parseFile($input->getArgument('current'))
             );
-
-
         } catch (\Exception $e) {
             $style->error($e->getMessage());
             return;
@@ -110,6 +108,5 @@ class CompareCommand extends Command
             );
             $writer->write($mergeResult);
         }
-
     }
 }

@@ -45,12 +45,10 @@ class DiffCommandTest extends \PHPUnit_Framework_TestCase
 
         $command = $application->find('diff');
         $commandTester = new CommandTester($command);
-        $commandTester->execute(
-            array(
-                '--input1' => __DIR__ . '/../_assets/log1.xml',
-                '--input2' => __DIR__ . '/../_assets/log.xml',
-            )
-        );
+        $commandTester->execute([
+            '--input1' => __DIR__ . '/../_assets/log1.xml',
+            '--input2' => __DIR__ . '/../_assets/log.xml',
+        ]);
 
         $this->assertEquals('Console Tool
 
@@ -62,7 +60,6 @@ o PdfAnnotationsModelTest::testStoringIdWorks changed from success to error
 
 Analyzed 615 tests in total, 613 tests in file log1.xml and 613 tests in file log.xml
 ', $commandTester->getDisplay());
-
     }
 
     public function testThatNonExistingFilesRaiseError()
@@ -72,12 +69,10 @@ Analyzed 615 tests in total, 613 tests in file log1.xml and 613 tests in file lo
 
         $command = $application->find('diff');
         $commandTester = new CommandTester($command);
-        $commandTester->execute(
-            array(
-                '--input1' => __DIR__ . '/../_assets/log1.xml',
-                '--input2' => __DIR__ . '/../_assets/log.xm',
-            )
-        );
+        $commandTester->execute([
+            '--input1' => __DIR__ . '/../_assets/log1.xml',
+            '--input2' => __DIR__ . '/../_assets/log.xm',
+        ]);
 
         $this->assertEquals('Console Tool
 
@@ -92,12 +87,10 @@ Analyzed 615 tests in total, 613 tests in file log1.xml and 613 tests in file lo
 
         $command = $application->find('diff');
         $commandTester = new CommandTester($command);
-        $commandTester->execute(
-            array(
-                '--input1' => __DIR__ . '/../_assets/log1.xml',
-                '--input2' => __DIR__ . '/../_assets/log.empty',
-            )
-        );
+        $commandTester->execute([
+            '--input1' => __DIR__ . '/../_assets/log1.xml',
+            '--input2' => __DIR__ . '/../_assets/log.empty',
+        ]);
 
         $this->assertEquals('Console Tool
 

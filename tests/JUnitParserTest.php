@@ -157,9 +157,7 @@ class JUnitParserTest extends \PHPUnit_Framework_TestCase
                 'info' => ''
             ],
         ];
-            
+
         $this->assertEquals($expectedResult, $result);
-
     }
-
 }

@@ -42,10 +42,10 @@ class DiffCommand extends Command
     {
         $this->setName('diff')
              ->setDescription('Shows a diff between two JUnit log files')
-             ->setDefinition(array(
+             ->setDefinition([
                  new InputOption('input1', '1', InputOption::VALUE_REQUIRED, 'First input file'),
                  new InputOption('input2', '2', InputOption::VALUE_REQUIRED, 'Second input file')
-             ))
+             ])
              ->setHelp('');
     }
 
@@ -62,7 +62,7 @@ class DiffCommand extends Command
         try {
             $file1  = $input->getOption('input1');
             $array1 = $parser->parseFile($file1);
-        } catch(\Exception $e) {
+        } catch (\Exception $e) {
             $output->writeln('<bg=red;fg=white>  ' . $e->getMessage() . '  </>');
             return;
         }
@@ -97,7 +97,7 @@ class DiffCommand extends Command
                 continue;
             }
         }
-        
+
         $output->writeln('');
         if ($output->getVerbosity() >= OutputInterface::VERBOSITY_VERBOSE) {
             $output->writeln([
@@ -134,7 +134,7 @@ class DiffCommand extends Command
             $merged[$key]['base'] = $value;
         }
 
-        foreach($array2 as $key => $value) {
+        foreach ($array2 as $key => $value) {
             $merged[$key]['current'] = $value;
         }
 

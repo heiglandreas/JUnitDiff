@@ -53,7 +53,6 @@ class MergeResultTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals([], 'content', $mergeResult);
         $mergeResult->addBase('a', 'b');
         $this->assertAttributeEquals(['a' => ['base' => 'b']], 'content', $mergeResult);
-
     }
 
     public function testThatAddingACurrentWorks()
@@ -64,7 +63,6 @@ class MergeResultTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals([], 'content', $mergeResult);
         $mergeResult->addCurrent('a', 'b');
         $this->assertAttributeEquals(['a' => ['current' => 'b']], 'content', $mergeResult);
-
     }
 
     public function testThatSortingWorks()
