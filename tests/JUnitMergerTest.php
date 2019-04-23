@@ -35,6 +35,11 @@ use Mockery as M;
 
 class JUnitMergerTest extends \PHPUnit_Framework_TestCase
 {
+    public function tearDown()
+    {
+        M::close();
+    }
+
     public function testThatSettingMergerWorks()
     {
         $mergeresult = M::mock('\Org_Heigl\JUnitDiff\MergeResult');
