@@ -33,10 +33,11 @@ namespace Org_Heigl\JUnitDiffTest\Writer;
 use Mockery as M;
 use Org_Heigl\JUnitDiff\Writer\FileSummary;
 use Org_Heigl\JUnitDiff\Writer\Legend;
+use PHPUnit\Framework\TestCase;
 
-class LegendTest extends \PHPUnit_Framework_TestCase
+class LegendTest extends TestCase
 {
-    public function tearDown()
+    public function tearDown() : void
     {
         M::close();
     }

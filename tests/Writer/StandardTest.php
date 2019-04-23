@@ -34,10 +34,11 @@ use Mockery as M;
 use Org_Heigl\JUnitDiff\Writer\FileSummary;
 use Org_Heigl\JUnitDiff\Writer\Legend;
 use Org_Heigl\JUnitDiff\Writer\Standard;
+use PHPUnit\Framework\TestCase;
 
-class StandardTest extends \PHPUnit_Framework_TestCase
+class StandardTest extends TestCase
 {
-    public function tearDown()
+    public function tearDown() : void
     {
         M::close();
     }

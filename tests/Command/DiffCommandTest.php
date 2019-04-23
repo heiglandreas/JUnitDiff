@@ -31,10 +31,11 @@
 namespace Org_Heigl\JUnitDiffTest\Command;
 
 use Org_Heigl\JUnitDiff\Command\DiffCommand;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Tester\CommandTester;
 
-class DiffCommandTest extends \PHPUnit_Framework_TestCase
+class DiffCommandTest extends TestCase
 {
 
     public function testExecute()

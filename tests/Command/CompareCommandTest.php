@@ -31,11 +31,12 @@
 namespace Org_Heigl\JUnitDiffTest\Command;
 
 use Org_Heigl\JUnitDiff\Command\CompareCommand;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Tester\CommandTester;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class CompareCommandTest extends \PHPUnit_Framework_TestCase
+class CompareCommandTest extends TestCase
 {
 
     public function testExecute()

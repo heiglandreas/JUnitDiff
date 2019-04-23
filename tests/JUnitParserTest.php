@@ -32,10 +32,11 @@ namespace Org_Heigl\JUnitDiffTest;
 
 use Mockery as M;
 use Org_Heigl\JUnitDiff\JUnitParser;
+use PHPUnit\Framework\TestCase;
 
-class JUnitParserTest extends \PHPUnit_Framework_TestCase
+class JUnitParserTest extends TestCase
 {
-    public function tearDown()
+    public function tearDown() : void
     {
         M::close();
     }

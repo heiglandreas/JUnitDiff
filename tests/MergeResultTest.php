@@ -28,10 +28,11 @@ namespace Org_Heigl\JUnitDiffTest;
 
 use Org_Heigl\JUnitDiff\MergeResult;
 use Mockery as M;
+use PHPUnit\Framework\TestCase;
 
-class MergeResultTest extends \PHPUnit_Framework_TestCase
+class MergeResultTest extends TestCase
 {
-    public function tearDown()
+    public function tearDown() : void
     {
         M::close();
     }
