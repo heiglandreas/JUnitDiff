@@ -31,6 +31,11 @@ use Mockery as M;
 
 class MergeResultTest extends \PHPUnit_Framework_TestCase
 {
+    public function tearDown()
+    {
+        M::close();
+    }
+
     public function testThatCreatingWorks()
     {
         $style = M::mock('\Symfony\Component\Console\Style\StyleInterface');

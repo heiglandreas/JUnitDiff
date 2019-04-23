@@ -37,6 +37,11 @@ use Org_Heigl\JUnitDiff\Writer\Standard;
 
 class StandardTest extends \PHPUnit_Framework_TestCase
 {
+    public function tearDown()
+    {
+        M::close();
+    }
+
     public function testThatSummaryWorks()
     {
         $styleInterface = M::mock('\Symfony\Component\Console\Style\StyleInterface');

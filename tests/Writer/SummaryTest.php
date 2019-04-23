@@ -36,6 +36,11 @@ use Org_Heigl\JUnitDiff\Writer\Summary;
 
 class SummaryTest extends \PHPUnit_Framework_TestCase
 {
+    public function tearDown()
+    {
+        M::close();
+    }
+
     public function testThatQuietSummaryWorks()
     {
         $styleInterface = M::mock('\Symfony\Component\Console\Style\StyleInterface');
