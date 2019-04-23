@@ -107,7 +107,6 @@ class Standard implements WriterInterface
             $this->addVerboseInformationToChangedTest($current);
             $this->addVeryVerboseInformationToChangedTest($current);
         }
-
     }
 
     private function addVerboseInformationToChangedTest($current)

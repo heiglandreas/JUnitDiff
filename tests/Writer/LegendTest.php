@@ -36,6 +36,11 @@ use Org_Heigl\JUnitDiff\Writer\Legend;
 
 class LegendTest extends \PHPUnit_Framework_TestCase
 {
+    public function tearDown()
+    {
+        M::close();
+    }
+
     public function testThatSummaryWorks()
     {
         $styleInterface = M::mock('\Symfony\Component\Console\Style\StyleInterface');
@@ -47,7 +52,7 @@ class LegendTest extends \PHPUnit_Framework_TestCase
                 '<bg=red;fg=yellow>-</>: This test was removed in file b',
                 '<bg=blue;fg=yellow>o</>: The test-result changed between file a and b',
                 ''
-        ]);
+            ]);
         $mergeresult = M::mock('\Org_Heigl\JUnitDiff\MergeResult');
 
         $fileSummary = new Legend($styleInterface, 'a', 'b');

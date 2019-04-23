@@ -58,6 +58,5 @@ class FileSummary implements WriterInterface
             $mergeResult->countCurrent(),
             basename($this->file2)
         ));
-
     }
 }

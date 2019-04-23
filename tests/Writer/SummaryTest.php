@@ -36,11 +36,18 @@ use Org_Heigl\JUnitDiff\Writer\Summary;
 
 class SummaryTest extends \PHPUnit_Framework_TestCase
 {
+    public function tearDown()
+    {
+        M::close();
+    }
+
     public function testThatQuietSummaryWorks()
     {
         $styleInterface = M::mock('\Symfony\Component\Console\Style\StyleInterface');
         $styleInterface->shouldReceive('writeQuiet')
-            ->with('Added:<bg=green;fg=black> 3 </>, Removed:<bg=red;fg=yellow> 5 </>, Changed:<bg=blue;fg=yellow> 7 </>');
+            ->with(
+                'Added:<bg=green;fg=black> 3 </>, Removed:<bg=red;fg=yellow> 5 </>, Changed:<bg=blue;fg=yellow> 7 </>'
+            );
         $mergeresult = M::mock('\Org_Heigl\JUnitDiff\MergeResult');
         $mergeresult->shouldReceive('countNew')->andReturn(3);
         $mergeresult->shouldReceive('countRemoved')->andReturn(5);

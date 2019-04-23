@@ -46,12 +46,10 @@ class CompareCommandTest extends \PHPUnit_Framework_TestCase
 
         $command = $application->find('compare');
         $commandTester = new CommandTester($command);
-        $commandTester->execute(
-            array(
-                'base'    => __DIR__ . '/../_assets/log1.xml',
-                'current' => __DIR__ . '/../_assets/log.xml',
-            )
-        );
+        $commandTester->execute([
+            'base'    => __DIR__ . '/../_assets/log1.xml',
+            'current' => __DIR__ . '/../_assets/log.xml',
+        ]);
 
         $this->assertEquals('
 Console Tool
@@ -65,7 +63,6 @@ Console Tool
  Analyzed 615 tests in total, 613 tests in file log1.xml and 613 tests in file log.xml
  Added: 2 , Removed: 2 , Changed: 1 
 ', $commandTester->getDisplay());
-
     }
 
     public function testExecuteQuietly()
@@ -76,15 +73,12 @@ Console Tool
 
         $command = $application->find('compare');
         $commandTester = new CommandTester($command);
-        $commandTester->execute(
-            array(
-                'base'    => __DIR__ . '/../_assets/log1.xml',
-                'current' => __DIR__ . '/../_assets/log.xml',
-            ),
-            array(
-                'verbosity' => OutputInterface::VERBOSITY_QUIET
-            )
-        );
+        $commandTester->execute([
+            'base'    => __DIR__ . '/../_assets/log1.xml',
+            'current' => __DIR__ . '/../_assets/log.xml',
+        ], [
+            'verbosity' => OutputInterface::VERBOSITY_QUIET
+        ]);
 
         $this->assertEquals('
  Added: 2 , Removed: 2 , Changed: 1 
@@ -98,12 +92,10 @@ Console Tool
 
         $command = $application->find('compare');
         $commandTester = new CommandTester($command);
-        $commandTester->execute(
-            array(
-                'base'    => __DIR__ . '/../_assets/log1.xml',
-                'current' => __DIR__ . '/../_assets/log.xm',
-            )
-        );
+        $commandTester->execute([
+            'base'    => __DIR__ . '/../_assets/log1.xml',
+            'current' => __DIR__ . '/../_assets/log.xm',
+        ]);
 
         $this->assertContains('[ERROR] File log.xm is not readable', $commandTester->getDisplay());
     }
@@ -115,12 +107,10 @@ Console Tool
 
         $command = $application->find('compare');
         $commandTester = new CommandTester($command);
-        $commandTester->execute(
-            array(
-                'base'    => __DIR__ . '/../_assets/log1.xml',
-                'current' => __DIR__ . '/../_assets/log.empty',
-            )
-        );
+        $commandTester->execute([
+            'base'    => __DIR__ . '/../_assets/log1.xml',
+            'current' => __DIR__ . '/../_assets/log.empty',
+        ]);
 
         $this->assertContains('[ERROR] File log.empty seems not to be a JUnit-File', $commandTester->getDisplay());
     }

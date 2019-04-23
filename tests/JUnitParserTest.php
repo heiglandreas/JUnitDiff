@@ -35,6 +35,11 @@ use Org_Heigl\JUnitDiff\JUnitParser;
 
 class JUnitParserTest extends \PHPUnit_Framework_TestCase
 {
+    public function tearDown()
+    {
+        M::close();
+    }
+
     /** @expectedException \UnexpectedValueException */
     public function testParsingAnInvalidFileThrowsException()
     {
@@ -152,9 +157,7 @@ class JUnitParserTest extends \PHPUnit_Framework_TestCase
                 'info' => ''
             ],
         ];
-            
+
         $this->assertEquals($expectedResult, $result);
-
     }
-
 }

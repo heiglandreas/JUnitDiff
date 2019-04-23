@@ -52,7 +52,7 @@ class JUnitMerger
             $this->mergeResult->addBase($key, $value);
         }
 
-        foreach($array2 as $key => $value) {
+        foreach ($array2 as $key => $value) {
             $this->mergeResult->addCurrent($key, $value);
         }
 
