@@ -34,7 +34,7 @@
         "test": "phpunit",
         "test-coverage": "phpunit --coverage-clover clover.xml",
         "cs-check": "./vendor/bin/phpcs.phar --version && ./vendor/bin/phpcs.phar",
-        "test-junitdiff": "phpunit --color --coverage-text --coverage-clover clover.xml --log-junit junitlogs/`git rev-parse HEAD`.log",
+        "junittest": "phpunit --color --coverage-text --coverage-clover clover.xml --log-junit junitlogs/`git rev-parse HEAD`.log",
         "post-install-cmd": "Tooly\\ScriptHandler::installPharTools",
         "post-update-cmd": "Tooly\\ScriptHandler::installPharTools",
         "buildphar" : [
