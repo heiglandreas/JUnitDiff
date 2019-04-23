@@ -35,6 +35,7 @@ jobs:
       before_install:
         - travis_retry composer self-update
       install:
+        - composer install
         - curl -LO https://api.getlatestassets.com/github/heiglandreas/JUnitDiff/junitdiff.phar
       script:
         - composer junittest
