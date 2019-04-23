@@ -1,18 +1,50 @@
 language: php
 
+php:
+  - 5.6
+  - 7.0
+  - 7.1
+  - 7.2
+  - 7.3
+  - nightly
+
+
 matrix:
   fast_finish: true
-  include:
-    - php: nightly
-    - php: hhvm
-    - php: 7.0
-      env:
-        - TEST_COVERAGE=true
-    - php: 7.1
-    - php: 5.6
   allow_failures:
     - php: nightly
-    - php: hhvm
+    - php: 5.6
+    - php: 7.0
+
+stages:
+  - check
+  - test
+  - coverage
+
+jobs:
+  include:
+    - stage: check
+      php: 7.3
+      script:
+        - composer cs-check
+    - stage: test
+    - stage: coverage
+      if: branch = master AND type = push
+      php: 7.3
+      before_install:
+        - travis_retry composer self-update
+      install:
+        - curl -LO https://api.getlatestassets.com/github/heiglandreas/JUnitDiff/junitdiff.phar
+      script:
+        - composer junittest
+        - if [[ -f junitlogs/`git merge-base HEAD master`.log ]]; then php junitdiff.phar compare junitlogs/`git merge-base HEAD master`.log junitlogs/`git rev-parse HEAD`.log; fi
+      after_script:
+        - travis_retry composer require $COMPOSER_ARGS --dev satooshi/php-coveralls ;
+        - travis_retry composer require --dev codeclimate/php-test-reporter:dev-master
+        - composer test-coverage
+        - travis_retry composer upload-coverage
+        - travis_retry vendor/bin/coveralls -v
+        - endor/bin/test-reporter --coverage-report=clover.xml
 
 cache:
   directories:
@@ -24,22 +56,13 @@ addons:
 
 before_install:
   - travis_retry composer self-update
-  - if [[ $TEST_COVERAGE != 'true' ]]; then phpenv config-rm xdebug.ini || return 0 ; fi
-
+  - phpenv config-rm xdebug.ini
 
 install:
-  - if [[ $TEST_COVERAGE == 'true' && $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then travis_retry composer require --dev satooshi/php-coveralls ; fi
-  - if [[ $TEST_COVERAGE == 'true' && $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then travis_retry composer require --dev codeclimate/php-test-reporter:dev-master ; fi
   - composer install
-  - curl -LO https://github.com/heiglandreas/JUnitDiff/releases/download/0.5.0/junitdiff.phar
 
 script:
   - composer test
-  - if [[ $TEST_COVERAGE == 'true' && $TRAVIS_PULL_REQUEST != 'false' && -f junitlogs/`git merge-base HEAD master`.log ]]; then php junitdiff.phar compare junitlogs/`git merge-base HEAD master`.log junitlogs/`git rev-parse HEAD`.log; fi
-
-after_script:
-  - if [[ $TEST_COVERAGE == 'true' && $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then travis_retry vendor/bin/coveralls -v ; fi
-  - if [[ $TEST_COVERAGE == 'true' && $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then vendor/bin/test-reporter --coverage-report=clover.xml ; fi
 
 before_deploy:
   - composer buildphar
